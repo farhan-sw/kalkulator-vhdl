@@ -1,0 +1,18 @@
+|comparatorreal
+P[0] => LessThan0.IN6
+P[1] => LessThan0.IN5
+P[2] => LessThan0.IN4
+P[3] => LessThan0.IN3
+P[4] => LessThan0.IN2
+P[5] => LessThan0.IN1
+Q[0] => LessThan0.IN12
+Q[1] => LessThan0.IN11
+Q[2] => LessThan0.IN10
+Q[3] => LessThan0.IN9
+Q[4] => LessThan0.IN8
+Q[5] => LessThan0.IN7
+rst => comp~0.OUTPUTSELECT
+clk => comp~reg0.CLK
+comp <= comp~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

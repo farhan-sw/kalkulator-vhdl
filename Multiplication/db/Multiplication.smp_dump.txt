@@ -1,0 +1,37 @@
+
+State Machine - |Multiplication|AdderSubtractor:AddSub|adderFSM:AdderFSMBlok|state
+Name state.doneWithCary state.done state.H state.G state.init 
+state.init 0 0 0 0 0 
+state.G 0 0 0 1 1 
+state.H 0 0 1 0 1 
+state.done 0 1 0 0 1 
+state.doneWithCary 1 0 0 0 1 
+
+State Machine - |Multiplication|AdderSubtractor:AddSub|FSM:FSM_AdderSubtractor|state
+Name state.done state.wait_adder state.s4 state.s3 state.s2 state.s1 state.compare state.init 
+state.init 0 0 0 0 0 0 0 0 
+state.compare 0 0 0 0 0 0 1 1 
+state.s1 0 0 0 0 0 1 0 1 
+state.s2 0 0 0 0 1 0 0 1 
+state.s3 0 0 0 1 0 0 0 1 
+state.s4 0 0 1 0 0 0 0 1 
+state.wait_adder 0 1 0 0 0 0 0 1 
+state.done 1 0 0 0 0 0 0 1 
+
+State Machine - |Multiplication|FSM_Multi:control|cState
+Name cState.M cState.L cState.K cState.J cState.I2 cState.I1 cState.H cState.G cState.F cState.E cState.D cState.C cState.B2 cState.B1 cState.A 
+cState.A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+cState.B1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+cState.B2 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+cState.C 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+cState.D 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+cState.E 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+cState.F 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+cState.G 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+cState.H 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+cState.I1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+cState.I2 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+cState.J 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+cState.K 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+cState.L 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+cState.M 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 

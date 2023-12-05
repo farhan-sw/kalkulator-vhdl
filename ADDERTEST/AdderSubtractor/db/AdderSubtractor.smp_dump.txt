@@ -1,0 +1,19 @@
+
+State Machine - |AdderSubtractor|adderFSM:AdderFSMBlok|state
+Name state.doneWithCary state.done state.H state.G state.init 
+state.init 0 0 0 0 0 
+state.G 0 0 0 1 1 
+state.H 0 0 1 0 1 
+state.done 0 1 0 0 1 
+state.doneWithCary 1 0 0 0 1 
+
+State Machine - |AdderSubtractor|FSM:FSM_AdderSubtractor|state
+Name state.done state.wait_adder state.s4 state.s3 state.s2 state.s1 state.compare state.init 
+state.init 0 0 0 0 0 0 0 0 
+state.compare 0 0 0 0 0 0 1 1 
+state.s1 0 0 0 0 0 1 0 1 
+state.s2 0 0 0 0 1 0 0 1 
+state.s3 0 0 0 1 0 0 0 1 
+state.s4 0 0 1 0 0 0 0 1 
+state.wait_adder 0 1 0 0 0 0 0 1 
+state.done 1 0 0 0 0 0 0 1 

@@ -1,0 +1,129 @@
+library IEEE;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
+entity Multiplication is 
+	generic ( N: INTEGER := 41);
+	port (
+		P			: in std_logic_vector (N-1 downto 0) ;
+		Q			: in std_logic_vector (N-1 downto 0) ;
+		Mode		: in std_logic_vector (2 downto 0) ;
+		Clk, Rst	: in std_logic ;
+		Multi_Out	: out std_logic_vector (N-1 downto 0) ;
+		Status_Out	: out std_logic_vector (1 downto 0) ;
+		debugout 	: out integer 
+   
+	);
+end Multiplication;
+
+architecture Multi_arc of Multiplication is 
+
+component ParalelRegister is
+	generic ( N: INTEGER := N);
+    port (
+        IN_REG          : in std_logic_vector (N - 1 downto 0);
+        CT              : in std_logic_vector(1 downto 0);
+        OUT_REG         : out std_logic_vector(N - 1 downto 0);
+
+        clk             : in std_logic
+    );
+end  component;
+
+component ParalelRegisterQ is
+    generic ( N : INTEGER := 41 );
+    port (
+        IN_REG          : in std_logic_vector (N -1 downto 0);
+        CT              : in std_logic_vector(1 downto 0);
+        OUT_REG         : out std_logic_vector(N -1 downto 0);
+        QLSB 			: out std_logic;
+
+        clk             : in std_logic
+    );
+end component;
+
+component AdderSubtractor is
+    generic ( N : INTEGER := N);
+    port (
+        P_in            : in std_logic_vector (N - 1 downto 0);
+        Q_in            : in std_logic_vector (N - 1 downto 0);
+
+        OUT_Operasi     : out std_logic_vector (N - 1 downto 0);
+
+        M               : in std_logic_vector(2 downto 0);
+        status          : out std_logic_vector(1 downto 0);
+
+        clk             : in std_logic;
+        rst             : in std_logic
+    );
+end component;
+
+component multiplexer IS
+	generic (N : INTEGER := 41);
+	PORT (  P, Q   : IN STD_LOGIC_VECTOR (N-1 downto 0) ;
+			S, clk      : IN std_logic;
+			f     : OUT STD_LOGIC_VECTOR (N-1 downto 0)
+			);
+end component;
+
+component FSM_Multi is 
+	port (
+		Mode			: in std_logic_vector (2 downto 0) ;
+		StatusAdder		: in std_logic_vector (1 downto 0) ;
+		Qprev			: in std_logic ;
+		QLSB			: in std_logic ;
+		clk				: in std_logic ;
+		Rst				: in std_logic ;
+		S1				: out std_logic ;
+		S2				: out std_logic ;
+		ModeAdder		: out std_logic_vector (2 downto 0) ;
+		EnArs			: out std_logic ;
+		CtP, CtQ, CtA	: out std_logic_vector (1 downto 0) ;
+		EnOutFinal		: out std_logic 
+	);
+end component ;
+
+component arsShifter is
+	generic (N : INTEGER := 41);
+    port (
+        A                   : in std_logic_vector (N-1 downto 0);
+        Q					: in std_logic_vector (N-1 downto 0) ;
+        En					: in std_logic ;
+        clk					: in std_logic ;
+        Aout				: out std_logic_vector (N-1 downto 0) ;
+        Qout				: out std_logic_vector (N-1 downto 0) ;
+        Qprev				: out std_logic  
+        );
+end component ;
+
+component outFinal is 
+	generic (N : Integer := 41) ;
+	port (
+		Aout			: in std_logic_vector (N-1 downto 0) ;
+		Qout			: in std_logic_vector (N-1 downto 0) ;
+		clk, En			: in std_logic ;
+		finalOut		: out std_logic_vector (N-1 downto 0) ;
+		Status			: out std_logic_vector (1 downto 0)
+	);
+end component;
+
+signal St_Add, Ct_P, Ct_Q, Ct_Acc, StatusOutFinal : std_logic_vector (1 downto 0) ;
+signal AddSub_Out, Ars_Out, Out_Mux_Acc, Out_Mux_RegQ, Out_RegP, Out_RegQ, Acc_Out, Qrs_Out, Out_Final : std_logic_vector (N-1 downto 0) ;
+signal Qprev, QLSB, selectorQ, selectorAcc, En_Ars, EnOutFinal : std_logic ;
+signal Mode_Add: std_logic_vector (2 downto 0);
+signal debug : Integer ;
+
+begin
+	control : FSM_Multi port map (Mode, St_Add, Qprev, QLSB, clk, rst, selectorQ , selectorAcc, Mode_Add, En_Ars, Ct_P, Ct_Q,  Ct_Acc, EnOutFinal); 
+	MuxAcc : multiplexer port map (AddSub_Out, Ars_Out, selectorAcc, clk, Out_Mux_Acc) ;
+	MuxRegQ : multiplexer port map (Q, Qrs_Out, selectorQ, clk, Out_Mux_RegQ) ;
+	reg_p : ParalelRegister port map (P, Ct_P, Out_RegP, clk) ;
+	reg_q : ParalelRegisterQ port map (Q , Ct_Q, Out_RegQ, QLSB, clk) ;
+	reg_acc : ParalelRegister port map (Out_Mux_Acc, Ct_Acc, Acc_out, clk) ;
+	AddSub : AdderSubtractor port map (Ars_Out, Out_RegP, AddSub_Out, Mode_Add, St_Add, clk, rst) ;
+	ArsShift : arsShifter port map (Acc_Out, Out_RegQ, En_Ars, clk, Ars_Out, Qrs_Out, Qprev);
+	OutputFinal : outFinal port map (Ars_Out, Qrs_Out, clk, EnOutFinal, Out_Final, StatusOutFinal);
+	Multi_Out <= Out_Final;
+	Status_Out <= StatusOutFinal;
+
+end Multi_arc;

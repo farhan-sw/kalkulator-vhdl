@@ -1,0 +1,542 @@
+Simulator report for mux21
+Tue Nov 28 03:27:18 2023
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 207 nodes    ;
+; Simulation Coverage         ;      15.46 % ;
+; Total Number of Transitions ; 347          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Stratix II   ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Functional ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Vector input source                                                                        ; mux21.vwf  ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; On         ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      15.46 % ;
+; Total nodes checked                                 ; 207          ;
+; Total output ports checked                          ; 207          ;
+; Total output ports with complete 1/0-value coverage ; 32           ;
+; Total output ports with no 1/0-value coverage       ; 171          ;
+; Total output ports with no 1-value coverage         ; 171          ;
+; Total output ports with no 0-value coverage         ; 175          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------+
+; Complete 1/0-Value Coverage                              ;
++-------------------+-------------------+------------------+
+; Node Name         ; Output Port Name  ; Output Port Type ;
++-------------------+-------------------+------------------+
+; |mux21|f[0]~reg0  ; |mux21|f[0]~reg0  ; regout           ;
+; |mux21|f~21       ; |mux21|f~21       ; out              ;
+; |mux21|f~22       ; |mux21|f~22       ; out              ;
+; |mux21|f~23       ; |mux21|f~23       ; out              ;
+; |mux21|f~24       ; |mux21|f~24       ; out              ;
+; |mux21|f~26       ; |mux21|f~26       ; out              ;
+; |mux21|f~31       ; |mux21|f~31       ; out              ;
+; |mux21|f~35       ; |mux21|f~35       ; out              ;
+; |mux21|f~36       ; |mux21|f~36       ; out              ;
+; |mux21|f~38       ; |mux21|f~38       ; out              ;
+; |mux21|f~40       ; |mux21|f~40       ; out              ;
+; |mux21|f[2]~reg0  ; |mux21|f[2]~reg0  ; regout           ;
+; |mux21|f[4]~reg0  ; |mux21|f[4]~reg0  ; regout           ;
+; |mux21|f[5]~reg0  ; |mux21|f[5]~reg0  ; regout           ;
+; |mux21|f[9]~reg0  ; |mux21|f[9]~reg0  ; regout           ;
+; |mux21|f[14]~reg0 ; |mux21|f[14]~reg0 ; regout           ;
+; |mux21|f[16]~reg0 ; |mux21|f[16]~reg0 ; regout           ;
+; |mux21|f[17]~reg0 ; |mux21|f[17]~reg0 ; regout           ;
+; |mux21|f[18]~reg0 ; |mux21|f[18]~reg0 ; regout           ;
+; |mux21|f[19]~reg0 ; |mux21|f[19]~reg0 ; regout           ;
+; |mux21|S          ; |mux21|S          ; out              ;
+; |mux21|clk        ; |mux21|clk        ; out              ;
+; |mux21|f[0]       ; |mux21|f[0]       ; pin_out          ;
+; |mux21|f[2]       ; |mux21|f[2]       ; pin_out          ;
+; |mux21|f[4]       ; |mux21|f[4]       ; pin_out          ;
+; |mux21|f[5]       ; |mux21|f[5]       ; pin_out          ;
+; |mux21|f[9]       ; |mux21|f[9]       ; pin_out          ;
+; |mux21|f[14]      ; |mux21|f[14]      ; pin_out          ;
+; |mux21|f[16]      ; |mux21|f[16]      ; pin_out          ;
+; |mux21|f[17]      ; |mux21|f[17]      ; pin_out          ;
+; |mux21|f[18]      ; |mux21|f[18]      ; pin_out          ;
+; |mux21|f[19]      ; |mux21|f[19]      ; pin_out          ;
++-------------------+-------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------+
+; Missing 1-Value Coverage                                 ;
++-------------------+-------------------+------------------+
+; Node Name         ; Output Port Name  ; Output Port Type ;
++-------------------+-------------------+------------------+
+; |mux21|f~0        ; |mux21|f~0        ; out              ;
+; |mux21|f~1        ; |mux21|f~1        ; out              ;
+; |mux21|f~2        ; |mux21|f~2        ; out              ;
+; |mux21|f~3        ; |mux21|f~3        ; out              ;
+; |mux21|f~4        ; |mux21|f~4        ; out              ;
+; |mux21|f~5        ; |mux21|f~5        ; out              ;
+; |mux21|f~6        ; |mux21|f~6        ; out              ;
+; |mux21|f~7        ; |mux21|f~7        ; out              ;
+; |mux21|f~8        ; |mux21|f~8        ; out              ;
+; |mux21|f~9        ; |mux21|f~9        ; out              ;
+; |mux21|f~10       ; |mux21|f~10       ; out              ;
+; |mux21|f~11       ; |mux21|f~11       ; out              ;
+; |mux21|f~12       ; |mux21|f~12       ; out              ;
+; |mux21|f~13       ; |mux21|f~13       ; out              ;
+; |mux21|f~14       ; |mux21|f~14       ; out              ;
+; |mux21|f~15       ; |mux21|f~15       ; out              ;
+; |mux21|f~16       ; |mux21|f~16       ; out              ;
+; |mux21|f~17       ; |mux21|f~17       ; out              ;
+; |mux21|f~18       ; |mux21|f~18       ; out              ;
+; |mux21|f~19       ; |mux21|f~19       ; out              ;
+; |mux21|f~20       ; |mux21|f~20       ; out              ;
+; |mux21|f~25       ; |mux21|f~25       ; out              ;
+; |mux21|f~27       ; |mux21|f~27       ; out              ;
+; |mux21|f~28       ; |mux21|f~28       ; out              ;
+; |mux21|f~29       ; |mux21|f~29       ; out              ;
+; |mux21|f~30       ; |mux21|f~30       ; out              ;
+; |mux21|f~32       ; |mux21|f~32       ; out              ;
+; |mux21|f~33       ; |mux21|f~33       ; out              ;
+; |mux21|f~34       ; |mux21|f~34       ; out              ;
+; |mux21|f~37       ; |mux21|f~37       ; out              ;
+; |mux21|f~39       ; |mux21|f~39       ; out              ;
+; |mux21|f[6]~reg0  ; |mux21|f[6]~reg0  ; regout           ;
+; |mux21|f[7]~reg0  ; |mux21|f[7]~reg0  ; regout           ;
+; |mux21|f[8]~reg0  ; |mux21|f[8]~reg0  ; regout           ;
+; |mux21|f[10]~reg0 ; |mux21|f[10]~reg0 ; regout           ;
+; |mux21|f[11]~reg0 ; |mux21|f[11]~reg0 ; regout           ;
+; |mux21|f[12]~reg0 ; |mux21|f[12]~reg0 ; regout           ;
+; |mux21|f[13]~reg0 ; |mux21|f[13]~reg0 ; regout           ;
+; |mux21|f[15]~reg0 ; |mux21|f[15]~reg0 ; regout           ;
+; |mux21|f[20]~reg0 ; |mux21|f[20]~reg0 ; regout           ;
+; |mux21|f[21]~reg0 ; |mux21|f[21]~reg0 ; regout           ;
+; |mux21|f[22]~reg0 ; |mux21|f[22]~reg0 ; regout           ;
+; |mux21|f[23]~reg0 ; |mux21|f[23]~reg0 ; regout           ;
+; |mux21|f[24]~reg0 ; |mux21|f[24]~reg0 ; regout           ;
+; |mux21|f[25]~reg0 ; |mux21|f[25]~reg0 ; regout           ;
+; |mux21|f[26]~reg0 ; |mux21|f[26]~reg0 ; regout           ;
+; |mux21|f[27]~reg0 ; |mux21|f[27]~reg0 ; regout           ;
+; |mux21|f[28]~reg0 ; |mux21|f[28]~reg0 ; regout           ;
+; |mux21|f[29]~reg0 ; |mux21|f[29]~reg0 ; regout           ;
+; |mux21|f[30]~reg0 ; |mux21|f[30]~reg0 ; regout           ;
+; |mux21|f[31]~reg0 ; |mux21|f[31]~reg0 ; regout           ;
+; |mux21|f[32]~reg0 ; |mux21|f[32]~reg0 ; regout           ;
+; |mux21|f[33]~reg0 ; |mux21|f[33]~reg0 ; regout           ;
+; |mux21|f[34]~reg0 ; |mux21|f[34]~reg0 ; regout           ;
+; |mux21|f[35]~reg0 ; |mux21|f[35]~reg0 ; regout           ;
+; |mux21|f[36]~reg0 ; |mux21|f[36]~reg0 ; regout           ;
+; |mux21|f[37]~reg0 ; |mux21|f[37]~reg0 ; regout           ;
+; |mux21|f[38]~reg0 ; |mux21|f[38]~reg0 ; regout           ;
+; |mux21|f[39]~reg0 ; |mux21|f[39]~reg0 ; regout           ;
+; |mux21|f[40]~reg0 ; |mux21|f[40]~reg0 ; regout           ;
+; |mux21|P[0]       ; |mux21|P[0]       ; out              ;
+; |mux21|P[1]       ; |mux21|P[1]       ; out              ;
+; |mux21|P[2]       ; |mux21|P[2]       ; out              ;
+; |mux21|P[3]       ; |mux21|P[3]       ; out              ;
+; |mux21|P[4]       ; |mux21|P[4]       ; out              ;
+; |mux21|P[5]       ; |mux21|P[5]       ; out              ;
+; |mux21|P[6]       ; |mux21|P[6]       ; out              ;
+; |mux21|P[7]       ; |mux21|P[7]       ; out              ;
+; |mux21|P[8]       ; |mux21|P[8]       ; out              ;
+; |mux21|P[9]       ; |mux21|P[9]       ; out              ;
+; |mux21|P[10]      ; |mux21|P[10]      ; out              ;
+; |mux21|P[11]      ; |mux21|P[11]      ; out              ;
+; |mux21|P[12]      ; |mux21|P[12]      ; out              ;
+; |mux21|P[13]      ; |mux21|P[13]      ; out              ;
+; |mux21|P[14]      ; |mux21|P[14]      ; out              ;
+; |mux21|P[15]      ; |mux21|P[15]      ; out              ;
+; |mux21|P[16]      ; |mux21|P[16]      ; out              ;
+; |mux21|P[17]      ; |mux21|P[17]      ; out              ;
+; |mux21|P[18]      ; |mux21|P[18]      ; out              ;
+; |mux21|P[19]      ; |mux21|P[19]      ; out              ;
+; |mux21|P[20]      ; |mux21|P[20]      ; out              ;
+; |mux21|P[21]      ; |mux21|P[21]      ; out              ;
+; |mux21|P[22]      ; |mux21|P[22]      ; out              ;
+; |mux21|P[23]      ; |mux21|P[23]      ; out              ;
+; |mux21|P[24]      ; |mux21|P[24]      ; out              ;
+; |mux21|P[25]      ; |mux21|P[25]      ; out              ;
+; |mux21|P[26]      ; |mux21|P[26]      ; out              ;
+; |mux21|P[27]      ; |mux21|P[27]      ; out              ;
+; |mux21|P[28]      ; |mux21|P[28]      ; out              ;
+; |mux21|P[29]      ; |mux21|P[29]      ; out              ;
+; |mux21|P[30]      ; |mux21|P[30]      ; out              ;
+; |mux21|P[31]      ; |mux21|P[31]      ; out              ;
+; |mux21|P[32]      ; |mux21|P[32]      ; out              ;
+; |mux21|P[33]      ; |mux21|P[33]      ; out              ;
+; |mux21|P[34]      ; |mux21|P[34]      ; out              ;
+; |mux21|P[35]      ; |mux21|P[35]      ; out              ;
+; |mux21|P[36]      ; |mux21|P[36]      ; out              ;
+; |mux21|P[37]      ; |mux21|P[37]      ; out              ;
+; |mux21|P[38]      ; |mux21|P[38]      ; out              ;
+; |mux21|P[39]      ; |mux21|P[39]      ; out              ;
+; |mux21|P[40]      ; |mux21|P[40]      ; out              ;
+; |mux21|Q[0]       ; |mux21|Q[0]       ; out              ;
+; |mux21|Q[1]       ; |mux21|Q[1]       ; out              ;
+; |mux21|Q[2]       ; |mux21|Q[2]       ; out              ;
+; |mux21|Q[3]       ; |mux21|Q[3]       ; out              ;
+; |mux21|Q[4]       ; |mux21|Q[4]       ; out              ;
+; |mux21|Q[5]       ; |mux21|Q[5]       ; out              ;
+; |mux21|Q[6]       ; |mux21|Q[6]       ; out              ;
+; |mux21|Q[7]       ; |mux21|Q[7]       ; out              ;
+; |mux21|Q[8]       ; |mux21|Q[8]       ; out              ;
+; |mux21|Q[9]       ; |mux21|Q[9]       ; out              ;
+; |mux21|Q[10]      ; |mux21|Q[10]      ; out              ;
+; |mux21|Q[11]      ; |mux21|Q[11]      ; out              ;
+; |mux21|Q[12]      ; |mux21|Q[12]      ; out              ;
+; |mux21|Q[13]      ; |mux21|Q[13]      ; out              ;
+; |mux21|Q[14]      ; |mux21|Q[14]      ; out              ;
+; |mux21|Q[15]      ; |mux21|Q[15]      ; out              ;
+; |mux21|Q[16]      ; |mux21|Q[16]      ; out              ;
+; |mux21|Q[17]      ; |mux21|Q[17]      ; out              ;
+; |mux21|Q[18]      ; |mux21|Q[18]      ; out              ;
+; |mux21|Q[19]      ; |mux21|Q[19]      ; out              ;
+; |mux21|Q[20]      ; |mux21|Q[20]      ; out              ;
+; |mux21|Q[21]      ; |mux21|Q[21]      ; out              ;
+; |mux21|Q[22]      ; |mux21|Q[22]      ; out              ;
+; |mux21|Q[23]      ; |mux21|Q[23]      ; out              ;
+; |mux21|Q[24]      ; |mux21|Q[24]      ; out              ;
+; |mux21|Q[25]      ; |mux21|Q[25]      ; out              ;
+; |mux21|Q[26]      ; |mux21|Q[26]      ; out              ;
+; |mux21|Q[27]      ; |mux21|Q[27]      ; out              ;
+; |mux21|Q[28]      ; |mux21|Q[28]      ; out              ;
+; |mux21|Q[29]      ; |mux21|Q[29]      ; out              ;
+; |mux21|Q[30]      ; |mux21|Q[30]      ; out              ;
+; |mux21|Q[31]      ; |mux21|Q[31]      ; out              ;
+; |mux21|Q[32]      ; |mux21|Q[32]      ; out              ;
+; |mux21|Q[33]      ; |mux21|Q[33]      ; out              ;
+; |mux21|Q[34]      ; |mux21|Q[34]      ; out              ;
+; |mux21|Q[35]      ; |mux21|Q[35]      ; out              ;
+; |mux21|Q[36]      ; |mux21|Q[36]      ; out              ;
+; |mux21|Q[37]      ; |mux21|Q[37]      ; out              ;
+; |mux21|Q[38]      ; |mux21|Q[38]      ; out              ;
+; |mux21|Q[39]      ; |mux21|Q[39]      ; out              ;
+; |mux21|Q[40]      ; |mux21|Q[40]      ; out              ;
+; |mux21|f[6]       ; |mux21|f[6]       ; pin_out          ;
+; |mux21|f[7]       ; |mux21|f[7]       ; pin_out          ;
+; |mux21|f[8]       ; |mux21|f[8]       ; pin_out          ;
+; |mux21|f[10]      ; |mux21|f[10]      ; pin_out          ;
+; |mux21|f[11]      ; |mux21|f[11]      ; pin_out          ;
+; |mux21|f[12]      ; |mux21|f[12]      ; pin_out          ;
+; |mux21|f[13]      ; |mux21|f[13]      ; pin_out          ;
+; |mux21|f[15]      ; |mux21|f[15]      ; pin_out          ;
+; |mux21|f[20]      ; |mux21|f[20]      ; pin_out          ;
+; |mux21|f[21]      ; |mux21|f[21]      ; pin_out          ;
+; |mux21|f[22]      ; |mux21|f[22]      ; pin_out          ;
+; |mux21|f[23]      ; |mux21|f[23]      ; pin_out          ;
+; |mux21|f[24]      ; |mux21|f[24]      ; pin_out          ;
+; |mux21|f[25]      ; |mux21|f[25]      ; pin_out          ;
+; |mux21|f[26]      ; |mux21|f[26]      ; pin_out          ;
+; |mux21|f[27]      ; |mux21|f[27]      ; pin_out          ;
+; |mux21|f[28]      ; |mux21|f[28]      ; pin_out          ;
+; |mux21|f[29]      ; |mux21|f[29]      ; pin_out          ;
+; |mux21|f[30]      ; |mux21|f[30]      ; pin_out          ;
+; |mux21|f[31]      ; |mux21|f[31]      ; pin_out          ;
+; |mux21|f[32]      ; |mux21|f[32]      ; pin_out          ;
+; |mux21|f[33]      ; |mux21|f[33]      ; pin_out          ;
+; |mux21|f[34]      ; |mux21|f[34]      ; pin_out          ;
+; |mux21|f[35]      ; |mux21|f[35]      ; pin_out          ;
+; |mux21|f[36]      ; |mux21|f[36]      ; pin_out          ;
+; |mux21|f[37]      ; |mux21|f[37]      ; pin_out          ;
+; |mux21|f[38]      ; |mux21|f[38]      ; pin_out          ;
+; |mux21|f[39]      ; |mux21|f[39]      ; pin_out          ;
+; |mux21|f[40]      ; |mux21|f[40]      ; pin_out          ;
++-------------------+-------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------+
+; Missing 0-Value Coverage                                 ;
++-------------------+-------------------+------------------+
+; Node Name         ; Output Port Name  ; Output Port Type ;
++-------------------+-------------------+------------------+
+; |mux21|f~0        ; |mux21|f~0        ; out              ;
+; |mux21|f~1        ; |mux21|f~1        ; out              ;
+; |mux21|f~2        ; |mux21|f~2        ; out              ;
+; |mux21|f~3        ; |mux21|f~3        ; out              ;
+; |mux21|f~4        ; |mux21|f~4        ; out              ;
+; |mux21|f~5        ; |mux21|f~5        ; out              ;
+; |mux21|f~6        ; |mux21|f~6        ; out              ;
+; |mux21|f~7        ; |mux21|f~7        ; out              ;
+; |mux21|f~8        ; |mux21|f~8        ; out              ;
+; |mux21|f~9        ; |mux21|f~9        ; out              ;
+; |mux21|f~10       ; |mux21|f~10       ; out              ;
+; |mux21|f~11       ; |mux21|f~11       ; out              ;
+; |mux21|f~12       ; |mux21|f~12       ; out              ;
+; |mux21|f~13       ; |mux21|f~13       ; out              ;
+; |mux21|f~14       ; |mux21|f~14       ; out              ;
+; |mux21|f~15       ; |mux21|f~15       ; out              ;
+; |mux21|f~16       ; |mux21|f~16       ; out              ;
+; |mux21|f~17       ; |mux21|f~17       ; out              ;
+; |mux21|f~18       ; |mux21|f~18       ; out              ;
+; |mux21|f~19       ; |mux21|f~19       ; out              ;
+; |mux21|f~20       ; |mux21|f~20       ; out              ;
+; |mux21|f~25       ; |mux21|f~25       ; out              ;
+; |mux21|f~27       ; |mux21|f~27       ; out              ;
+; |mux21|f~28       ; |mux21|f~28       ; out              ;
+; |mux21|f~29       ; |mux21|f~29       ; out              ;
+; |mux21|f~30       ; |mux21|f~30       ; out              ;
+; |mux21|f~32       ; |mux21|f~32       ; out              ;
+; |mux21|f~33       ; |mux21|f~33       ; out              ;
+; |mux21|f~34       ; |mux21|f~34       ; out              ;
+; |mux21|f~37       ; |mux21|f~37       ; out              ;
+; |mux21|f~39       ; |mux21|f~39       ; out              ;
+; |mux21|f[1]~reg0  ; |mux21|f[1]~reg0  ; regout           ;
+; |mux21|f[3]~reg0  ; |mux21|f[3]~reg0  ; regout           ;
+; |mux21|f[6]~reg0  ; |mux21|f[6]~reg0  ; regout           ;
+; |mux21|f[7]~reg0  ; |mux21|f[7]~reg0  ; regout           ;
+; |mux21|f[8]~reg0  ; |mux21|f[8]~reg0  ; regout           ;
+; |mux21|f[10]~reg0 ; |mux21|f[10]~reg0 ; regout           ;
+; |mux21|f[11]~reg0 ; |mux21|f[11]~reg0 ; regout           ;
+; |mux21|f[12]~reg0 ; |mux21|f[12]~reg0 ; regout           ;
+; |mux21|f[13]~reg0 ; |mux21|f[13]~reg0 ; regout           ;
+; |mux21|f[15]~reg0 ; |mux21|f[15]~reg0 ; regout           ;
+; |mux21|f[20]~reg0 ; |mux21|f[20]~reg0 ; regout           ;
+; |mux21|f[21]~reg0 ; |mux21|f[21]~reg0 ; regout           ;
+; |mux21|f[22]~reg0 ; |mux21|f[22]~reg0 ; regout           ;
+; |mux21|f[23]~reg0 ; |mux21|f[23]~reg0 ; regout           ;
+; |mux21|f[24]~reg0 ; |mux21|f[24]~reg0 ; regout           ;
+; |mux21|f[25]~reg0 ; |mux21|f[25]~reg0 ; regout           ;
+; |mux21|f[26]~reg0 ; |mux21|f[26]~reg0 ; regout           ;
+; |mux21|f[27]~reg0 ; |mux21|f[27]~reg0 ; regout           ;
+; |mux21|f[28]~reg0 ; |mux21|f[28]~reg0 ; regout           ;
+; |mux21|f[29]~reg0 ; |mux21|f[29]~reg0 ; regout           ;
+; |mux21|f[30]~reg0 ; |mux21|f[30]~reg0 ; regout           ;
+; |mux21|f[31]~reg0 ; |mux21|f[31]~reg0 ; regout           ;
+; |mux21|f[32]~reg0 ; |mux21|f[32]~reg0 ; regout           ;
+; |mux21|f[33]~reg0 ; |mux21|f[33]~reg0 ; regout           ;
+; |mux21|f[34]~reg0 ; |mux21|f[34]~reg0 ; regout           ;
+; |mux21|f[35]~reg0 ; |mux21|f[35]~reg0 ; regout           ;
+; |mux21|f[36]~reg0 ; |mux21|f[36]~reg0 ; regout           ;
+; |mux21|f[37]~reg0 ; |mux21|f[37]~reg0 ; regout           ;
+; |mux21|f[38]~reg0 ; |mux21|f[38]~reg0 ; regout           ;
+; |mux21|f[39]~reg0 ; |mux21|f[39]~reg0 ; regout           ;
+; |mux21|f[40]~reg0 ; |mux21|f[40]~reg0 ; regout           ;
+; |mux21|P[0]       ; |mux21|P[0]       ; out              ;
+; |mux21|P[1]       ; |mux21|P[1]       ; out              ;
+; |mux21|P[2]       ; |mux21|P[2]       ; out              ;
+; |mux21|P[3]       ; |mux21|P[3]       ; out              ;
+; |mux21|P[4]       ; |mux21|P[4]       ; out              ;
+; |mux21|P[5]       ; |mux21|P[5]       ; out              ;
+; |mux21|P[6]       ; |mux21|P[6]       ; out              ;
+; |mux21|P[7]       ; |mux21|P[7]       ; out              ;
+; |mux21|P[8]       ; |mux21|P[8]       ; out              ;
+; |mux21|P[9]       ; |mux21|P[9]       ; out              ;
+; |mux21|P[10]      ; |mux21|P[10]      ; out              ;
+; |mux21|P[11]      ; |mux21|P[11]      ; out              ;
+; |mux21|P[12]      ; |mux21|P[12]      ; out              ;
+; |mux21|P[13]      ; |mux21|P[13]      ; out              ;
+; |mux21|P[14]      ; |mux21|P[14]      ; out              ;
+; |mux21|P[15]      ; |mux21|P[15]      ; out              ;
+; |mux21|P[16]      ; |mux21|P[16]      ; out              ;
+; |mux21|P[17]      ; |mux21|P[17]      ; out              ;
+; |mux21|P[18]      ; |mux21|P[18]      ; out              ;
+; |mux21|P[19]      ; |mux21|P[19]      ; out              ;
+; |mux21|P[20]      ; |mux21|P[20]      ; out              ;
+; |mux21|P[21]      ; |mux21|P[21]      ; out              ;
+; |mux21|P[22]      ; |mux21|P[22]      ; out              ;
+; |mux21|P[23]      ; |mux21|P[23]      ; out              ;
+; |mux21|P[24]      ; |mux21|P[24]      ; out              ;
+; |mux21|P[25]      ; |mux21|P[25]      ; out              ;
+; |mux21|P[26]      ; |mux21|P[26]      ; out              ;
+; |mux21|P[27]      ; |mux21|P[27]      ; out              ;
+; |mux21|P[28]      ; |mux21|P[28]      ; out              ;
+; |mux21|P[29]      ; |mux21|P[29]      ; out              ;
+; |mux21|P[30]      ; |mux21|P[30]      ; out              ;
+; |mux21|P[31]      ; |mux21|P[31]      ; out              ;
+; |mux21|P[32]      ; |mux21|P[32]      ; out              ;
+; |mux21|P[33]      ; |mux21|P[33]      ; out              ;
+; |mux21|P[34]      ; |mux21|P[34]      ; out              ;
+; |mux21|P[35]      ; |mux21|P[35]      ; out              ;
+; |mux21|P[36]      ; |mux21|P[36]      ; out              ;
+; |mux21|P[37]      ; |mux21|P[37]      ; out              ;
+; |mux21|P[38]      ; |mux21|P[38]      ; out              ;
+; |mux21|P[39]      ; |mux21|P[39]      ; out              ;
+; |mux21|P[40]      ; |mux21|P[40]      ; out              ;
+; |mux21|Q[0]       ; |mux21|Q[0]       ; out              ;
+; |mux21|Q[1]       ; |mux21|Q[1]       ; out              ;
+; |mux21|Q[2]       ; |mux21|Q[2]       ; out              ;
+; |mux21|Q[3]       ; |mux21|Q[3]       ; out              ;
+; |mux21|Q[4]       ; |mux21|Q[4]       ; out              ;
+; |mux21|Q[5]       ; |mux21|Q[5]       ; out              ;
+; |mux21|Q[6]       ; |mux21|Q[6]       ; out              ;
+; |mux21|Q[7]       ; |mux21|Q[7]       ; out              ;
+; |mux21|Q[8]       ; |mux21|Q[8]       ; out              ;
+; |mux21|Q[9]       ; |mux21|Q[9]       ; out              ;
+; |mux21|Q[10]      ; |mux21|Q[10]      ; out              ;
+; |mux21|Q[11]      ; |mux21|Q[11]      ; out              ;
+; |mux21|Q[12]      ; |mux21|Q[12]      ; out              ;
+; |mux21|Q[13]      ; |mux21|Q[13]      ; out              ;
+; |mux21|Q[14]      ; |mux21|Q[14]      ; out              ;
+; |mux21|Q[15]      ; |mux21|Q[15]      ; out              ;
+; |mux21|Q[16]      ; |mux21|Q[16]      ; out              ;
+; |mux21|Q[17]      ; |mux21|Q[17]      ; out              ;
+; |mux21|Q[18]      ; |mux21|Q[18]      ; out              ;
+; |mux21|Q[19]      ; |mux21|Q[19]      ; out              ;
+; |mux21|Q[20]      ; |mux21|Q[20]      ; out              ;
+; |mux21|Q[21]      ; |mux21|Q[21]      ; out              ;
+; |mux21|Q[22]      ; |mux21|Q[22]      ; out              ;
+; |mux21|Q[23]      ; |mux21|Q[23]      ; out              ;
+; |mux21|Q[24]      ; |mux21|Q[24]      ; out              ;
+; |mux21|Q[25]      ; |mux21|Q[25]      ; out              ;
+; |mux21|Q[26]      ; |mux21|Q[26]      ; out              ;
+; |mux21|Q[27]      ; |mux21|Q[27]      ; out              ;
+; |mux21|Q[28]      ; |mux21|Q[28]      ; out              ;
+; |mux21|Q[29]      ; |mux21|Q[29]      ; out              ;
+; |mux21|Q[30]      ; |mux21|Q[30]      ; out              ;
+; |mux21|Q[31]      ; |mux21|Q[31]      ; out              ;
+; |mux21|Q[32]      ; |mux21|Q[32]      ; out              ;
+; |mux21|Q[33]      ; |mux21|Q[33]      ; out              ;
+; |mux21|Q[34]      ; |mux21|Q[34]      ; out              ;
+; |mux21|Q[35]      ; |mux21|Q[35]      ; out              ;
+; |mux21|Q[36]      ; |mux21|Q[36]      ; out              ;
+; |mux21|Q[37]      ; |mux21|Q[37]      ; out              ;
+; |mux21|Q[38]      ; |mux21|Q[38]      ; out              ;
+; |mux21|Q[39]      ; |mux21|Q[39]      ; out              ;
+; |mux21|Q[40]      ; |mux21|Q[40]      ; out              ;
+; |mux21|f[1]       ; |mux21|f[1]       ; pin_out          ;
+; |mux21|f[3]       ; |mux21|f[3]       ; pin_out          ;
+; |mux21|f[6]       ; |mux21|f[6]       ; pin_out          ;
+; |mux21|f[7]       ; |mux21|f[7]       ; pin_out          ;
+; |mux21|f[8]       ; |mux21|f[8]       ; pin_out          ;
+; |mux21|f[10]      ; |mux21|f[10]      ; pin_out          ;
+; |mux21|f[11]      ; |mux21|f[11]      ; pin_out          ;
+; |mux21|f[12]      ; |mux21|f[12]      ; pin_out          ;
+; |mux21|f[13]      ; |mux21|f[13]      ; pin_out          ;
+; |mux21|f[15]      ; |mux21|f[15]      ; pin_out          ;
+; |mux21|f[20]      ; |mux21|f[20]      ; pin_out          ;
+; |mux21|f[21]      ; |mux21|f[21]      ; pin_out          ;
+; |mux21|f[22]      ; |mux21|f[22]      ; pin_out          ;
+; |mux21|f[23]      ; |mux21|f[23]      ; pin_out          ;
+; |mux21|f[24]      ; |mux21|f[24]      ; pin_out          ;
+; |mux21|f[25]      ; |mux21|f[25]      ; pin_out          ;
+; |mux21|f[26]      ; |mux21|f[26]      ; pin_out          ;
+; |mux21|f[27]      ; |mux21|f[27]      ; pin_out          ;
+; |mux21|f[28]      ; |mux21|f[28]      ; pin_out          ;
+; |mux21|f[29]      ; |mux21|f[29]      ; pin_out          ;
+; |mux21|f[30]      ; |mux21|f[30]      ; pin_out          ;
+; |mux21|f[31]      ; |mux21|f[31]      ; pin_out          ;
+; |mux21|f[32]      ; |mux21|f[32]      ; pin_out          ;
+; |mux21|f[33]      ; |mux21|f[33]      ; pin_out          ;
+; |mux21|f[34]      ; |mux21|f[34]      ; pin_out          ;
+; |mux21|f[35]      ; |mux21|f[35]      ; pin_out          ;
+; |mux21|f[36]      ; |mux21|f[36]      ; pin_out          ;
+; |mux21|f[37]      ; |mux21|f[37]      ; pin_out          ;
+; |mux21|f[38]      ; |mux21|f[38]      ; pin_out          ;
+; |mux21|f[39]      ; |mux21|f[39]      ; pin_out          ;
+; |mux21|f[40]      ; |mux21|f[40]      ; pin_out          ;
++-------------------+-------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Tue Nov 28 03:27:17 2023
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off mux21 -c mux21
+Info: Using vector source file "C:/Users/Marvin/Kuliah/TAHUN KEDUA/Semester 1/Sistem Digital/TUGAS BESAR/NEW DIVIDER REMAKE/testfile/mux21.vwf"
+Info: Overwriting simulation input file with simulation results
+    Info: A backup of mux21.vwf called mux21.sim_ori.vwf has been created in the db folder
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      15.46 %
+Info: Number of transitions in simulation is 347
+Info: Vector file mux21.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 155 megabytes
+    Info: Processing ended: Tue Nov 28 03:27:18 2023
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

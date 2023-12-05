@@ -1,0 +1,1046 @@
+Analysis & Synthesis report for multiplication
+Sat Dec 02 11:34:34 2023
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |Multiplication|AdderSubtractor_M:AddSub|adderFSM:AdderFSMBlok|state
+  9. State Machine - |Multiplication|AdderSubtractor_M:AddSub|FSM_M:FSM_AdderSubtractor|state
+ 10. State Machine - |Multiplication|FSM_Multi:control|cState
+ 11. User-Specified and Inferred Latches
+ 12. Registers Removed During Synthesis
+ 13. General Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Parameter Settings for User Entity Instance: Top-level Entity: |Multiplication
+ 16. Parameter Settings for User Entity Instance: FSM_Multi:control
+ 17. Parameter Settings for User Entity Instance: MSB:MSBP
+ 18. Parameter Settings for User Entity Instance: MSB:MSBQ
+ 19. Parameter Settings for User Entity Instance: ParalelRegister2:reg_p
+ 20. Parameter Settings for User Entity Instance: multiplexer:MuxRegQ
+ 21. Parameter Settings for User Entity Instance: ParalelRegisterQ:reg_q
+ 22. Parameter Settings for User Entity Instance: AdderSubtractor_M:AddSub
+ 23. Parameter Settings for User Entity Instance: AdderSubtractor_M:AddSub|FSM_M:FSM_AdderSubtractor
+ 24. Parameter Settings for User Entity Instance: AdderSubtractor_M:AddSub|FSM_M:FSM_AdderSubtractor|mux21:OUTP
+ 25. Parameter Settings for User Entity Instance: AdderSubtractor_M:AddSub|FSM_M:FSM_AdderSubtractor|mux21:OUTQ
+ 26. Parameter Settings for User Entity Instance: AdderSubtractor_M:AddSub|FSM_M:FSM_AdderSubtractor|S2Comp:COMP_P
+ 27. Parameter Settings for User Entity Instance: AdderSubtractor_M:AddSub|FSM_M:FSM_AdderSubtractor|S2Comp:COMP_Q
+ 28. Parameter Settings for User Entity Instance: AdderSubtractor_M:AddSub|adderFSM:AdderFSMBlok
+ 29. Parameter Settings for User Entity Instance: AdderSubtractor_M:AddSub|adderFSM:AdderFSMBlok|RegisterSerial:RegA
+ 30. Parameter Settings for User Entity Instance: AdderSubtractor_M:AddSub|adderFSM:AdderFSMBlok|RegisterSerial:RegB
+ 31. Parameter Settings for User Entity Instance: AdderSubtractor_M:AddSub|adderFSM:AdderFSMBlok|RegisterSerial:RegS
+ 32. Parameter Settings for User Entity Instance: multiplexer:MuxAcc
+ 33. Parameter Settings for User Entity Instance: ParalelRegister2:Acc
+ 34. Parameter Settings for User Entity Instance: arsShifter:ArsShift
+ 35. Parameter Settings for User Entity Instance: outFinal:OutputFinal
+ 36. Port Connectivity Checks: "AdderSubtractor_M:AddSub|adderFSM:AdderFSMBlok|RegisterSerial:RegS"
+ 37. Port Connectivity Checks: "AdderSubtractor_M:AddSub|adderFSM:AdderFSMBlok|RegisterSerial:RegB"
+ 38. Port Connectivity Checks: "AdderSubtractor_M:AddSub|adderFSM:AdderFSMBlok|RegisterSerial:RegA"
+ 39. Port Connectivity Checks: "AdderSubtractor_M:AddSub|adderFSM:AdderFSMBlok"
+ 40. Port Connectivity Checks: "FSM_Multi:control"
+ 41. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                      ;
++------------------------------------+----------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sat Dec 02 11:34:34 2023        ;
+; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
+; Revision Name                      ; multiplication                               ;
+; Top-level Entity Name              ; Multiplication                               ;
+; Family                             ; Cyclone II                                   ;
+; Total logic elements               ; 707                                          ;
+;     Total combinational functions  ; 576                                          ;
+;     Dedicated logic registers      ; 580                                          ;
+; Total registers                    ; 580                                          ;
+; Total pins                         ; 162                                          ;
+; Total virtual pins                 ; 0                                            ;
+; Total memory bits                  ; 0                                            ;
+; Embedded Multiplier 9-bit elements ; 0                                            ;
+; Total PLLs                         ; 0                                            ;
++------------------------------------+----------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C20F484C7       ;                    ;
+; Top-level entity name                                                      ; Multiplication     ; multiplication     ;
+; Family name                                                                ; Cyclone II         ; Stratix II         ;
+; Use Generated Physical Constraints File                                    ; Off                ;                    ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report                         ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 12     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                     ;
++----------------------------------+-----------------+-----------------------+---------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                                  ;
++----------------------------------+-----------------+-----------------------+---------------------------------------------------------------+
+; adderFSM.vhd                     ; yes             ; User VHDL File        ; C:/ITB/semester 3/Perkalian/Perkalian/adderFSM.vhd            ;
+; RegisterSerial.vhd               ; yes             ; User VHDL File        ; C:/ITB/semester 3/Perkalian/Perkalian/RegisterSerial.vhd      ;
+; S2Comp.vhd                       ; yes             ; User VHDL File        ; C:/ITB/semester 3/Perkalian/Perkalian/S2Comp.vhd              ;
+; ParalelRegisterQ.vhd             ; yes             ; User VHDL File        ; C:/ITB/semester 3/Perkalian/Perkalian/ParalelRegisterQ.vhd    ;
+; arsShifter.vhd                   ; yes             ; User VHDL File        ; C:/ITB/semester 3/Perkalian/Perkalian/arsShifter.vhd          ;
+; FSM_Multi.vhd                    ; yes             ; User VHDL File        ; C:/ITB/semester 3/Perkalian/Perkalian/FSM_Multi.vhd           ;
+; multiplexer.vhd                  ; yes             ; User VHDL File        ; C:/ITB/semester 3/Perkalian/Perkalian/multiplexer.vhd         ;
+; Multiplication.vhd               ; yes             ; User VHDL File        ; C:/ITB/semester 3/Perkalian/Perkalian/Multiplication.vhd      ;
+; mux21.vhd                        ; yes             ; User VHDL File        ; C:/ITB/semester 3/Perkalian/Perkalian/mux21.vhd               ;
+; Output_Finalization.vhd          ; yes             ; User VHDL File        ; C:/ITB/semester 3/Perkalian/Perkalian/Output_Finalization.vhd ;
+; MSB.vhd                          ; yes             ; User VHDL File        ; C:/ITB/semester 3/Perkalian/Perkalian/MSB.vhd                 ;
+; paralelregister2.vhd             ; yes             ; Auto-Found VHDL File  ; C:/ITB/semester 3/Perkalian/Perkalian/paralelregister2.vhd    ;
+; addersubtractor_m.vhd            ; yes             ; Auto-Found VHDL File  ; C:/ITB/semester 3/Perkalian/Perkalian/addersubtractor_m.vhd   ;
+; fsm_m.vhd                        ; yes             ; Auto-Found VHDL File  ; C:/ITB/semester 3/Perkalian/Perkalian/fsm_m.vhd               ;
++----------------------------------+-----------------+-----------------------+---------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 707   ;
+;                                             ;       ;
+; Total combinational functions               ; 576   ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 211   ;
+;     -- 3 input functions                    ; 302   ;
+;     -- <=2 input functions                  ; 63    ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 527   ;
+;     -- arithmetic mode                      ; 49    ;
+;                                             ;       ;
+; Total registers                             ; 580   ;
+;     -- Dedicated logic registers            ; 580   ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 162   ;
+; Maximum fan-out node                        ; Clk   ;
+; Maximum fan-out                             ; 580   ;
+; Total fan-out                               ; 3301  ;
+; Average fan-out                             ; 2.50  ;
++---------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                               ;
++-----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node        ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                ; Library Name ;
++-----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------+--------------+
+; |Multiplication                   ; 576 (1)           ; 580 (0)      ; 0           ; 0            ; 0       ; 0         ; 162  ; 0            ; |Multiplication                                                                    ; work         ;
+;    |AdderSubtractor_M:AddSub|     ; 311 (0)           ; 264 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiplication|AdderSubtractor_M:AddSub                                           ; work         ;
+;       |FSM_M:FSM_AdderSubtractor| ; 170 (89)          ; 130 (8)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiplication|AdderSubtractor_M:AddSub|FSM_M:FSM_AdderSubtractor                 ; work         ;
+;          |S2Comp:COMP_Q|          ; 40 (40)           ; 41 (41)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiplication|AdderSubtractor_M:AddSub|FSM_M:FSM_AdderSubtractor|S2Comp:COMP_Q   ; work         ;
+;          |mux21:OUTP|             ; 0 (0)             ; 40 (40)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiplication|AdderSubtractor_M:AddSub|FSM_M:FSM_AdderSubtractor|mux21:OUTP      ; work         ;
+;          |mux21:OUTQ|             ; 41 (41)           ; 41 (41)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiplication|AdderSubtractor_M:AddSub|FSM_M:FSM_AdderSubtractor|mux21:OUTQ      ;              ;
+;       |adderFSM:AdderFSMBlok|     ; 141 (19)          ; 134 (11)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiplication|AdderSubtractor_M:AddSub|adderFSM:AdderFSMBlok                     ; work         ;
+;          |RegisterSerial:RegA|    ; 41 (41)           ; 41 (41)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiplication|AdderSubtractor_M:AddSub|adderFSM:AdderFSMBlok|RegisterSerial:RegA ; work         ;
+;          |RegisterSerial:RegB|    ; 41 (41)           ; 41 (41)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiplication|AdderSubtractor_M:AddSub|adderFSM:AdderFSMBlok|RegisterSerial:RegB ; work         ;
+;          |RegisterSerial:RegS|    ; 40 (40)           ; 41 (41)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiplication|AdderSubtractor_M:AddSub|adderFSM:AdderFSMBlok|RegisterSerial:RegS ; work         ;
+;    |FSM_Multi:control|            ; 43 (43)           ; 27 (27)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiplication|FSM_Multi:control                                                  ;              ;
+;    |MSB:MSBP|                     ; 0 (0)             ; 41 (41)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiplication|MSB:MSBP                                                           ; work         ;
+;    |MSB:MSBQ|                     ; 0 (0)             ; 41 (41)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiplication|MSB:MSBQ                                                           ; work         ;
+;    |ParalelRegister2:Acc|         ; 43 (43)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiplication|ParalelRegister2:Acc                                               ; work         ;
+;    |ParalelRegister2:reg_p|       ; 41 (41)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiplication|ParalelRegister2:reg_p                                             ; work         ;
+;    |ParalelRegisterQ:reg_q|       ; 41 (41)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiplication|ParalelRegisterQ:reg_q                                             ; work         ;
+;    |arsShifter:ArsShift|          ; 0 (0)             ; 82 (82)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiplication|arsShifter:ArsShift                                                ; work         ;
+;    |multiplexer:MuxAcc|           ; 41 (41)           ; 41 (41)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiplication|multiplexer:MuxAcc                                                 ; work         ;
+;    |multiplexer:MuxRegQ|          ; 41 (41)           ; 41 (41)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiplication|multiplexer:MuxRegQ                                                ; work         ;
+;    |outFinal:OutputFinal|         ; 14 (14)           ; 43 (43)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Multiplication|outFinal:OutputFinal                                               ; work         ;
++-----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------+
+; State Machine - |Multiplication|AdderSubtractor_M:AddSub|adderFSM:AdderFSMBlok|state  ;
++--------------------+--------------------+------------+---------+---------+------------+
+; Name               ; state.doneWithCary ; state.done ; state.H ; state.G ; state.init ;
++--------------------+--------------------+------------+---------+---------+------------+
+; state.init         ; 0                  ; 0          ; 0       ; 0       ; 0          ;
+; state.G            ; 0                  ; 0          ; 0       ; 1       ; 1          ;
+; state.H            ; 0                  ; 0          ; 1       ; 0       ; 1          ;
+; state.done         ; 0                  ; 1          ; 0       ; 0       ; 1          ;
+; state.doneWithCary ; 1                  ; 0          ; 0       ; 0       ; 1          ;
++--------------------+--------------------+------------+---------+---------+------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Multiplication|AdderSubtractor_M:AddSub|FSM_M:FSM_AdderSubtractor|state                                  ;
++------------------+------------+------------------+----------+----------+----------+----------+---------------+------------+
+; Name             ; state.done ; state.wait_adder ; state.s4 ; state.s3 ; state.s2 ; state.s1 ; state.compare ; state.init ;
++------------------+------------+------------------+----------+----------+----------+----------+---------------+------------+
+; state.init       ; 0          ; 0                ; 0        ; 0        ; 0        ; 0        ; 0             ; 0          ;
+; state.compare    ; 0          ; 0                ; 0        ; 0        ; 0        ; 0        ; 1             ; 1          ;
+; state.s1         ; 0          ; 0                ; 0        ; 0        ; 0        ; 1        ; 0             ; 1          ;
+; state.s2         ; 0          ; 0                ; 0        ; 0        ; 1        ; 0        ; 0             ; 1          ;
+; state.s3         ; 0          ; 0                ; 0        ; 1        ; 0        ; 0        ; 0             ; 1          ;
+; state.s4         ; 0          ; 0                ; 1        ; 0        ; 0        ; 0        ; 0             ; 1          ;
+; state.wait_adder ; 0          ; 1                ; 0        ; 0        ; 0        ; 0        ; 0             ; 1          ;
+; state.done       ; 1          ; 0                ; 0        ; 0        ; 0        ; 0        ; 0             ; 1          ;
++------------------+------------+------------------+----------+----------+----------+----------+---------------+------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Multiplication|FSM_Multi:control|cState                                                                                                                                                                                                  ;
++-------------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+-----------+-----------+-----------+-----------+-------------+
+; Name        ; cState.R ; cState.Q ; cState.P ; cState.O ; cState.S ; cState.M ; cState.L ; cState.K ; cState.J ; cState.I ; cState.H ; cState.G ; cState.F ; cState.E ; cState.D ; cState.C ; cState.B2 ; cState.B1 ; cState.A2 ; cState.A1 ; cState.awal ;
++-------------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+-----------+-----------+-----------+-----------+-------------+
+; cState.awal ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0         ; 0         ; 0         ; 0         ; 0           ;
+; cState.A1   ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0         ; 0         ; 0         ; 1         ; 1           ;
+; cState.A2   ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0         ; 0         ; 1         ; 0         ; 1           ;
+; cState.B1   ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0         ; 1         ; 0         ; 0         ; 1           ;
+; cState.B2   ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1         ; 0         ; 0         ; 0         ; 1           ;
+; cState.C    ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0         ; 0         ; 0         ; 0         ; 1           ;
+; cState.D    ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 0         ; 0         ; 0         ; 0         ; 1           ;
+; cState.E    ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 0         ; 0         ; 0         ; 0         ; 1           ;
+; cState.F    ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 0         ; 0         ; 0         ; 0         ; 1           ;
+; cState.G    ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 0         ; 0         ; 0         ; 0         ; 1           ;
+; cState.H    ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0         ; 0         ; 0         ; 0         ; 1           ;
+; cState.I    ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0         ; 0         ; 0         ; 0         ; 1           ;
+; cState.J    ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0         ; 0         ; 0         ; 0         ; 1           ;
+; cState.K    ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0         ; 0         ; 0         ; 0         ; 1           ;
+; cState.L    ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0         ; 0         ; 0         ; 0         ; 1           ;
+; cState.M    ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0         ; 0         ; 0         ; 0         ; 1           ;
+; cState.S    ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0         ; 0         ; 0         ; 0         ; 1           ;
+; cState.O    ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0         ; 0         ; 0         ; 0         ; 1           ;
+; cState.P    ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0         ; 0         ; 0         ; 0         ; 1           ;
+; cState.Q    ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0         ; 0         ; 0         ; 0         ; 1           ;
+; cState.R    ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0         ; 0         ; 0         ; 0         ; 1           ;
++-------------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+----------+-----------+-----------+-----------+-----------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                                                    ;
++----------------------------------------------------------+--------------------------------------------------------------------+------------------------+
+; Latch Name                                               ; Latch Enable Signal                                                ; Free of Timing Hazards ;
++----------------------------------------------------------+--------------------------------------------------------------------+------------------------+
+; ParalelRegisterQ:reg_q|Qlsbb                             ; ParalelRegisterQ:reg_q|Equal0                                      ; yes                    ;
+; ParalelRegisterQ:reg_q|REG[1]                            ; ParalelRegisterQ:reg_q|Equal0                                      ; yes                    ;
+; ParalelRegisterQ:reg_q|REG[2]                            ; ParalelRegisterQ:reg_q|Equal0                                      ; yes                    ;
+; ParalelRegisterQ:reg_q|REG[3]                            ; ParalelRegisterQ:reg_q|Equal0                                      ; yes                    ;
+; ParalelRegisterQ:reg_q|REG[4]                            ; ParalelRegisterQ:reg_q|Equal0                                      ; yes                    ;
+; ParalelRegisterQ:reg_q|REG[5]                            ; ParalelRegisterQ:reg_q|Equal0                                      ; yes                    ;
+; ParalelRegisterQ:reg_q|REG[6]                            ; ParalelRegisterQ:reg_q|Equal0                                      ; yes                    ;
+; ParalelRegisterQ:reg_q|REG[7]                            ; ParalelRegisterQ:reg_q|Equal0                                      ; yes                    ;
+; ParalelRegisterQ:reg_q|REG[8]                            ; ParalelRegisterQ:reg_q|Equal0                                      ; yes                    ;
+; ParalelRegisterQ:reg_q|REG[9]                            ; ParalelRegisterQ:reg_q|Equal0                                      ; yes                    ;
+; ParalelRegisterQ:reg_q|REG[10]                           ; ParalelRegisterQ:reg_q|Equal0                                      ; yes                    ;
+; ParalelRegisterQ:reg_q|REG[11]                           ; ParalelRegisterQ:reg_q|Equal0                                      ; yes                    ;
+; ParalelRegisterQ:reg_q|REG[12]                           ; ParalelRegisterQ:reg_q|Equal0                                      ; yes                    ;
+; ParalelRegisterQ:reg_q|REG[13]                           ; ParalelRegisterQ:reg_q|Equal0                                      ; yes                    ;
+; ParalelRegisterQ:reg_q|REG[14]                           ; ParalelRegisterQ:reg_q|Equal0                                      ; yes                    ;
+; ParalelRegisterQ:reg_q|REG[15]                           ; ParalelRegisterQ:reg_q|Equal0                                      ; yes                    ;
+; ParalelRegisterQ:reg_q|REG[16]                           ; ParalelRegisterQ:reg_q|Equal0                                      ; yes                    ;
+; ParalelRegisterQ:reg_q|REG[17]                           ; ParalelRegisterQ:reg_q|Equal0                                      ; yes                    ;
+; ParalelRegisterQ:reg_q|REG[18]                           ; ParalelRegisterQ:reg_q|Equal0                                      ; yes                    ;
+; ParalelRegisterQ:reg_q|REG[19]                           ; ParalelRegisterQ:reg_q|Equal0                                      ; yes                    ;
+; ParalelRegisterQ:reg_q|REG[20]                           ; ParalelRegisterQ:reg_q|Equal0                                      ; yes                    ;
+; ParalelRegisterQ:reg_q|REG[21]                           ; ParalelRegisterQ:reg_q|Equal0                                      ; yes                    ;
+; ParalelRegisterQ:reg_q|REG[22]                           ; ParalelRegisterQ:reg_q|Equal0                                      ; yes                    ;
+; ParalelRegisterQ:reg_q|REG[23]                           ; ParalelRegisterQ:reg_q|Equal0                                      ; yes                    ;
+; ParalelRegisterQ:reg_q|REG[24]                           ; ParalelRegisterQ:reg_q|Equal0                                      ; yes                    ;
+; ParalelRegisterQ:reg_q|REG[25]                           ; ParalelRegisterQ:reg_q|Equal0                                      ; yes                    ;
+; ParalelRegisterQ:reg_q|REG[26]                           ; ParalelRegisterQ:reg_q|Equal0                                      ; yes                    ;
+; ParalelRegisterQ:reg_q|REG[27]                           ; ParalelRegisterQ:reg_q|Equal0                                      ; yes                    ;
+; ParalelRegisterQ:reg_q|REG[28]                           ; ParalelRegisterQ:reg_q|Equal0                                      ; yes                    ;
+; ParalelRegisterQ:reg_q|REG[29]                           ; ParalelRegisterQ:reg_q|Equal0                                      ; yes                    ;
+; ParalelRegisterQ:reg_q|REG[30]                           ; ParalelRegisterQ:reg_q|Equal0                                      ; yes                    ;
+; ParalelRegisterQ:reg_q|REG[31]                           ; ParalelRegisterQ:reg_q|Equal0                                      ; yes                    ;
+; ParalelRegisterQ:reg_q|REG[32]                           ; ParalelRegisterQ:reg_q|Equal0                                      ; yes                    ;
+; ParalelRegisterQ:reg_q|REG[33]                           ; ParalelRegisterQ:reg_q|Equal0                                      ; yes                    ;
+; ParalelRegisterQ:reg_q|REG[34]                           ; ParalelRegisterQ:reg_q|Equal0                                      ; yes                    ;
+; ParalelRegisterQ:reg_q|REG[35]                           ; ParalelRegisterQ:reg_q|Equal0                                      ; yes                    ;
+; ParalelRegisterQ:reg_q|REG[36]                           ; ParalelRegisterQ:reg_q|Equal0                                      ; yes                    ;
+; ParalelRegisterQ:reg_q|REG[37]                           ; ParalelRegisterQ:reg_q|Equal0                                      ; yes                    ;
+; ParalelRegisterQ:reg_q|REG[38]                           ; ParalelRegisterQ:reg_q|Equal0                                      ; yes                    ;
+; ParalelRegisterQ:reg_q|REG[39]                           ; ParalelRegisterQ:reg_q|Equal0                                      ; yes                    ;
+; ParalelRegisterQ:reg_q|REG[40]                           ; ParalelRegisterQ:reg_q|Equal0                                      ; yes                    ;
+; ParalelRegister2:Acc|REG[0]                              ; ParalelRegister2:Acc|Equal0                                        ; yes                    ;
+; ParalelRegister2:Acc|REG[1]                              ; ParalelRegister2:Acc|Equal0                                        ; yes                    ;
+; ParalelRegister2:Acc|REG[2]                              ; ParalelRegister2:Acc|Equal0                                        ; yes                    ;
+; ParalelRegister2:Acc|REG[3]                              ; ParalelRegister2:Acc|Equal0                                        ; yes                    ;
+; ParalelRegister2:Acc|REG[4]                              ; ParalelRegister2:Acc|Equal0                                        ; yes                    ;
+; ParalelRegister2:Acc|REG[5]                              ; ParalelRegister2:Acc|Equal0                                        ; yes                    ;
+; ParalelRegister2:Acc|REG[6]                              ; ParalelRegister2:Acc|Equal0                                        ; yes                    ;
+; ParalelRegister2:Acc|REG[7]                              ; ParalelRegister2:Acc|Equal0                                        ; yes                    ;
+; ParalelRegister2:Acc|REG[8]                              ; ParalelRegister2:Acc|Equal0                                        ; yes                    ;
+; ParalelRegister2:Acc|REG[9]                              ; ParalelRegister2:Acc|Equal0                                        ; yes                    ;
+; ParalelRegister2:Acc|REG[10]                             ; ParalelRegister2:Acc|Equal0                                        ; yes                    ;
+; ParalelRegister2:Acc|REG[11]                             ; ParalelRegister2:Acc|Equal0                                        ; yes                    ;
+; ParalelRegister2:Acc|REG[12]                             ; ParalelRegister2:Acc|Equal0                                        ; yes                    ;
+; ParalelRegister2:Acc|REG[13]                             ; ParalelRegister2:Acc|Equal0                                        ; yes                    ;
+; ParalelRegister2:Acc|REG[14]                             ; ParalelRegister2:Acc|Equal0                                        ; yes                    ;
+; ParalelRegister2:Acc|REG[15]                             ; ParalelRegister2:Acc|Equal0                                        ; yes                    ;
+; ParalelRegister2:Acc|REG[16]                             ; ParalelRegister2:Acc|Equal0                                        ; yes                    ;
+; ParalelRegister2:Acc|REG[17]                             ; ParalelRegister2:Acc|Equal0                                        ; yes                    ;
+; ParalelRegister2:Acc|REG[18]                             ; ParalelRegister2:Acc|Equal0                                        ; yes                    ;
+; ParalelRegister2:Acc|REG[19]                             ; ParalelRegister2:Acc|Equal0                                        ; yes                    ;
+; ParalelRegister2:Acc|REG[20]                             ; ParalelRegister2:Acc|Equal0                                        ; yes                    ;
+; ParalelRegister2:Acc|REG[21]                             ; ParalelRegister2:Acc|Equal0                                        ; yes                    ;
+; ParalelRegister2:Acc|REG[22]                             ; ParalelRegister2:Acc|Equal0                                        ; yes                    ;
+; ParalelRegister2:Acc|REG[23]                             ; ParalelRegister2:Acc|Equal0                                        ; yes                    ;
+; ParalelRegister2:Acc|REG[24]                             ; ParalelRegister2:Acc|Equal0                                        ; yes                    ;
+; ParalelRegister2:Acc|REG[25]                             ; ParalelRegister2:Acc|Equal0                                        ; yes                    ;
+; ParalelRegister2:Acc|REG[26]                             ; ParalelRegister2:Acc|Equal0                                        ; yes                    ;
+; ParalelRegister2:Acc|REG[27]                             ; ParalelRegister2:Acc|Equal0                                        ; yes                    ;
+; ParalelRegister2:Acc|REG[28]                             ; ParalelRegister2:Acc|Equal0                                        ; yes                    ;
+; ParalelRegister2:Acc|REG[29]                             ; ParalelRegister2:Acc|Equal0                                        ; yes                    ;
+; ParalelRegister2:Acc|REG[30]                             ; ParalelRegister2:Acc|Equal0                                        ; yes                    ;
+; ParalelRegister2:Acc|REG[31]                             ; ParalelRegister2:Acc|Equal0                                        ; yes                    ;
+; ParalelRegister2:Acc|REG[32]                             ; ParalelRegister2:Acc|Equal0                                        ; yes                    ;
+; ParalelRegister2:Acc|REG[33]                             ; ParalelRegister2:Acc|Equal0                                        ; yes                    ;
+; ParalelRegister2:Acc|REG[34]                             ; ParalelRegister2:Acc|Equal0                                        ; yes                    ;
+; ParalelRegister2:Acc|REG[35]                             ; ParalelRegister2:Acc|Equal0                                        ; yes                    ;
+; ParalelRegister2:Acc|REG[36]                             ; ParalelRegister2:Acc|Equal0                                        ; yes                    ;
+; ParalelRegister2:Acc|REG[37]                             ; ParalelRegister2:Acc|Equal0                                        ; yes                    ;
+; ParalelRegister2:Acc|REG[38]                             ; ParalelRegister2:Acc|Equal0                                        ; yes                    ;
+; ParalelRegister2:Acc|REG[39]                             ; ParalelRegister2:Acc|Equal0                                        ; yes                    ;
+; ParalelRegister2:Acc|REG[40]                             ; ParalelRegister2:Acc|Equal0                                        ; yes                    ;
+; ParalelRegisterQ:reg_q|REG[0]                            ; ParalelRegisterQ:reg_q|Equal0                                      ; yes                    ;
+; AdderSubtractor_M:AddSub|FSM_M:FSM_AdderSubtractor|P[40] ; AdderSubtractor_M:AddSub|FSM_M:FSM_AdderSubtractor|AdderSubtractor ; yes                    ;
+; AdderSubtractor_M:AddSub|FSM_M:FSM_AdderSubtractor|P[0]  ; AdderSubtractor_M:AddSub|FSM_M:FSM_AdderSubtractor|AdderSubtractor ; yes                    ;
+; AdderSubtractor_M:AddSub|FSM_M:FSM_AdderSubtractor|Q[0]  ; AdderSubtractor_M:AddSub|FSM_M:FSM_AdderSubtractor|AdderSubtractor ; yes                    ;
+; AdderSubtractor_M:AddSub|FSM_M:FSM_AdderSubtractor|P[1]  ; AdderSubtractor_M:AddSub|FSM_M:FSM_AdderSubtractor|AdderSubtractor ; yes                    ;
+; ParalelRegister2:reg_p|REG[0]                            ; ParalelRegister2:reg_p|Equal0                                      ; yes                    ;
+; AdderSubtractor_M:AddSub|FSM_M:FSM_AdderSubtractor|Q[1]  ; AdderSubtractor_M:AddSub|FSM_M:FSM_AdderSubtractor|AdderSubtractor ; yes                    ;
+; AdderSubtractor_M:AddSub|FSM_M:FSM_AdderSubtractor|P[2]  ; AdderSubtractor_M:AddSub|FSM_M:FSM_AdderSubtractor|AdderSubtractor ; yes                    ;
+; ParalelRegister2:reg_p|REG[1]                            ; ParalelRegister2:reg_p|Equal0                                      ; yes                    ;
+; AdderSubtractor_M:AddSub|FSM_M:FSM_AdderSubtractor|Q[2]  ; AdderSubtractor_M:AddSub|FSM_M:FSM_AdderSubtractor|AdderSubtractor ; yes                    ;
+; AdderSubtractor_M:AddSub|FSM_M:FSM_AdderSubtractor|P[3]  ; AdderSubtractor_M:AddSub|FSM_M:FSM_AdderSubtractor|AdderSubtractor ; yes                    ;
+; ParalelRegister2:reg_p|REG[2]                            ; ParalelRegister2:reg_p|Equal0                                      ; yes                    ;
+; AdderSubtractor_M:AddSub|FSM_M:FSM_AdderSubtractor|Q[3]  ; AdderSubtractor_M:AddSub|FSM_M:FSM_AdderSubtractor|AdderSubtractor ; yes                    ;
+; AdderSubtractor_M:AddSub|FSM_M:FSM_AdderSubtractor|P[4]  ; AdderSubtractor_M:AddSub|FSM_M:FSM_AdderSubtractor|AdderSubtractor ; yes                    ;
+; ParalelRegister2:reg_p|REG[3]                            ; ParalelRegister2:reg_p|Equal0                                      ; yes                    ;
+; AdderSubtractor_M:AddSub|FSM_M:FSM_AdderSubtractor|Q[4]  ; AdderSubtractor_M:AddSub|FSM_M:FSM_AdderSubtractor|AdderSubtractor ; yes                    ;
+; AdderSubtractor_M:AddSub|FSM_M:FSM_AdderSubtractor|P[5]  ; AdderSubtractor_M:AddSub|FSM_M:FSM_AdderSubtractor|AdderSubtractor ; yes                    ;
+; ParalelRegister2:reg_p|REG[4]                            ; ParalelRegister2:reg_p|Equal0                                      ; yes                    ;
+; Number of user-specified and inferred latches = 204      ;                                                                    ;                        ;
++----------------------------------------------------------+--------------------------------------------------------------------+------------------------+
+Table restricted to first 100 entries. Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                    ;
++---------------------------------------------------------------------+---------------------------------------------------------------------------------+
+; Register name                                                       ; Reason for Removal                                                              ;
++---------------------------------------------------------------------+---------------------------------------------------------------------------------+
+; arsShifter:ArsShift|Aout[40]                                        ; Merged with arsShifter:ArsShift|Aout[39]                                        ;
+; AdderSubtractor_M:AddSub|FSM_M:FSM_AdderSubtractor|SP               ; Stuck at GND due to stuck port data_in                                          ;
+; AdderSubtractor_M:AddSub|FSM_M:FSM_AdderSubtractor|state.s3         ; Lost fanout                                                                     ;
+; AdderSubtractor_M:AddSub|FSM_M:FSM_AdderSubtractor|state.s4         ; Lost fanout                                                                     ;
+; AdderSubtractor_M:AddSub|FSM_M:FSM_AdderSubtractor|mux21:OUTP|f[40] ; Merged with AdderSubtractor_M:AddSub|FSM_M:FSM_AdderSubtractor|mux21:OUTP|f[39] ;
+; Total Number of Removed Registers = 5                               ;                                                                                 ;
++---------------------------------------------------------------------+---------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 580   ;
+; Number of registers using Synchronous Clear  ; 1     ;
+; Number of registers using Synchronous Load   ; 12    ;
+; Number of registers using Asynchronous Clear ; 32    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 176   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------+
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |Multiplication|FSM_Multi:control|count[0]                               ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |Multiplication|AdderSubtractor_M:AddSub|adderFSM:AdderFSMBlok|count[0]  ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Multiplication|AdderSubtractor_M:AddSub|FSM_M:FSM_AdderSubtractor|state ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |Multiplication|FSM_Multi:control|nState.Q                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |Multiplication ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; N              ; 41    ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FSM_Multi:control ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; N              ; 41    ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------+
+; Parameter Settings for User Entity Instance: MSB:MSBP ;
++----------------+-------+------------------------------+
+; Parameter Name ; Value ; Type                         ;
++----------------+-------+------------------------------+
+; n              ; 41    ; Signed Integer               ;
++----------------+-------+------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------+
+; Parameter Settings for User Entity Instance: MSB:MSBQ ;
++----------------+-------+------------------------------+
+; Parameter Name ; Value ; Type                         ;
++----------------+-------+------------------------------+
+; n              ; 41    ; Signed Integer               ;
++----------------+-------+------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ParalelRegister2:reg_p ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; n              ; 41    ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: multiplexer:MuxRegQ ;
++----------------+-------+-----------------------------------------+
+; Parameter Name ; Value ; Type                                    ;
++----------------+-------+-----------------------------------------+
+; n              ; 41    ; Signed Integer                          ;
++----------------+-------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ParalelRegisterQ:reg_q ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; n              ; 41    ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: AdderSubtractor_M:AddSub ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; n              ; 41    ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: AdderSubtractor_M:AddSub|FSM_M:FSM_AdderSubtractor ;
++----------------+-------+------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                   ;
++----------------+-------+------------------------------------------------------------------------+
+; n              ; 41    ; Signed Integer                                                         ;
++----------------+-------+------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: AdderSubtractor_M:AddSub|FSM_M:FSM_AdderSubtractor|mux21:OUTP ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                              ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; n              ; 41    ; Signed Integer                                                                    ;
++----------------+-------+-----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: AdderSubtractor_M:AddSub|FSM_M:FSM_AdderSubtractor|mux21:OUTQ ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                              ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; n              ; 41    ; Signed Integer                                                                    ;
++----------------+-------+-----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: AdderSubtractor_M:AddSub|FSM_M:FSM_AdderSubtractor|S2Comp:COMP_P ;
++----------------+-------+--------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                 ;
++----------------+-------+--------------------------------------------------------------------------------------+
+; n              ; 41    ; Signed Integer                                                                       ;
++----------------+-------+--------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: AdderSubtractor_M:AddSub|FSM_M:FSM_AdderSubtractor|S2Comp:COMP_Q ;
++----------------+-------+--------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                 ;
++----------------+-------+--------------------------------------------------------------------------------------+
+; n              ; 41    ; Signed Integer                                                                       ;
++----------------+-------+--------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: AdderSubtractor_M:AddSub|adderFSM:AdderFSMBlok ;
++----------------+-------+--------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                               ;
++----------------+-------+--------------------------------------------------------------------+
+; n              ; 41    ; Signed Integer                                                     ;
++----------------+-------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: AdderSubtractor_M:AddSub|adderFSM:AdderFSMBlok|RegisterSerial:RegA ;
++----------------+-------+----------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                   ;
++----------------+-------+----------------------------------------------------------------------------------------+
+; n              ; 41    ; Signed Integer                                                                         ;
++----------------+-------+----------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: AdderSubtractor_M:AddSub|adderFSM:AdderFSMBlok|RegisterSerial:RegB ;
++----------------+-------+----------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                   ;
++----------------+-------+----------------------------------------------------------------------------------------+
+; n              ; 41    ; Signed Integer                                                                         ;
++----------------+-------+----------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: AdderSubtractor_M:AddSub|adderFSM:AdderFSMBlok|RegisterSerial:RegS ;
++----------------+-------+----------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                   ;
++----------------+-------+----------------------------------------------------------------------------------------+
+; n              ; 41    ; Signed Integer                                                                         ;
++----------------+-------+----------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: multiplexer:MuxAcc ;
++----------------+-------+----------------------------------------+
+; Parameter Name ; Value ; Type                                   ;
++----------------+-------+----------------------------------------+
+; n              ; 41    ; Signed Integer                         ;
++----------------+-------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ParalelRegister2:Acc ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; n              ; 41    ; Signed Integer                           ;
++----------------+-------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arsShifter:ArsShift ;
++----------------+-------+-----------------------------------------+
+; Parameter Name ; Value ; Type                                    ;
++----------------+-------+-----------------------------------------+
+; n              ; 41    ; Signed Integer                          ;
++----------------+-------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: outFinal:OutputFinal ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; n              ; 41    ; Signed Integer                           ;
++----------------+-------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "AdderSubtractor_M:AddSub|adderFSM:AdderFSMBlok|RegisterSerial:RegS" ;
++--------+-------+----------+--------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                            ;
++--------+-------+----------+--------------------------------------------------------------------+
+; in_reg ; Input ; Info     ; Stuck at GND                                                       ;
++--------+-------+----------+--------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "AdderSubtractor_M:AddSub|adderFSM:AdderFSMBlok|RegisterSerial:RegB"                     ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; w        ; Input  ; Info     ; Stuck at GND                                                                        ;
+; en       ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; q[40..1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "AdderSubtractor_M:AddSub|adderFSM:AdderFSMBlok|RegisterSerial:RegA"                     ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; w        ; Input  ; Info     ; Stuck at GND                                                                        ;
+; en       ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; q[40..1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "AdderSubtractor_M:AddSub|adderFSM:AdderFSMBlok"                                     ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; ens  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FSM_Multi:control"                                                                       ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; selectorp ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ct2s      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Sat Dec 02 11:34:32 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off multiplication -c multiplication
+Warning: Can't analyze file -- file ParalelRegister.vhd is missing
+Info: Found 2 design units, including 1 entities, in source file adderfsm.vhd
+    Info: Found design unit 1: adderFSM-adderFSM_arc
+    Info: Found entity 1: adderFSM
+Warning: Can't analyze file -- file AdderSubtractor.vhd is missing
+Warning: Can't analyze file -- file FSM.vhd is missing
+Info: Found 2 design units, including 1 entities, in source file registerserial.vhd
+    Info: Found design unit 1: RegisterSerial-register_arc
+    Info: Found entity 1: RegisterSerial
+Info: Found 2 design units, including 1 entities, in source file s2comp.vhd
+    Info: Found design unit 1: S2Comp-S2Compp_arc
+    Info: Found entity 1: S2Comp
+Info: Found 2 design units, including 1 entities, in source file paralelregisterp.vhd
+    Info: Found design unit 1: ParalelRegisterr-register_arc
+    Info: Found entity 1: ParalelRegisterr
+Info: Found 2 design units, including 1 entities, in source file paralelregisterq.vhd
+    Info: Found design unit 1: ParalelRegisterQ-registerQ_arc
+    Info: Found entity 1: ParalelRegisterQ
+Info: Found 2 design units, including 1 entities, in source file arsshifter.vhd
+    Info: Found design unit 1: arsShifter-ars_arc
+    Info: Found entity 1: arsShifter
+Info: Found 2 design units, including 1 entities, in source file fsm_multi.vhd
+    Info: Found design unit 1: FSM_Multi-FSM_arc
+    Info: Found entity 1: FSM_Multi
+Info: Found 2 design units, including 1 entities, in source file multiplexer.vhd
+    Info: Found design unit 1: multiplexer-Behavior
+    Info: Found entity 1: multiplexer
+Info: Found 2 design units, including 1 entities, in source file multiplication.vhd
+    Info: Found design unit 1: Multiplication-Multi_arc
+    Info: Found entity 1: Multiplication
+Info: Found 2 design units, including 1 entities, in source file mux21.vhd
+    Info: Found design unit 1: mux21-Behavior
+    Info: Found entity 1: mux21
+Info: Found 2 design units, including 1 entities, in source file output_finalization.vhd
+    Info: Found design unit 1: outFinal-outFinal_arc
+    Info: Found entity 1: outFinal
+Info: Found 2 design units, including 1 entities, in source file msb.vhd
+    Info: Found design unit 1: MSB-MSB_arc
+    Info: Found entity 1: MSB
+Info: Elaborating entity "Multiplication" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at Multiplication.vhd(134): object "Ct_comp" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at Multiplication.vhd(136): object "selectorP" assigned a value but never read
+Info: Elaborating entity "FSM_Multi" for hierarchy "FSM_Multi:control"
+Warning (10492): VHDL Process Statement warning at FSM_Multi.vhd(43): signal "cState" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at FSM_Multi.vhd(113): signal "count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at FSM_Multi.vhd(114): signal "QMSB" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at FSM_Multi.vhd(114): signal "PMSB" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info: Elaborating entity "MSB" for hierarchy "MSB:MSBP"
+Warning (10492): VHDL Process Statement warning at MSB.vhd(26): signal "firstbit" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at MSB.vhd(27): signal "otherbit" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning: Using design file paralelregister2.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info: Found design unit 1: ParalelRegister2-register_arc
+    Info: Found entity 1: ParalelRegister2
+Info: Elaborating entity "ParalelRegister2" for hierarchy "ParalelRegister2:reg_p"
+Warning (10492): VHDL Process Statement warning at paralelregister2.vhd(24): signal "IN_REG" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at paralelregister2.vhd(27): signal "REG" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at paralelregister2.vhd(20): inferring latch(es) for signal or variable "REG", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "REG[0]" at paralelregister2.vhd(20)
+Info (10041): Inferred latch for "REG[1]" at paralelregister2.vhd(20)
+Info (10041): Inferred latch for "REG[2]" at paralelregister2.vhd(20)
+Info (10041): Inferred latch for "REG[3]" at paralelregister2.vhd(20)
+Info (10041): Inferred latch for "REG[4]" at paralelregister2.vhd(20)
+Info (10041): Inferred latch for "REG[5]" at paralelregister2.vhd(20)
+Info (10041): Inferred latch for "REG[6]" at paralelregister2.vhd(20)
+Info (10041): Inferred latch for "REG[7]" at paralelregister2.vhd(20)
+Info (10041): Inferred latch for "REG[8]" at paralelregister2.vhd(20)
+Info (10041): Inferred latch for "REG[9]" at paralelregister2.vhd(20)
+Info (10041): Inferred latch for "REG[10]" at paralelregister2.vhd(20)
+Info (10041): Inferred latch for "REG[11]" at paralelregister2.vhd(20)
+Info (10041): Inferred latch for "REG[12]" at paralelregister2.vhd(20)
+Info (10041): Inferred latch for "REG[13]" at paralelregister2.vhd(20)
+Info (10041): Inferred latch for "REG[14]" at paralelregister2.vhd(20)
+Info (10041): Inferred latch for "REG[15]" at paralelregister2.vhd(20)
+Info (10041): Inferred latch for "REG[16]" at paralelregister2.vhd(20)
+Info (10041): Inferred latch for "REG[17]" at paralelregister2.vhd(20)
+Info (10041): Inferred latch for "REG[18]" at paralelregister2.vhd(20)
+Info (10041): Inferred latch for "REG[19]" at paralelregister2.vhd(20)
+Info (10041): Inferred latch for "REG[20]" at paralelregister2.vhd(20)
+Info (10041): Inferred latch for "REG[21]" at paralelregister2.vhd(20)
+Info (10041): Inferred latch for "REG[22]" at paralelregister2.vhd(20)
+Info (10041): Inferred latch for "REG[23]" at paralelregister2.vhd(20)
+Info (10041): Inferred latch for "REG[24]" at paralelregister2.vhd(20)
+Info (10041): Inferred latch for "REG[25]" at paralelregister2.vhd(20)
+Info (10041): Inferred latch for "REG[26]" at paralelregister2.vhd(20)
+Info (10041): Inferred latch for "REG[27]" at paralelregister2.vhd(20)
+Info (10041): Inferred latch for "REG[28]" at paralelregister2.vhd(20)
+Info (10041): Inferred latch for "REG[29]" at paralelregister2.vhd(20)
+Info (10041): Inferred latch for "REG[30]" at paralelregister2.vhd(20)
+Info (10041): Inferred latch for "REG[31]" at paralelregister2.vhd(20)
+Info (10041): Inferred latch for "REG[32]" at paralelregister2.vhd(20)
+Info (10041): Inferred latch for "REG[33]" at paralelregister2.vhd(20)
+Info (10041): Inferred latch for "REG[34]" at paralelregister2.vhd(20)
+Info (10041): Inferred latch for "REG[35]" at paralelregister2.vhd(20)
+Info (10041): Inferred latch for "REG[36]" at paralelregister2.vhd(20)
+Info (10041): Inferred latch for "REG[37]" at paralelregister2.vhd(20)
+Info (10041): Inferred latch for "REG[38]" at paralelregister2.vhd(20)
+Info (10041): Inferred latch for "REG[39]" at paralelregister2.vhd(20)
+Info (10041): Inferred latch for "REG[40]" at paralelregister2.vhd(20)
+Info: Elaborating entity "multiplexer" for hierarchy "multiplexer:MuxRegQ"
+Info: Elaborating entity "ParalelRegisterQ" for hierarchy "ParalelRegisterQ:reg_q"
+Warning (10492): VHDL Process Statement warning at ParalelRegisterQ.vhd(26): signal "IN_REG" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ParalelRegisterQ.vhd(27): signal "IN_REG" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ParalelRegisterQ.vhd(30): signal "REG" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ParalelRegisterQ.vhd(31): signal "Qlsbb" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at ParalelRegisterQ.vhd(22): inferring latch(es) for signal or variable "REG", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at ParalelRegisterQ.vhd(22): inferring latch(es) for signal or variable "Qlsbb", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "Qlsbb" at ParalelRegisterQ.vhd(22)
+Info (10041): Inferred latch for "REG[0]" at ParalelRegisterQ.vhd(22)
+Info (10041): Inferred latch for "REG[1]" at ParalelRegisterQ.vhd(22)
+Info (10041): Inferred latch for "REG[2]" at ParalelRegisterQ.vhd(22)
+Info (10041): Inferred latch for "REG[3]" at ParalelRegisterQ.vhd(22)
+Info (10041): Inferred latch for "REG[4]" at ParalelRegisterQ.vhd(22)
+Info (10041): Inferred latch for "REG[5]" at ParalelRegisterQ.vhd(22)
+Info (10041): Inferred latch for "REG[6]" at ParalelRegisterQ.vhd(22)
+Info (10041): Inferred latch for "REG[7]" at ParalelRegisterQ.vhd(22)
+Info (10041): Inferred latch for "REG[8]" at ParalelRegisterQ.vhd(22)
+Info (10041): Inferred latch for "REG[9]" at ParalelRegisterQ.vhd(22)
+Info (10041): Inferred latch for "REG[10]" at ParalelRegisterQ.vhd(22)
+Info (10041): Inferred latch for "REG[11]" at ParalelRegisterQ.vhd(22)
+Info (10041): Inferred latch for "REG[12]" at ParalelRegisterQ.vhd(22)
+Info (10041): Inferred latch for "REG[13]" at ParalelRegisterQ.vhd(22)
+Info (10041): Inferred latch for "REG[14]" at ParalelRegisterQ.vhd(22)
+Info (10041): Inferred latch for "REG[15]" at ParalelRegisterQ.vhd(22)
+Info (10041): Inferred latch for "REG[16]" at ParalelRegisterQ.vhd(22)
+Info (10041): Inferred latch for "REG[17]" at ParalelRegisterQ.vhd(22)
+Info (10041): Inferred latch for "REG[18]" at ParalelRegisterQ.vhd(22)
+Info (10041): Inferred latch for "REG[19]" at ParalelRegisterQ.vhd(22)
+Info (10041): Inferred latch for "REG[20]" at ParalelRegisterQ.vhd(22)
+Info (10041): Inferred latch for "REG[21]" at ParalelRegisterQ.vhd(22)
+Info (10041): Inferred latch for "REG[22]" at ParalelRegisterQ.vhd(22)
+Info (10041): Inferred latch for "REG[23]" at ParalelRegisterQ.vhd(22)
+Info (10041): Inferred latch for "REG[24]" at ParalelRegisterQ.vhd(22)
+Info (10041): Inferred latch for "REG[25]" at ParalelRegisterQ.vhd(22)
+Info (10041): Inferred latch for "REG[26]" at ParalelRegisterQ.vhd(22)
+Info (10041): Inferred latch for "REG[27]" at ParalelRegisterQ.vhd(22)
+Info (10041): Inferred latch for "REG[28]" at ParalelRegisterQ.vhd(22)
+Info (10041): Inferred latch for "REG[29]" at ParalelRegisterQ.vhd(22)
+Info (10041): Inferred latch for "REG[30]" at ParalelRegisterQ.vhd(22)
+Info (10041): Inferred latch for "REG[31]" at ParalelRegisterQ.vhd(22)
+Info (10041): Inferred latch for "REG[32]" at ParalelRegisterQ.vhd(22)
+Info (10041): Inferred latch for "REG[33]" at ParalelRegisterQ.vhd(22)
+Info (10041): Inferred latch for "REG[34]" at ParalelRegisterQ.vhd(22)
+Info (10041): Inferred latch for "REG[35]" at ParalelRegisterQ.vhd(22)
+Info (10041): Inferred latch for "REG[36]" at ParalelRegisterQ.vhd(22)
+Info (10041): Inferred latch for "REG[37]" at ParalelRegisterQ.vhd(22)
+Info (10041): Inferred latch for "REG[38]" at ParalelRegisterQ.vhd(22)
+Info (10041): Inferred latch for "REG[39]" at ParalelRegisterQ.vhd(22)
+Info (10041): Inferred latch for "REG[40]" at ParalelRegisterQ.vhd(22)
+Warning: Using design file addersubtractor_m.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info: Found design unit 1: AdderSubtractor_M-AdderSubtractor_arc
+    Info: Found entity 1: AdderSubtractor_M
+Info: Elaborating entity "AdderSubtractor_M" for hierarchy "AdderSubtractor_M:AddSub"
+Warning (10492): VHDL Process Statement warning at addersubtractor_m.vhd(94): signal "Out_int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning: Using design file fsm_m.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info: Found design unit 1: FSM_M-FSM_arc
+    Info: Found entity 1: FSM_M
+Info: Elaborating entity "FSM_M" for hierarchy "AdderSubtractor_M:AddSub|FSM_M:FSM_AdderSubtractor"
+Warning (10492): VHDL Process Statement warning at fsm_m.vhd(84): signal "Pin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at fsm_m.vhd(85): signal "Qin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at fsm_m.vhd(79): inferring latch(es) for signal or variable "P", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at fsm_m.vhd(79): inferring latch(es) for signal or variable "Q", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "Q[0]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "Q[1]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "Q[2]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "Q[3]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "Q[4]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "Q[5]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "Q[6]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "Q[7]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "Q[8]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "Q[9]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "Q[10]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "Q[11]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "Q[12]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "Q[13]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "Q[14]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "Q[15]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "Q[16]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "Q[17]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "Q[18]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "Q[19]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "Q[20]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "Q[21]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "Q[22]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "Q[23]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "Q[24]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "Q[25]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "Q[26]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "Q[27]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "Q[28]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "Q[29]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "Q[30]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "Q[31]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "Q[32]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "Q[33]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "Q[34]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "Q[35]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "Q[36]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "Q[37]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "Q[38]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "Q[39]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "Q[40]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "P[0]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "P[1]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "P[2]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "P[3]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "P[4]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "P[5]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "P[6]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "P[7]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "P[8]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "P[9]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "P[10]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "P[11]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "P[12]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "P[13]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "P[14]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "P[15]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "P[16]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "P[17]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "P[18]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "P[19]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "P[20]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "P[21]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "P[22]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "P[23]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "P[24]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "P[25]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "P[26]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "P[27]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "P[28]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "P[29]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "P[30]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "P[31]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "P[32]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "P[33]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "P[34]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "P[35]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "P[36]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "P[37]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "P[38]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "P[39]" at fsm_m.vhd(79)
+Info (10041): Inferred latch for "P[40]" at fsm_m.vhd(79)
+Info: Elaborating entity "mux21" for hierarchy "AdderSubtractor_M:AddSub|FSM_M:FSM_AdderSubtractor|mux21:OUTP"
+Info: Elaborating entity "S2Comp" for hierarchy "AdderSubtractor_M:AddSub|FSM_M:FSM_AdderSubtractor|S2Comp:COMP_P"
+Info: Elaborating entity "adderFSM" for hierarchy "AdderSubtractor_M:AddSub|adderFSM:AdderFSMBlok"
+Warning (10540): VHDL Signal Declaration warning at adderFSM.vhd(43): used explicit default value for signal "high" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at adderFSM.vhd(44): used explicit default value for signal "low" because signal was never assigned a value
+Warning (10492): VHDL Process Statement warning at adderFSM.vhd(135): signal "count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at adderFSM.vhd(152): signal "QA" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at adderFSM.vhd(152): signal "QB" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at adderFSM.vhd(157): signal "QA" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at adderFSM.vhd(157): signal "QB" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at adderFSM.vhd(162): signal "QA" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at adderFSM.vhd(162): signal "QB" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at adderFSM.vhd(167): signal "QA" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at adderFSM.vhd(167): signal "QB" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info: Elaborating entity "RegisterSerial" for hierarchy "AdderSubtractor_M:AddSub|adderFSM:AdderFSMBlok|RegisterSerial:RegA"
+Info: Elaborating entity "arsShifter" for hierarchy "arsShifter:ArsShift"
+Info: Elaborating entity "outFinal" for hierarchy "outFinal:OutputFinal"
+Info: Duplicate LATCH primitives merged into single LATCH primitive
+    Info: Duplicate LATCH primitive "ParalelRegisterQ:reg_q|REG[0]" merged with LATCH primitive "ParalelRegisterQ:reg_q|Qlsbb"
+    Info: Duplicate LATCH primitive "AdderSubtractor_M:AddSub|FSM_M:FSM_AdderSubtractor|P[39]" merged with LATCH primitive "AdderSubtractor_M:AddSub|FSM_M:FSM_AdderSubtractor|P[40]"
+Warning: Output pins are stuck at VCC or GND
+    Warning (13410): Pin "debugout[5]" is stuck at GND
+    Warning (13410): Pin "debugout[6]" is stuck at GND
+    Warning (13410): Pin "debugout[7]" is stuck at GND
+    Warning (13410): Pin "debugout[8]" is stuck at GND
+    Warning (13410): Pin "debugout[9]" is stuck at GND
+    Warning (13410): Pin "debugout[10]" is stuck at GND
+    Warning (13410): Pin "debugout[11]" is stuck at GND
+    Warning (13410): Pin "debugout[12]" is stuck at GND
+    Warning (13410): Pin "debugout[13]" is stuck at GND
+    Warning (13410): Pin "debugout[14]" is stuck at GND
+    Warning (13410): Pin "debugout[15]" is stuck at GND
+    Warning (13410): Pin "debugout[16]" is stuck at GND
+    Warning (13410): Pin "debugout[17]" is stuck at GND
+    Warning (13410): Pin "debugout[18]" is stuck at GND
+    Warning (13410): Pin "debugout[19]" is stuck at GND
+    Warning (13410): Pin "debugout[20]" is stuck at GND
+    Warning (13410): Pin "debugout[21]" is stuck at GND
+    Warning (13410): Pin "debugout[22]" is stuck at GND
+    Warning (13410): Pin "debugout[23]" is stuck at GND
+    Warning (13410): Pin "debugout[24]" is stuck at GND
+    Warning (13410): Pin "debugout[25]" is stuck at GND
+    Warning (13410): Pin "debugout[26]" is stuck at GND
+    Warning (13410): Pin "debugout[27]" is stuck at GND
+    Warning (13410): Pin "debugout[28]" is stuck at GND
+    Warning (13410): Pin "debugout[29]" is stuck at GND
+    Warning (13410): Pin "debugout[30]" is stuck at GND
+    Warning (13410): Pin "debugout[31]" is stuck at GND
+Info: 2 registers lost all their fanouts during netlist optimizations. The first 2 are displayed below.
+    Info: Register "AdderSubtractor_M:AddSub|FSM_M:FSM_AdderSubtractor|state.s3" lost all its fanouts during netlist optimizations.
+    Info: Register "AdderSubtractor_M:AddSub|FSM_M:FSM_AdderSubtractor|state.s4" lost all its fanouts during netlist optimizations.
+Info: Implemented 993 device resources after synthesis - the final resource count might be different
+    Info: Implemented 87 input pins
+    Info: Implemented 75 output pins
+    Info: Implemented 831 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 67 warnings
+    Info: Peak virtual memory: 252 megabytes
+    Info: Processing ended: Sat Dec 02 11:34:34 2023
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+

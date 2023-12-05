@@ -1,0 +1,375 @@
+Simulator report for RegisterSerial
+Tue Nov 28 04:24:17 2023
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 168 nodes    ;
+; Simulation Coverage         ;      34.52 % ;
+; Total Number of Transitions ; 480          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Stratix II   ;
++-----------------------------+--------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                              ;
++--------------------------------------------------------------------------------------------+--------------------+---------------+
+; Option                                                                                     ; Setting            ; Default Value ;
++--------------------------------------------------------------------------------------------+--------------------+---------------+
+; Simulation mode                                                                            ; Functional         ; Timing        ;
+; Start time                                                                                 ; 0 ns               ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF               ;               ;
+; Vector input source                                                                        ; RegisterSerial.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                 ; On            ;
+; Check outputs                                                                              ; Off                ; Off           ;
+; Report simulation coverage                                                                 ; On                 ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                 ; On            ;
+; Display missing 1-value coverage report                                                    ; On                 ; On            ;
+; Display missing 0-value coverage report                                                    ; On                 ; On            ;
+; Detect setup and hold time violations                                                      ; Off                ; Off           ;
+; Detect glitches                                                                            ; Off                ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                ; Off           ;
+; Generate Signal Activity File                                                              ; Off                ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                 ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE         ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; On                 ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto               ; Auto          ;
++--------------------------------------------------------------------------------------------+--------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      34.52 % ;
+; Total nodes checked                                 ; 168          ;
+; Total output ports checked                          ; 168          ;
+; Total output ports with complete 1/0-value coverage ; 58           ;
+; Total output ports with no 1/0-value coverage       ; 43           ;
+; Total output ports with no 1-value coverage         ; 44           ;
+; Total output ports with no 0-value coverage         ; 109          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                ;
++----------------------------+----------------------------+------------------+
+; Node Name                  ; Output Port Name           ; Output Port Type ;
++----------------------------+----------------------------+------------------+
+; |RegisterSerial|Q[0]~reg0  ; |RegisterSerial|Q[0]~reg0  ; regout           ;
+; |RegisterSerial|Q~22       ; |RegisterSerial|Q~22       ; out              ;
+; |RegisterSerial|Q~23       ; |RegisterSerial|Q~23       ; out              ;
+; |RegisterSerial|Q~24       ; |RegisterSerial|Q~24       ; out              ;
+; |RegisterSerial|Q~25       ; |RegisterSerial|Q~25       ; out              ;
+; |RegisterSerial|Q~26       ; |RegisterSerial|Q~26       ; out              ;
+; |RegisterSerial|Q~27       ; |RegisterSerial|Q~27       ; out              ;
+; |RegisterSerial|Q~28       ; |RegisterSerial|Q~28       ; out              ;
+; |RegisterSerial|Q~29       ; |RegisterSerial|Q~29       ; out              ;
+; |RegisterSerial|Q~30       ; |RegisterSerial|Q~30       ; out              ;
+; |RegisterSerial|Q~31       ; |RegisterSerial|Q~31       ; out              ;
+; |RegisterSerial|Q~32       ; |RegisterSerial|Q~32       ; out              ;
+; |RegisterSerial|Q~33       ; |RegisterSerial|Q~33       ; out              ;
+; |RegisterSerial|Q~34       ; |RegisterSerial|Q~34       ; out              ;
+; |RegisterSerial|Q~35       ; |RegisterSerial|Q~35       ; out              ;
+; |RegisterSerial|Q~36       ; |RegisterSerial|Q~36       ; out              ;
+; |RegisterSerial|Q~37       ; |RegisterSerial|Q~37       ; out              ;
+; |RegisterSerial|Q~38       ; |RegisterSerial|Q~38       ; out              ;
+; |RegisterSerial|Q~39       ; |RegisterSerial|Q~39       ; out              ;
+; |RegisterSerial|Q~40       ; |RegisterSerial|Q~40       ; out              ;
+; |RegisterSerial|Q[1]~reg0  ; |RegisterSerial|Q[1]~reg0  ; regout           ;
+; |RegisterSerial|Q[2]~reg0  ; |RegisterSerial|Q[2]~reg0  ; regout           ;
+; |RegisterSerial|Q[3]~reg0  ; |RegisterSerial|Q[3]~reg0  ; regout           ;
+; |RegisterSerial|Q[4]~reg0  ; |RegisterSerial|Q[4]~reg0  ; regout           ;
+; |RegisterSerial|Q[5]~reg0  ; |RegisterSerial|Q[5]~reg0  ; regout           ;
+; |RegisterSerial|Q[6]~reg0  ; |RegisterSerial|Q[6]~reg0  ; regout           ;
+; |RegisterSerial|Q[7]~reg0  ; |RegisterSerial|Q[7]~reg0  ; regout           ;
+; |RegisterSerial|Q[8]~reg0  ; |RegisterSerial|Q[8]~reg0  ; regout           ;
+; |RegisterSerial|Q[9]~reg0  ; |RegisterSerial|Q[9]~reg0  ; regout           ;
+; |RegisterSerial|Q[10]~reg0 ; |RegisterSerial|Q[10]~reg0 ; regout           ;
+; |RegisterSerial|Q[11]~reg0 ; |RegisterSerial|Q[11]~reg0 ; regout           ;
+; |RegisterSerial|Q[12]~reg0 ; |RegisterSerial|Q[12]~reg0 ; regout           ;
+; |RegisterSerial|Q[13]~reg0 ; |RegisterSerial|Q[13]~reg0 ; regout           ;
+; |RegisterSerial|Q[14]~reg0 ; |RegisterSerial|Q[14]~reg0 ; regout           ;
+; |RegisterSerial|Q[15]~reg0 ; |RegisterSerial|Q[15]~reg0 ; regout           ;
+; |RegisterSerial|Q[16]~reg0 ; |RegisterSerial|Q[16]~reg0 ; regout           ;
+; |RegisterSerial|Q[17]~reg0 ; |RegisterSerial|Q[17]~reg0 ; regout           ;
+; |RegisterSerial|Q[18]~reg0 ; |RegisterSerial|Q[18]~reg0 ; regout           ;
+; |RegisterSerial|Q[0]       ; |RegisterSerial|Q[0]       ; pin_out          ;
+; |RegisterSerial|Q[1]       ; |RegisterSerial|Q[1]       ; pin_out          ;
+; |RegisterSerial|Q[2]       ; |RegisterSerial|Q[2]       ; pin_out          ;
+; |RegisterSerial|Q[3]       ; |RegisterSerial|Q[3]       ; pin_out          ;
+; |RegisterSerial|Q[4]       ; |RegisterSerial|Q[4]       ; pin_out          ;
+; |RegisterSerial|Q[5]       ; |RegisterSerial|Q[5]       ; pin_out          ;
+; |RegisterSerial|Q[6]       ; |RegisterSerial|Q[6]       ; pin_out          ;
+; |RegisterSerial|Q[7]       ; |RegisterSerial|Q[7]       ; pin_out          ;
+; |RegisterSerial|Q[8]       ; |RegisterSerial|Q[8]       ; pin_out          ;
+; |RegisterSerial|Q[9]       ; |RegisterSerial|Q[9]       ; pin_out          ;
+; |RegisterSerial|Q[10]      ; |RegisterSerial|Q[10]      ; pin_out          ;
+; |RegisterSerial|Q[11]      ; |RegisterSerial|Q[11]      ; pin_out          ;
+; |RegisterSerial|Q[12]      ; |RegisterSerial|Q[12]      ; pin_out          ;
+; |RegisterSerial|Q[13]      ; |RegisterSerial|Q[13]      ; pin_out          ;
+; |RegisterSerial|Q[14]      ; |RegisterSerial|Q[14]      ; pin_out          ;
+; |RegisterSerial|Q[15]      ; |RegisterSerial|Q[15]      ; pin_out          ;
+; |RegisterSerial|Q[16]      ; |RegisterSerial|Q[16]      ; pin_out          ;
+; |RegisterSerial|Q[17]      ; |RegisterSerial|Q[17]      ; pin_out          ;
+; |RegisterSerial|Q[18]      ; |RegisterSerial|Q[18]      ; pin_out          ;
+; |RegisterSerial|clk        ; |RegisterSerial|clk        ; out              ;
++----------------------------+----------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                   ;
++----------------------------+----------------------------+------------------+
+; Node Name                  ; Output Port Name           ; Output Port Type ;
++----------------------------+----------------------------+------------------+
+; |RegisterSerial|IN_REG[0]  ; |RegisterSerial|IN_REG[0]  ; out              ;
+; |RegisterSerial|IN_REG[1]  ; |RegisterSerial|IN_REG[1]  ; out              ;
+; |RegisterSerial|IN_REG[2]  ; |RegisterSerial|IN_REG[2]  ; out              ;
+; |RegisterSerial|IN_REG[3]  ; |RegisterSerial|IN_REG[3]  ; out              ;
+; |RegisterSerial|IN_REG[4]  ; |RegisterSerial|IN_REG[4]  ; out              ;
+; |RegisterSerial|IN_REG[5]  ; |RegisterSerial|IN_REG[5]  ; out              ;
+; |RegisterSerial|IN_REG[6]  ; |RegisterSerial|IN_REG[6]  ; out              ;
+; |RegisterSerial|IN_REG[7]  ; |RegisterSerial|IN_REG[7]  ; out              ;
+; |RegisterSerial|IN_REG[8]  ; |RegisterSerial|IN_REG[8]  ; out              ;
+; |RegisterSerial|IN_REG[9]  ; |RegisterSerial|IN_REG[9]  ; out              ;
+; |RegisterSerial|IN_REG[10] ; |RegisterSerial|IN_REG[10] ; out              ;
+; |RegisterSerial|IN_REG[11] ; |RegisterSerial|IN_REG[11] ; out              ;
+; |RegisterSerial|IN_REG[12] ; |RegisterSerial|IN_REG[12] ; out              ;
+; |RegisterSerial|IN_REG[13] ; |RegisterSerial|IN_REG[13] ; out              ;
+; |RegisterSerial|IN_REG[14] ; |RegisterSerial|IN_REG[14] ; out              ;
+; |RegisterSerial|IN_REG[15] ; |RegisterSerial|IN_REG[15] ; out              ;
+; |RegisterSerial|IN_REG[16] ; |RegisterSerial|IN_REG[16] ; out              ;
+; |RegisterSerial|IN_REG[17] ; |RegisterSerial|IN_REG[17] ; out              ;
+; |RegisterSerial|IN_REG[18] ; |RegisterSerial|IN_REG[18] ; out              ;
+; |RegisterSerial|IN_REG[19] ; |RegisterSerial|IN_REG[19] ; out              ;
+; |RegisterSerial|IN_REG[20] ; |RegisterSerial|IN_REG[20] ; out              ;
+; |RegisterSerial|IN_REG[21] ; |RegisterSerial|IN_REG[21] ; out              ;
+; |RegisterSerial|IN_REG[22] ; |RegisterSerial|IN_REG[22] ; out              ;
+; |RegisterSerial|IN_REG[23] ; |RegisterSerial|IN_REG[23] ; out              ;
+; |RegisterSerial|IN_REG[24] ; |RegisterSerial|IN_REG[24] ; out              ;
+; |RegisterSerial|IN_REG[25] ; |RegisterSerial|IN_REG[25] ; out              ;
+; |RegisterSerial|IN_REG[26] ; |RegisterSerial|IN_REG[26] ; out              ;
+; |RegisterSerial|IN_REG[27] ; |RegisterSerial|IN_REG[27] ; out              ;
+; |RegisterSerial|IN_REG[28] ; |RegisterSerial|IN_REG[28] ; out              ;
+; |RegisterSerial|IN_REG[29] ; |RegisterSerial|IN_REG[29] ; out              ;
+; |RegisterSerial|IN_REG[30] ; |RegisterSerial|IN_REG[30] ; out              ;
+; |RegisterSerial|IN_REG[31] ; |RegisterSerial|IN_REG[31] ; out              ;
+; |RegisterSerial|IN_REG[32] ; |RegisterSerial|IN_REG[32] ; out              ;
+; |RegisterSerial|IN_REG[33] ; |RegisterSerial|IN_REG[33] ; out              ;
+; |RegisterSerial|IN_REG[34] ; |RegisterSerial|IN_REG[34] ; out              ;
+; |RegisterSerial|IN_REG[35] ; |RegisterSerial|IN_REG[35] ; out              ;
+; |RegisterSerial|IN_REG[36] ; |RegisterSerial|IN_REG[36] ; out              ;
+; |RegisterSerial|IN_REG[37] ; |RegisterSerial|IN_REG[37] ; out              ;
+; |RegisterSerial|IN_REG[38] ; |RegisterSerial|IN_REG[38] ; out              ;
+; |RegisterSerial|IN_REG[39] ; |RegisterSerial|IN_REG[39] ; out              ;
+; |RegisterSerial|IN_REG[40] ; |RegisterSerial|IN_REG[40] ; out              ;
+; |RegisterSerial|L          ; |RegisterSerial|L          ; out              ;
+; |RegisterSerial|W          ; |RegisterSerial|W          ; out              ;
+; |RegisterSerial|EN         ; |RegisterSerial|EN         ; out              ;
++----------------------------+----------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                   ;
++----------------------------+----------------------------+------------------+
+; Node Name                  ; Output Port Name           ; Output Port Type ;
++----------------------------+----------------------------+------------------+
+; |RegisterSerial|Q~0        ; |RegisterSerial|Q~0        ; out              ;
+; |RegisterSerial|Q~1        ; |RegisterSerial|Q~1        ; out              ;
+; |RegisterSerial|Q~2        ; |RegisterSerial|Q~2        ; out              ;
+; |RegisterSerial|Q~3        ; |RegisterSerial|Q~3        ; out              ;
+; |RegisterSerial|Q~4        ; |RegisterSerial|Q~4        ; out              ;
+; |RegisterSerial|Q~5        ; |RegisterSerial|Q~5        ; out              ;
+; |RegisterSerial|Q~6        ; |RegisterSerial|Q~6        ; out              ;
+; |RegisterSerial|Q~7        ; |RegisterSerial|Q~7        ; out              ;
+; |RegisterSerial|Q~8        ; |RegisterSerial|Q~8        ; out              ;
+; |RegisterSerial|Q~9        ; |RegisterSerial|Q~9        ; out              ;
+; |RegisterSerial|Q~10       ; |RegisterSerial|Q~10       ; out              ;
+; |RegisterSerial|Q~11       ; |RegisterSerial|Q~11       ; out              ;
+; |RegisterSerial|Q~12       ; |RegisterSerial|Q~12       ; out              ;
+; |RegisterSerial|Q~13       ; |RegisterSerial|Q~13       ; out              ;
+; |RegisterSerial|Q~14       ; |RegisterSerial|Q~14       ; out              ;
+; |RegisterSerial|Q~15       ; |RegisterSerial|Q~15       ; out              ;
+; |RegisterSerial|Q~16       ; |RegisterSerial|Q~16       ; out              ;
+; |RegisterSerial|Q~17       ; |RegisterSerial|Q~17       ; out              ;
+; |RegisterSerial|Q~18       ; |RegisterSerial|Q~18       ; out              ;
+; |RegisterSerial|Q~19       ; |RegisterSerial|Q~19       ; out              ;
+; |RegisterSerial|Q~20       ; |RegisterSerial|Q~20       ; out              ;
+; |RegisterSerial|Q~21       ; |RegisterSerial|Q~21       ; out              ;
+; |RegisterSerial|Q[19]~reg0 ; |RegisterSerial|Q[19]~reg0 ; regout           ;
+; |RegisterSerial|Q[20]~reg0 ; |RegisterSerial|Q[20]~reg0 ; regout           ;
+; |RegisterSerial|Q[21]~reg0 ; |RegisterSerial|Q[21]~reg0 ; regout           ;
+; |RegisterSerial|Q[22]~reg0 ; |RegisterSerial|Q[22]~reg0 ; regout           ;
+; |RegisterSerial|Q[23]~reg0 ; |RegisterSerial|Q[23]~reg0 ; regout           ;
+; |RegisterSerial|Q[24]~reg0 ; |RegisterSerial|Q[24]~reg0 ; regout           ;
+; |RegisterSerial|Q[25]~reg0 ; |RegisterSerial|Q[25]~reg0 ; regout           ;
+; |RegisterSerial|Q[26]~reg0 ; |RegisterSerial|Q[26]~reg0 ; regout           ;
+; |RegisterSerial|Q[27]~reg0 ; |RegisterSerial|Q[27]~reg0 ; regout           ;
+; |RegisterSerial|Q[28]~reg0 ; |RegisterSerial|Q[28]~reg0 ; regout           ;
+; |RegisterSerial|Q[29]~reg0 ; |RegisterSerial|Q[29]~reg0 ; regout           ;
+; |RegisterSerial|Q[30]~reg0 ; |RegisterSerial|Q[30]~reg0 ; regout           ;
+; |RegisterSerial|Q[31]~reg0 ; |RegisterSerial|Q[31]~reg0 ; regout           ;
+; |RegisterSerial|Q[32]~reg0 ; |RegisterSerial|Q[32]~reg0 ; regout           ;
+; |RegisterSerial|Q[33]~reg0 ; |RegisterSerial|Q[33]~reg0 ; regout           ;
+; |RegisterSerial|Q[34]~reg0 ; |RegisterSerial|Q[34]~reg0 ; regout           ;
+; |RegisterSerial|Q[35]~reg0 ; |RegisterSerial|Q[35]~reg0 ; regout           ;
+; |RegisterSerial|Q[36]~reg0 ; |RegisterSerial|Q[36]~reg0 ; regout           ;
+; |RegisterSerial|Q[37]~reg0 ; |RegisterSerial|Q[37]~reg0 ; regout           ;
+; |RegisterSerial|Q[38]~reg0 ; |RegisterSerial|Q[38]~reg0 ; regout           ;
+; |RegisterSerial|Q[39]~reg0 ; |RegisterSerial|Q[39]~reg0 ; regout           ;
+; |RegisterSerial|Q[40]~reg0 ; |RegisterSerial|Q[40]~reg0 ; regout           ;
+; |RegisterSerial|IN_REG[0]  ; |RegisterSerial|IN_REG[0]  ; out              ;
+; |RegisterSerial|IN_REG[1]  ; |RegisterSerial|IN_REG[1]  ; out              ;
+; |RegisterSerial|IN_REG[2]  ; |RegisterSerial|IN_REG[2]  ; out              ;
+; |RegisterSerial|IN_REG[3]  ; |RegisterSerial|IN_REG[3]  ; out              ;
+; |RegisterSerial|IN_REG[4]  ; |RegisterSerial|IN_REG[4]  ; out              ;
+; |RegisterSerial|IN_REG[5]  ; |RegisterSerial|IN_REG[5]  ; out              ;
+; |RegisterSerial|IN_REG[6]  ; |RegisterSerial|IN_REG[6]  ; out              ;
+; |RegisterSerial|IN_REG[7]  ; |RegisterSerial|IN_REG[7]  ; out              ;
+; |RegisterSerial|IN_REG[8]  ; |RegisterSerial|IN_REG[8]  ; out              ;
+; |RegisterSerial|IN_REG[9]  ; |RegisterSerial|IN_REG[9]  ; out              ;
+; |RegisterSerial|IN_REG[10] ; |RegisterSerial|IN_REG[10] ; out              ;
+; |RegisterSerial|IN_REG[11] ; |RegisterSerial|IN_REG[11] ; out              ;
+; |RegisterSerial|IN_REG[12] ; |RegisterSerial|IN_REG[12] ; out              ;
+; |RegisterSerial|IN_REG[13] ; |RegisterSerial|IN_REG[13] ; out              ;
+; |RegisterSerial|IN_REG[14] ; |RegisterSerial|IN_REG[14] ; out              ;
+; |RegisterSerial|IN_REG[15] ; |RegisterSerial|IN_REG[15] ; out              ;
+; |RegisterSerial|IN_REG[16] ; |RegisterSerial|IN_REG[16] ; out              ;
+; |RegisterSerial|IN_REG[17] ; |RegisterSerial|IN_REG[17] ; out              ;
+; |RegisterSerial|IN_REG[18] ; |RegisterSerial|IN_REG[18] ; out              ;
+; |RegisterSerial|IN_REG[19] ; |RegisterSerial|IN_REG[19] ; out              ;
+; |RegisterSerial|IN_REG[20] ; |RegisterSerial|IN_REG[20] ; out              ;
+; |RegisterSerial|IN_REG[21] ; |RegisterSerial|IN_REG[21] ; out              ;
+; |RegisterSerial|IN_REG[22] ; |RegisterSerial|IN_REG[22] ; out              ;
+; |RegisterSerial|IN_REG[23] ; |RegisterSerial|IN_REG[23] ; out              ;
+; |RegisterSerial|IN_REG[24] ; |RegisterSerial|IN_REG[24] ; out              ;
+; |RegisterSerial|IN_REG[25] ; |RegisterSerial|IN_REG[25] ; out              ;
+; |RegisterSerial|IN_REG[26] ; |RegisterSerial|IN_REG[26] ; out              ;
+; |RegisterSerial|IN_REG[27] ; |RegisterSerial|IN_REG[27] ; out              ;
+; |RegisterSerial|IN_REG[28] ; |RegisterSerial|IN_REG[28] ; out              ;
+; |RegisterSerial|IN_REG[29] ; |RegisterSerial|IN_REG[29] ; out              ;
+; |RegisterSerial|IN_REG[30] ; |RegisterSerial|IN_REG[30] ; out              ;
+; |RegisterSerial|IN_REG[31] ; |RegisterSerial|IN_REG[31] ; out              ;
+; |RegisterSerial|IN_REG[32] ; |RegisterSerial|IN_REG[32] ; out              ;
+; |RegisterSerial|IN_REG[33] ; |RegisterSerial|IN_REG[33] ; out              ;
+; |RegisterSerial|IN_REG[34] ; |RegisterSerial|IN_REG[34] ; out              ;
+; |RegisterSerial|IN_REG[35] ; |RegisterSerial|IN_REG[35] ; out              ;
+; |RegisterSerial|IN_REG[36] ; |RegisterSerial|IN_REG[36] ; out              ;
+; |RegisterSerial|IN_REG[37] ; |RegisterSerial|IN_REG[37] ; out              ;
+; |RegisterSerial|IN_REG[38] ; |RegisterSerial|IN_REG[38] ; out              ;
+; |RegisterSerial|IN_REG[39] ; |RegisterSerial|IN_REG[39] ; out              ;
+; |RegisterSerial|IN_REG[40] ; |RegisterSerial|IN_REG[40] ; out              ;
+; |RegisterSerial|W          ; |RegisterSerial|W          ; out              ;
+; |RegisterSerial|EN         ; |RegisterSerial|EN         ; out              ;
+; |RegisterSerial|Q[19]      ; |RegisterSerial|Q[19]      ; pin_out          ;
+; |RegisterSerial|Q[20]      ; |RegisterSerial|Q[20]      ; pin_out          ;
+; |RegisterSerial|Q[21]      ; |RegisterSerial|Q[21]      ; pin_out          ;
+; |RegisterSerial|Q[22]      ; |RegisterSerial|Q[22]      ; pin_out          ;
+; |RegisterSerial|Q[23]      ; |RegisterSerial|Q[23]      ; pin_out          ;
+; |RegisterSerial|Q[24]      ; |RegisterSerial|Q[24]      ; pin_out          ;
+; |RegisterSerial|Q[25]      ; |RegisterSerial|Q[25]      ; pin_out          ;
+; |RegisterSerial|Q[26]      ; |RegisterSerial|Q[26]      ; pin_out          ;
+; |RegisterSerial|Q[27]      ; |RegisterSerial|Q[27]      ; pin_out          ;
+; |RegisterSerial|Q[28]      ; |RegisterSerial|Q[28]      ; pin_out          ;
+; |RegisterSerial|Q[29]      ; |RegisterSerial|Q[29]      ; pin_out          ;
+; |RegisterSerial|Q[30]      ; |RegisterSerial|Q[30]      ; pin_out          ;
+; |RegisterSerial|Q[31]      ; |RegisterSerial|Q[31]      ; pin_out          ;
+; |RegisterSerial|Q[32]      ; |RegisterSerial|Q[32]      ; pin_out          ;
+; |RegisterSerial|Q[33]      ; |RegisterSerial|Q[33]      ; pin_out          ;
+; |RegisterSerial|Q[34]      ; |RegisterSerial|Q[34]      ; pin_out          ;
+; |RegisterSerial|Q[35]      ; |RegisterSerial|Q[35]      ; pin_out          ;
+; |RegisterSerial|Q[36]      ; |RegisterSerial|Q[36]      ; pin_out          ;
+; |RegisterSerial|Q[37]      ; |RegisterSerial|Q[37]      ; pin_out          ;
+; |RegisterSerial|Q[38]      ; |RegisterSerial|Q[38]      ; pin_out          ;
+; |RegisterSerial|Q[39]      ; |RegisterSerial|Q[39]      ; pin_out          ;
+; |RegisterSerial|Q[40]      ; |RegisterSerial|Q[40]      ; pin_out          ;
++----------------------------+----------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Tue Nov 28 04:24:16 2023
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off RegisterSerial -c RegisterSerial
+Info: Using vector source file "C:/Users/Marvin/Kuliah/TAHUN KEDUA/Semester 1/Sistem Digital/TUGAS BESAR/NEW DIVIDER REMAKE/testfile/RegisterSerial.vwf"
+Info: Overwriting simulation input file with simulation results
+    Info: A backup of RegisterSerial.vwf called RegisterSerial.sim_ori.vwf has been created in the db folder
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      34.52 %
+Info: Number of transitions in simulation is 480
+Info: Vector file RegisterSerial.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 154 megabytes
+    Info: Processing ended: Tue Nov 28 04:24:17 2023
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

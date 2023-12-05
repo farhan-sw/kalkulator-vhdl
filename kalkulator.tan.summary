@@ -1,0 +1,76 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 14.398 ns
+From           : input_P[0]
+To             : Pangkat:pangkat_coy|Multiplication:multiply|MSB:MSBP|firstbit
+From Clock     : --
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 21.566 ns
+From           : FPB:FPBB|ParalelRegister2:p_reg|REG[34]
+To             : hasil[34]
+From Clock     : clk
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 25.476 ns
+From           : input_Q[26]
+To             : hasil[37]
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 5.276 ns
+From           : input_Q[25]
+To             : divider:pembagian|AdderSubtractor:negatif|FSM:FSM_AdderSubtractor|P[25]
+From Clock     : --
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clk'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 35.24 MHz ( period = 28.378 ns )
+From           : divider:pembagian|ParalelRegister:RegisterR|REG[2]
+To             : divider:pembagian|comparatorreal:ComparatorRS|comp
+From Clock     : clk
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Clock Hold: 'clk'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : Multiplication:perkalian|multiplexer:MuxAcc|f[10]
+To             : Multiplication:perkalian|ParalelRegister2:Acc|REG[10]
+From Clock     : clk
+To Clock       : clk
+Failed Paths   : 810
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 810
+
+--------------------------------------------------------------------------------------
+

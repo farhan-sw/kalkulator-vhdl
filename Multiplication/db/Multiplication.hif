@@ -1,0 +1,840 @@
+Quartus II
+Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+11
+980
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+FSM
+# storage
+db|Multiplication.(1).cnf
+db|Multiplication.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|users|sjohn|onedrive - institut teknologi bandung|keperluan kuliah|ldte|tugas besar|addersubtractor|addersubtractor|fsm.vhd
+eb50f9616aa12336f88982c396174fd
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+N
+4
+PARAMETER_SIGNED_DEC
+DEF
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+mux21
+# storage
+db|Multiplication.(2).cnf
+db|Multiplication.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|users|sjohn|onedrive - institut teknologi bandung|keperluan kuliah|ldte|tugas besar|addersubtractor|addersubtractor|mux21.vhd
+ac7a45c83b3e53fd32e92742abb462c
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+n
+4
+PARAMETER_SIGNED_DEC
+USR
+ constraint(p)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(q)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(f)
+3 downto 0
+PARAMETER_STRING
+USR
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+S2Comp
+# storage
+db|Multiplication.(3).cnf
+db|Multiplication.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|users|sjohn|onedrive - institut teknologi bandung|keperluan kuliah|ldte|tugas besar|addersubtractor|addersubtractor|s2comp.vhd
+716456db46fc19fe13a51a1b819c6a2
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+n
+4
+PARAMETER_SIGNED_DEC
+USR
+ constraint(in_comp)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(out_comp)
+3 downto 0
+PARAMETER_STRING
+USR
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+multiplexer
+# storage
+db|Multiplication.(4).cnf
+db|Multiplication.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|users|sjohn|onedrive - institut teknologi bandung|keperluan kuliah|ldte|tugas besar|multiplexer|multiplexer.vhd
+c45fcf23699fed7ff23c533032bf2e62
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+n
+41
+PARAMETER_SIGNED_DEC
+USR
+ constraint(p)
+40 downto 0
+PARAMETER_STRING
+USR
+ constraint(q)
+40 downto 0
+PARAMETER_STRING
+USR
+ constraint(f)
+40 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+multiplexer:MuxAcc
+multiplexer:MuxRegQ
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+ParalelRegister
+# storage
+db|Multiplication.(5).cnf
+db|Multiplication.(5).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|users|sjohn|onedrive - institut teknologi bandung|keperluan kuliah|ldte|tugas besar|register pararel|paralelregister.vhd
+ffe570d9737dc712dca57eb4951df8e7
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+n
+41
+PARAMETER_SIGNED_DEC
+USR
+ constraint(in_reg)
+40 downto 0
+PARAMETER_STRING
+USR
+ constraint(ct)
+1 downto 0
+PARAMETER_STRING
+USR
+ constraint(out_reg)
+40 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+ParalelRegister:reg_p
+ParalelRegister:reg_acc
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+AdderSubtractor
+# storage
+db|Multiplication.(6).cnf
+db|Multiplication.(6).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|users|sjohn|onedrive - institut teknologi bandung|keperluan kuliah|ldte|tugas besar|addersubtractor|addersubtractor|addersubtractor.vhd
+92c8c23e654ebd77641ebe247a8a6718
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+n
+41
+PARAMETER_SIGNED_DEC
+USR
+ constraint(p_in)
+40 downto 0
+PARAMETER_STRING
+USR
+ constraint(q_in)
+40 downto 0
+PARAMETER_STRING
+USR
+ constraint(out_operasi)
+40 downto 0
+PARAMETER_STRING
+USR
+ constraint(m)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(status)
+1 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+AdderSubtractor:AddSub
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+FSM
+# storage
+db|Multiplication.(7).cnf
+db|Multiplication.(7).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|users|sjohn|onedrive - institut teknologi bandung|keperluan kuliah|ldte|tugas besar|addersubtractor|addersubtractor|fsm.vhd
+eb50f9616aa12336f88982c396174fd
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+n
+41
+PARAMETER_SIGNED_DEC
+USR
+ constraint(pin)
+40 downto 0
+PARAMETER_STRING
+USR
+ constraint(qin)
+40 downto 0
+PARAMETER_STRING
+USR
+ constraint(p_out)
+40 downto 0
+PARAMETER_STRING
+USR
+ constraint(q_out)
+40 downto 0
+PARAMETER_STRING
+USR
+ constraint(m)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(status)
+1 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+AdderSubtractor:AddSub|FSM:FSM_AdderSubtractor
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+mux21
+# storage
+db|Multiplication.(8).cnf
+db|Multiplication.(8).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|users|sjohn|onedrive - institut teknologi bandung|keperluan kuliah|ldte|tugas besar|addersubtractor|addersubtractor|mux21.vhd
+ac7a45c83b3e53fd32e92742abb462c
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+n
+41
+PARAMETER_SIGNED_DEC
+USR
+ constraint(p)
+40 downto 0
+PARAMETER_STRING
+USR
+ constraint(q)
+40 downto 0
+PARAMETER_STRING
+USR
+ constraint(f)
+40 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+AdderSubtractor:AddSub|FSM:FSM_AdderSubtractor|mux21:OUTP
+AdderSubtractor:AddSub|FSM:FSM_AdderSubtractor|mux21:OUTQ
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+S2Comp
+# storage
+db|Multiplication.(9).cnf
+db|Multiplication.(9).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|users|sjohn|onedrive - institut teknologi bandung|keperluan kuliah|ldte|tugas besar|addersubtractor|addersubtractor|s2comp.vhd
+716456db46fc19fe13a51a1b819c6a2
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+n
+41
+PARAMETER_SIGNED_DEC
+USR
+ constraint(in_comp)
+40 downto 0
+PARAMETER_STRING
+USR
+ constraint(out_comp)
+40 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+AdderSubtractor:AddSub|FSM:FSM_AdderSubtractor|S2Comp:COMP_P
+AdderSubtractor:AddSub|FSM:FSM_AdderSubtractor|S2Comp:COMP_Q
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+adderFSM
+# storage
+db|Multiplication.(10).cnf
+db|Multiplication.(10).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|users|sjohn|onedrive - institut teknologi bandung|keperluan kuliah|ldte|tugas besar|addersubtractor|addersubtractor|adderfsm.vhd
+537a3419e318935b1a6951378115dc2
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+n
+41
+PARAMETER_SIGNED_DEC
+USR
+ constraint(a)
+40 downto 0
+PARAMETER_STRING
+USR
+ constraint(b)
+40 downto 0
+PARAMETER_STRING
+USR
+ constraint(sum)
+40 downto 0
+PARAMETER_STRING
+USR
+ constraint(status)
+1 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+AdderSubtractor:AddSub|adderFSM:AdderFSMBlok
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+RegisterSerial
+# storage
+db|Multiplication.(11).cnf
+db|Multiplication.(11).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|users|sjohn|onedrive - institut teknologi bandung|keperluan kuliah|ldte|tugas besar|addersubtractor|addersubtractor|registerserial.vhd
+a87bd1f2a3768be9ee30e63b937bde7c
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+n
+41
+PARAMETER_SIGNED_DEC
+USR
+ constraint(in_reg)
+40 downto 0
+PARAMETER_STRING
+USR
+ constraint(q)
+40 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+AdderSubtractor:AddSub|adderFSM:AdderFSMBlok|RegisterSerial:RegA
+AdderSubtractor:AddSub|adderFSM:AdderFSMBlok|RegisterSerial:RegB
+AdderSubtractor:AddSub|adderFSM:AdderFSMBlok|RegisterSerial:RegS
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+ParalelRegisterQ
+# storage
+db|Multiplication.(14).cnf
+db|Multiplication.(14).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+paralelregister1.vhd
+1646f60ba675c4683fb6ebbf231522
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+n
+41
+PARAMETER_SIGNED_DEC
+USR
+ constraint(in_reg)
+40 downto 0
+PARAMETER_STRING
+USR
+ constraint(ct)
+1 downto 0
+PARAMETER_STRING
+USR
+ constraint(out_reg)
+40 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+ParalelRegisterQ:reg_q
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+outFinal
+# storage
+db|Multiplication.(15).cnf
+db|Multiplication.(15).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|users|sjohn|onedrive - institut teknologi bandung|keperluan kuliah|ldte|tugas besar|output finalization|output_finalization.vhd
+c3dbe77f7b6bc7c0f82bee5b6b9c8143
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+n
+41
+PARAMETER_SIGNED_DEC
+USR
+ constraint(aout)
+40 downto 0
+PARAMETER_STRING
+USR
+ constraint(qout)
+40 downto 0
+PARAMETER_STRING
+USR
+ constraint(finalout)
+40 downto 0
+PARAMETER_STRING
+USR
+ constraint(status)
+1 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+outFinal:OutputFinal
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+arsShifter
+# storage
+db|Multiplication.(13).cnf
+db|Multiplication.(13).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|users|sjohn|onedrive - institut teknologi bandung|keperluan kuliah|ldte|tugas besar|arsshifter|arsshifter.vhd
+8fa4af7b33eb3343c38c471a1ad27bb
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+n
+41
+PARAMETER_SIGNED_DEC
+USR
+ constraint(a)
+40 downto 0
+PARAMETER_STRING
+USR
+ constraint(q)
+40 downto 0
+PARAMETER_STRING
+USR
+ constraint(aout)
+40 downto 0
+PARAMETER_STRING
+USR
+ constraint(qout)
+40 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+arsShifter:ArsShift
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+Multiplication
+# storage
+db|Multiplication.(0).cnf
+db|Multiplication.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+multiplication.vhd
+2260151f1bb254135ee6a6b28c6a9e67
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+N
+41
+PARAMETER_SIGNED_DEC
+DEF
+}
+# hierarchies {
+|
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+FSM_Multi
+# storage
+db|Multiplication.(12).cnf
+db|Multiplication.(12).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|users|sjohn|onedrive - institut teknologi bandung|keperluan kuliah|ldte|tugas besar|fsmmulti|fsm_multi.vhd
+c4f8eb21868d4db7f089e81f105951a8
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(mode)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(statusadder)
+1 downto 0
+PARAMETER_STRING
+USR
+ constraint(modeadder)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(ctp)
+1 downto 0
+PARAMETER_STRING
+USR
+ constraint(ctq)
+1 downto 0
+PARAMETER_STRING
+USR
+ constraint(cta)
+1 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+FSM_Multi:control
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# complete
+
