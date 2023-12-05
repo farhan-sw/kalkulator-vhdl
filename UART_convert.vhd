@@ -492,7 +492,7 @@ begin
 		VARIABLE sendCount : INTEGER:= 0;
 		BEGIN
 			IF rising_edge(clk) THEN
-				IF sendCount > (800000) THEN
+				IF sendCount > (100000) THEN
 					clk_send <= NOT clk_send;
 					sendCount := 0;
 				ELSE
@@ -653,7 +653,7 @@ begin
 					when done =>
 						send_signal <= '1';
 
-						IF(send = '0') then -- harunya kalau dikasih '1' baru ngirim, tp ini karena button jadi '0'
+						IF(Status = "11" or Status = "10") then -- harunya kalau dikasih '1' baru ngirim, tp ini karena button jadi '0'
 							state_send <= done;
 						else
 							state_send <= init;
