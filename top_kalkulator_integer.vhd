@@ -104,6 +104,7 @@ architecture kalkulator of top_kalkulator_integer is
     SIGNAL REG_IN_Biner         : std_logic_vector(biner-1 downto 0);
 
     SIGNAL CLOCK_ALL : std_logic;
+    
 
 
 begin
