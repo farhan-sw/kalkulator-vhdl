@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Tue Dec  5 11:31:26 2023
+Analysis & Synthesis Status : Successful - Tue Dec  5 13:35:05 2023
 Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 Revision Name : kalkulator-integer-vhdl
-Top-level Entity Name : UART_convert
+Top-level Entity Name : top_kalkulator_integer
 Family : Cyclone IV E
-Total logic elements : 753
-    Total combinational functions : 732
-    Dedicated logic registers : 347
-Total registers : 347
-Total pins : 71
+Total logic elements : 579
+    Total combinational functions : 559
+    Dedicated logic registers : 324
+Total registers : 324
+Total pins : 21
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

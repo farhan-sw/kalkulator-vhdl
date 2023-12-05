@@ -1,4 +1,28 @@
-|UART_convert
+|top_kalkulator_integer
+clk => UART_convert:UART.clk
+rst_n => UART_convert:UART.rst_n
+Seven_Segment[0] <= UART_convert:UART.Seven_Segment[0]
+Seven_Segment[1] <= UART_convert:UART.Seven_Segment[1]
+Seven_Segment[2] <= UART_convert:UART.Seven_Segment[2]
+Seven_Segment[3] <= UART_convert:UART.Seven_Segment[3]
+Seven_Segment[4] <= UART_convert:UART.Seven_Segment[4]
+Seven_Segment[5] <= UART_convert:UART.Seven_Segment[5]
+Seven_Segment[6] <= UART_convert:UART.Seven_Segment[6]
+Seven_Segment[7] <= UART_convert:UART.Seven_Segment[7]
+Digit_SS[0] <= UART_convert:UART.Digit_SS[0]
+Digit_SS[1] <= UART_convert:UART.Digit_SS[1]
+Digit_SS[2] <= UART_convert:UART.Digit_SS[2]
+Digit_SS[3] <= UART_convert:UART.Digit_SS[3]
+led1 <= UART_convert:UART.led1
+led2 <= UART_convert:UART.led2
+led3 <= UART_convert:UART.led3
+led4 << UART_convert:UART.led4
+send => UART_convert:UART.send
+rs232_rx => UART_convert:UART.rs232_rx
+rs232_tx <= UART_convert:UART.rs232_tx
+
+
+|top_kalkulator_integer|UART_convert:UART
 clk => my_uart_top:UART.clk
 clk => clk_send.CLK
 clk => \SendClock:sendCount[0].CLK
@@ -58,6 +82,38 @@ clk => REGB_BCD[12].CLK
 clk => REGB_BCD[13].CLK
 clk => REGB_BCD[14].CLK
 clk => REGB_BCD[15].CLK
+clk => REGB_BCD[16].CLK
+clk => REGB_BCD[17].CLK
+clk => REGB_BCD[18].CLK
+clk => REGB_BCD[19].CLK
+clk => REGB_BCD[20].CLK
+clk => REGB_BCD[21].CLK
+clk => REGB_BCD[22].CLK
+clk => REGB_BCD[23].CLK
+clk => REGB_BCD[24].CLK
+clk => REGB_BCD[25].CLK
+clk => REGB_BCD[26].CLK
+clk => REGB_BCD[27].CLK
+clk => REGB_BCD[28].CLK
+clk => REGB_BCD[29].CLK
+clk => REGB_BCD[30].CLK
+clk => REGB_BCD[31].CLK
+clk => REGB_BCD[32].CLK
+clk => REGB_BCD[33].CLK
+clk => REGB_BCD[34].CLK
+clk => REGB_BCD[35].CLK
+clk => REGB_BCD[36].CLK
+clk => REGB_BCD[37].CLK
+clk => REGB_BCD[38].CLK
+clk => REGB_BCD[39].CLK
+clk => REGB_BCD[40].CLK
+clk => REGB_BCD[41].CLK
+clk => REGB_BCD[42].CLK
+clk => REGB_BCD[43].CLK
+clk => REGB_BCD[44].CLK
+clk => REGB_BCD[45].CLK
+clk => REGB_BCD[46].CLK
+clk => REGB_BCD[47].CLK
 clk => REGA_BCD[0].CLK
 clk => REGA_BCD[1].CLK
 clk => REGA_BCD[2].CLK
@@ -74,6 +130,38 @@ clk => REGA_BCD[12].CLK
 clk => REGA_BCD[13].CLK
 clk => REGA_BCD[14].CLK
 clk => REGA_BCD[15].CLK
+clk => REGA_BCD[16].CLK
+clk => REGA_BCD[17].CLK
+clk => REGA_BCD[18].CLK
+clk => REGA_BCD[19].CLK
+clk => REGA_BCD[20].CLK
+clk => REGA_BCD[21].CLK
+clk => REGA_BCD[22].CLK
+clk => REGA_BCD[23].CLK
+clk => REGA_BCD[24].CLK
+clk => REGA_BCD[25].CLK
+clk => REGA_BCD[26].CLK
+clk => REGA_BCD[27].CLK
+clk => REGA_BCD[28].CLK
+clk => REGA_BCD[29].CLK
+clk => REGA_BCD[30].CLK
+clk => REGA_BCD[31].CLK
+clk => REGA_BCD[32].CLK
+clk => REGA_BCD[33].CLK
+clk => REGA_BCD[34].CLK
+clk => REGA_BCD[35].CLK
+clk => REGA_BCD[36].CLK
+clk => REGA_BCD[37].CLK
+clk => REGA_BCD[38].CLK
+clk => REGA_BCD[39].CLK
+clk => REGA_BCD[40].CLK
+clk => REGA_BCD[41].CLK
+clk => REGA_BCD[42].CLK
+clk => REGA_BCD[43].CLK
+clk => REGA_BCD[44].CLK
+clk => REGA_BCD[45].CLK
+clk => REGA_BCD[46].CLK
+clk => REGA_BCD[47].CLK
 clk => receive_c.CLK
 clk => R_out~reg0.CLK
 clk => REG_B_TMP[0].CLK
@@ -90,6 +178,33 @@ clk => REG_B_TMP[10].CLK
 clk => REG_B_TMP[11].CLK
 clk => REG_B_TMP[12].CLK
 clk => REG_B_TMP[13].CLK
+clk => REG_B_TMP[14].CLK
+clk => REG_B_TMP[15].CLK
+clk => REG_B_TMP[16].CLK
+clk => REG_B_TMP[17].CLK
+clk => REG_B_TMP[18].CLK
+clk => REG_B_TMP[19].CLK
+clk => REG_B_TMP[20].CLK
+clk => REG_B_TMP[21].CLK
+clk => REG_B_TMP[22].CLK
+clk => REG_B_TMP[23].CLK
+clk => REG_B_TMP[24].CLK
+clk => REG_B_TMP[25].CLK
+clk => REG_B_TMP[26].CLK
+clk => REG_B_TMP[27].CLK
+clk => REG_B_TMP[28].CLK
+clk => REG_B_TMP[29].CLK
+clk => REG_B_TMP[30].CLK
+clk => REG_B_TMP[31].CLK
+clk => REG_B_TMP[32].CLK
+clk => REG_B_TMP[33].CLK
+clk => REG_B_TMP[34].CLK
+clk => REG_B_TMP[35].CLK
+clk => REG_B_TMP[36].CLK
+clk => REG_B_TMP[37].CLK
+clk => REG_B_TMP[38].CLK
+clk => REG_B_TMP[39].CLK
+clk => REG_B_TMP[40].CLK
 clk => REG_B[0]~reg0.CLK
 clk => REG_B[1]~reg0.CLK
 clk => REG_B[2]~reg0.CLK
@@ -104,6 +219,33 @@ clk => REG_B[10]~reg0.CLK
 clk => REG_B[11]~reg0.CLK
 clk => REG_B[12]~reg0.CLK
 clk => REG_B[13]~reg0.CLK
+clk => REG_B[14]~reg0.CLK
+clk => REG_B[15]~reg0.CLK
+clk => REG_B[16]~reg0.CLK
+clk => REG_B[17]~reg0.CLK
+clk => REG_B[18]~reg0.CLK
+clk => REG_B[19]~reg0.CLK
+clk => REG_B[20]~reg0.CLK
+clk => REG_B[21]~reg0.CLK
+clk => REG_B[22]~reg0.CLK
+clk => REG_B[23]~reg0.CLK
+clk => REG_B[24]~reg0.CLK
+clk => REG_B[25]~reg0.CLK
+clk => REG_B[26]~reg0.CLK
+clk => REG_B[27]~reg0.CLK
+clk => REG_B[28]~reg0.CLK
+clk => REG_B[29]~reg0.CLK
+clk => REG_B[30]~reg0.CLK
+clk => REG_B[31]~reg0.CLK
+clk => REG_B[32]~reg0.CLK
+clk => REG_B[33]~reg0.CLK
+clk => REG_B[34]~reg0.CLK
+clk => REG_B[35]~reg0.CLK
+clk => REG_B[36]~reg0.CLK
+clk => REG_B[37]~reg0.CLK
+clk => REG_B[38]~reg0.CLK
+clk => REG_B[39]~reg0.CLK
+clk => REG_B[40]~reg0.CLK
 clk => REG_A[0]~reg0.CLK
 clk => REG_A[1]~reg0.CLK
 clk => REG_A[2]~reg0.CLK
@@ -118,46 +260,129 @@ clk => REG_A[10]~reg0.CLK
 clk => REG_A[11]~reg0.CLK
 clk => REG_A[12]~reg0.CLK
 clk => REG_A[13]~reg0.CLK
+clk => REG_A[14]~reg0.CLK
+clk => REG_A[15]~reg0.CLK
+clk => REG_A[16]~reg0.CLK
+clk => REG_A[17]~reg0.CLK
+clk => REG_A[18]~reg0.CLK
+clk => REG_A[19]~reg0.CLK
+clk => REG_A[20]~reg0.CLK
+clk => REG_A[21]~reg0.CLK
+clk => REG_A[22]~reg0.CLK
+clk => REG_A[23]~reg0.CLK
+clk => REG_A[24]~reg0.CLK
+clk => REG_A[25]~reg0.CLK
+clk => REG_A[26]~reg0.CLK
+clk => REG_A[27]~reg0.CLK
+clk => REG_A[28]~reg0.CLK
+clk => REG_A[29]~reg0.CLK
+clk => REG_A[30]~reg0.CLK
+clk => REG_A[31]~reg0.CLK
+clk => REG_A[32]~reg0.CLK
+clk => REG_A[33]~reg0.CLK
+clk => REG_A[34]~reg0.CLK
+clk => REG_A[35]~reg0.CLK
+clk => REG_A[36]~reg0.CLK
+clk => REG_A[37]~reg0.CLK
+clk => REG_A[38]~reg0.CLK
+clk => REG_A[39]~reg0.CLK
+clk => REG_A[40]~reg0.CLK
 clk => CLOCKDIV:CLOCK7S.CLK
 clk => state~5.DATAIN
 clk => state_output~1.DATAIN
 rst_n => my_uart_top:UART.rst_n
-REG_A[0] << REG_A[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-REG_A[1] << REG_A[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-REG_A[2] << REG_A[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-REG_A[3] << REG_A[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-REG_A[4] << REG_A[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-REG_A[5] << REG_A[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-REG_A[6] << REG_A[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-REG_A[7] << REG_A[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-REG_A[8] << REG_A[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-REG_A[9] << REG_A[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-REG_A[10] << REG_A[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-REG_A[11] << REG_A[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-REG_A[12] << REG_A[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-REG_A[13] << REG_A[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-REG_B[0] << REG_B[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-REG_B[1] << REG_B[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-REG_B[2] << REG_B[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-REG_B[3] << REG_B[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-REG_B[4] << REG_B[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-REG_B[5] << REG_B[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-REG_B[6] << REG_B[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-REG_B[7] << REG_B[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-REG_B[8] << REG_B[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-REG_B[9] << REG_B[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-REG_B[10] << REG_B[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-REG_B[11] << REG_B[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-REG_B[12] << REG_B[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-REG_B[13] << REG_B[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-REG_M[0] << REG_M[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-REG_M[1] << REG_M[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-REG_M[2] << REG_M[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_A[0] <= REG_A[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_A[1] <= REG_A[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_A[2] <= REG_A[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_A[3] <= REG_A[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_A[4] <= REG_A[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_A[5] <= REG_A[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_A[6] <= REG_A[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_A[7] <= REG_A[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_A[8] <= REG_A[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_A[9] <= REG_A[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_A[10] <= REG_A[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_A[11] <= REG_A[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_A[12] <= REG_A[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_A[13] <= REG_A[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_A[14] <= REG_A[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_A[15] <= REG_A[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_A[16] <= REG_A[16]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_A[17] <= REG_A[17]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_A[18] <= REG_A[18]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_A[19] <= REG_A[19]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_A[20] <= REG_A[20]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_A[21] <= REG_A[21]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_A[22] <= REG_A[22]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_A[23] <= REG_A[23]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_A[24] <= REG_A[24]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_A[25] <= REG_A[25]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_A[26] <= REG_A[26]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_A[27] <= REG_A[27]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_A[28] <= REG_A[28]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_A[29] <= REG_A[29]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_A[30] <= REG_A[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_A[31] <= REG_A[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_A[32] <= REG_A[32]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_A[33] <= REG_A[33]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_A[34] <= REG_A[34]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_A[35] <= REG_A[35]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_A[36] <= REG_A[36]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_A[37] <= REG_A[37]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_A[38] <= REG_A[38]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_A[39] <= REG_A[39]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_A[40] <= REG_A[40]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_B[0] <= REG_B[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_B[1] <= REG_B[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_B[2] <= REG_B[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_B[3] <= REG_B[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_B[4] <= REG_B[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_B[5] <= REG_B[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_B[6] <= REG_B[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_B[7] <= REG_B[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_B[8] <= REG_B[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_B[9] <= REG_B[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_B[10] <= REG_B[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_B[11] <= REG_B[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_B[12] <= REG_B[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_B[13] <= REG_B[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_B[14] <= REG_B[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_B[15] <= REG_B[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_B[16] <= REG_B[16]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_B[17] <= REG_B[17]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_B[18] <= REG_B[18]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_B[19] <= REG_B[19]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_B[20] <= REG_B[20]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_B[21] <= REG_B[21]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_B[22] <= REG_B[22]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_B[23] <= REG_B[23]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_B[24] <= REG_B[24]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_B[25] <= REG_B[25]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_B[26] <= REG_B[26]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_B[27] <= REG_B[27]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_B[28] <= REG_B[28]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_B[29] <= REG_B[29]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_B[30] <= REG_B[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_B[31] <= REG_B[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_B[32] <= REG_B[32]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_B[33] <= REG_B[33]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_B[34] <= REG_B[34]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_B[35] <= REG_B[35]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_B[36] <= REG_B[36]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_B[37] <= REG_B[37]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_B[38] <= REG_B[38]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_B[39] <= REG_B[39]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_B[40] <= REG_B[40]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_M[0] <= REG_M[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_M[1] <= REG_M[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+REG_M[2] <= REG_M[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 isP_s <= isP_s~reg0.DB_MAX_OUTPUT_PORT_TYPE
 isQ_s <= isQ_s~reg0.DB_MAX_OUTPUT_PORT_TYPE
 R_out <= R_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Status[0] => ~NO_FANOUT~
-Status[1] => ~NO_FANOUT~
+Status[0] => Equal7.IN3
+Status[0] => Equal8.IN3
+Status[1] => Equal7.IN2
+Status[1] => Equal8.IN2
 Seven_Segment[0] <= Seven_Segment[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Seven_Segment[1] <= Seven_Segment[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Seven_Segment[2] <= Seven_Segment[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -173,29 +398,56 @@ Digit_SS[3] <= Digit_SS[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 led1 <= led1.DB_MAX_OUTPUT_PORT_TYPE
 led2 <= led2.DB_MAX_OUTPUT_PORT_TYPE
 led3 <= comb.DB_MAX_OUTPUT_PORT_TYPE
-led4 << led4~reg0.DB_MAX_OUTPUT_PORT_TYPE
-send => Selector156.IN4
-send => Selector162.IN3
-send => Selector157.IN2
-REG_IN_Biner[0] << REG_IN_Biner[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-REG_IN_Biner[1] << REG_IN_Biner[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-REG_IN_Biner[2] << REG_IN_Biner[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-REG_IN_Biner[3] << REG_IN_Biner[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-REG_IN_Biner[4] << REG_IN_Biner[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-REG_IN_Biner[5] << REG_IN_Biner[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-REG_IN_Biner[6] << REG_IN_Biner[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-REG_IN_Biner[7] << REG_IN_Biner[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-REG_IN_Biner[8] << REG_IN_Biner[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-REG_IN_Biner[9] << REG_IN_Biner[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-REG_IN_Biner[10] << REG_IN_Biner[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-REG_IN_Biner[11] << REG_IN_Biner[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-REG_IN_Biner[12] << REG_IN_Biner[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-REG_IN_Biner[13] << REG_IN_Biner[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+led4 <= led4~reg0.DB_MAX_OUTPUT_PORT_TYPE
+send => Selector321.IN4
+send => Selector328.IN3
+send => SendData.IN1
+REG_IN_Biner[0] => REG_IN_BINER_SHIFT.DATAB
+REG_IN_Biner[1] => REG_IN_BINER_SHIFT.DATAB
+REG_IN_Biner[2] => REG_IN_BINER_SHIFT.DATAB
+REG_IN_Biner[3] => REG_IN_BINER_SHIFT.DATAB
+REG_IN_Biner[4] => REG_IN_BINER_SHIFT.DATAB
+REG_IN_Biner[5] => REG_IN_BINER_SHIFT.DATAB
+REG_IN_Biner[6] => REG_IN_BINER_SHIFT.DATAB
+REG_IN_Biner[7] => REG_IN_BINER_SHIFT.DATAB
+REG_IN_Biner[8] => REG_IN_BINER_SHIFT.DATAB
+REG_IN_Biner[9] => REG_IN_BINER_SHIFT.DATAB
+REG_IN_Biner[10] => REG_IN_BINER_SHIFT.DATAB
+REG_IN_Biner[11] => REG_IN_BINER_SHIFT.DATAB
+REG_IN_Biner[12] => REG_IN_BINER_SHIFT.DATAB
+REG_IN_Biner[13] => REG_IN_BINER_SHIFT.DATAB
+REG_IN_Biner[14] => REG_IN_BINER_SHIFT.DATAB
+REG_IN_Biner[15] => REG_IN_BINER_SHIFT.DATAB
+REG_IN_Biner[16] => REG_IN_BINER_SHIFT.DATAB
+REG_IN_Biner[17] => REG_IN_BINER_SHIFT.DATAB
+REG_IN_Biner[18] => REG_IN_BINER_SHIFT.DATAB
+REG_IN_Biner[19] => REG_IN_BINER_SHIFT.DATAB
+REG_IN_Biner[20] => REG_IN_BINER_SHIFT.DATAB
+REG_IN_Biner[21] => REG_IN_BINER_SHIFT.DATAB
+REG_IN_Biner[22] => REG_IN_BINER_SHIFT.DATAB
+REG_IN_Biner[23] => REG_IN_BINER_SHIFT.DATAB
+REG_IN_Biner[24] => REG_IN_BINER_SHIFT.DATAB
+REG_IN_Biner[25] => REG_IN_BINER_SHIFT.DATAB
+REG_IN_Biner[26] => REG_IN_BINER_SHIFT.DATAB
+REG_IN_Biner[27] => REG_IN_BINER_SHIFT.DATAB
+REG_IN_Biner[28] => REG_IN_BINER_SHIFT.DATAB
+REG_IN_Biner[29] => REG_IN_BINER_SHIFT.DATAB
+REG_IN_Biner[30] => REG_IN_BINER_SHIFT.DATAB
+REG_IN_Biner[31] => REG_IN_BINER_SHIFT.DATAB
+REG_IN_Biner[32] => REG_IN_BINER_SHIFT.DATAB
+REG_IN_Biner[33] => REG_IN_BINER_SHIFT.DATAB
+REG_IN_Biner[34] => REG_IN_BINER_SHIFT.DATAB
+REG_IN_Biner[35] => REG_IN_BINER_SHIFT.DATAB
+REG_IN_Biner[36] => REG_IN_BINER_SHIFT.DATAB
+REG_IN_Biner[37] => REG_IN_BINER_SHIFT.DATAB
+REG_IN_Biner[38] => REG_IN_BINER_SHIFT.DATAB
+REG_IN_Biner[39] => REG_IN_BINER_SHIFT.DATAB
+REG_IN_Biner[40] => isNegatif.DATAB
 rs232_rx => my_uart_top:UART.rs232_rx
 rs232_tx <= my_uart_top:UART.rs232_tx
 
 
-|UART_convert|my_uart_top:UART
+|top_kalkulator_integer|UART_convert:UART|my_uart_top:UART
 clk => speed_select:speed_rx.clk
 clk => speed_select:speed_tx.clk
 clk => my_uart_rx:receiver.clk
@@ -226,7 +478,7 @@ rs232_rx => my_uart_rx:receiver.rs232_rx
 rs232_tx <= my_uart_tx:transmitter.rs232_tx
 
 
-|UART_convert|my_uart_top:UART|speed_select:speed_rx
+|top_kalkulator_integer|UART_convert:UART|my_uart_top:UART|speed_select:speed_rx
 clk => clk_bps_r.CLK
 clk => cnt[0].CLK
 clk => cnt[1].CLK
@@ -260,7 +512,7 @@ bps_start => process_0.IN1
 clk_bps <= clk_bps_r.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|UART_convert|my_uart_top:UART|speed_select:speed_tx
+|top_kalkulator_integer|UART_convert:UART|my_uart_top:UART|speed_select:speed_tx
 clk => clk_bps_r.CLK
 clk => cnt[0].CLK
 clk => cnt[1].CLK
@@ -294,7 +546,7 @@ bps_start => process_0.IN1
 clk_bps <= clk_bps_r.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|UART_convert|my_uart_top:UART|my_uart_rx:receiver
+|top_kalkulator_integer|UART_convert:UART|my_uart_top:UART|my_uart_rx:receiver
 clk => rx_data_r[0].CLK
 clk => rx_data_r[1].CLK
 clk => rx_data_r[2].CLK
@@ -389,7 +641,7 @@ rx_data[7] <= rx_data_r[7].DB_MAX_OUTPUT_PORT_TYPE
 rx_int <= rx_int_i.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|UART_convert|my_uart_top:UART|my_uart_tx:transmitter
+|top_kalkulator_integer|UART_convert:UART|my_uart_top:UART|my_uart_tx:transmitter
 clk => rs232_tx_r.CLK
 clk => num[0].CLK
 clk => num[1].CLK
@@ -445,7 +697,7 @@ clk_bps => rs232_tx_r.OUTPUTSELECT
 bps_start <= bps_start_r.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|UART_convert|ascii_to_bcd:CONVERT
+|top_kalkulator_integer|UART_convert:UART|ascii_to_bcd:CONVERT
 ascii[0] => Mux0.IN263
 ascii[0] => Mux1.IN263
 ascii[0] => Mux2.IN263
@@ -511,32 +763,26 @@ mode[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
 mode[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|UART_convert|bcd_to_ascii:CONVERT_TO_ASCII
-bcd[0] => Mux0.IN19
-bcd[0] => Mux1.IN19
+|top_kalkulator_integer|UART_convert:UART|bcd_to_ascii:CONVERT_TO_ASCII
 bcd[0] => Mux2.IN19
-bcd[0] => Mux3.IN19
 bcd[0] => Mux4.IN19
 bcd[0] => Mux5.IN19
 bcd[0] => Mux6.IN19
-bcd[1] => Mux0.IN18
-bcd[1] => Mux1.IN18
 bcd[1] => Mux2.IN18
-bcd[1] => Mux3.IN18
 bcd[1] => Mux4.IN18
 bcd[1] => Mux5.IN18
 bcd[1] => Mux6.IN18
-bcd[2] => Mux0.IN17
-bcd[2] => Mux1.IN17
+bcd[2] => Mux0.IN5
+bcd[2] => Mux1.IN5
 bcd[2] => Mux2.IN17
-bcd[2] => Mux3.IN17
+bcd[2] => Mux3.IN5
 bcd[2] => Mux4.IN17
 bcd[2] => Mux5.IN17
 bcd[2] => Mux6.IN17
-bcd[3] => Mux0.IN16
-bcd[3] => Mux1.IN16
+bcd[3] => Mux0.IN4
+bcd[3] => Mux1.IN4
 bcd[3] => Mux2.IN16
-bcd[3] => Mux3.IN16
+bcd[3] => Mux3.IN4
 bcd[3] => Mux4.IN16
 bcd[3] => Mux5.IN16
 bcd[3] => Mux6.IN16
@@ -550,7 +796,7 @@ ascii[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 ascii[7] <= <GND>
 
 
-|UART_convert|CLOCKDIV:CLOCK7S
+|top_kalkulator_integer|UART_convert:UART|CLOCKDIV:CLOCK7S
 CLK => pulse_div~reg0.CLK
 CLK => count[0].CLK
 CLK => count[1].CLK

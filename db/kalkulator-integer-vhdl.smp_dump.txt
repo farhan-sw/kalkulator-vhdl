@@ -1,5 +1,5 @@
 
-State Machine - |UART_convert|state_send
+State Machine - |top_kalkulator_integer|UART_convert:UART|state_send
 Name state_send.done state_send.switch state_send.sendBCD state_send.prepare state_send.adder state_send.shift state_send.start state_send.init 
 state_send.init 0 0 0 0 0 0 0 0 
 state_send.start 0 0 0 0 0 0 1 1 
@@ -10,20 +10,20 @@ state_send.sendBCD 0 0 1 0 0 0 0 1
 state_send.switch 0 1 0 0 0 0 0 1 
 state_send.done 1 0 0 0 0 0 0 1 
 
-State Machine - |UART_convert|state
+State Machine - |top_kalkulator_integer|UART_convert:UART|state
 Name state.final state.RB state.RA state.init 
 state.init 0 0 0 0 
 state.RA 0 0 1 1 
 state.RB 0 1 0 1 
 state.final 1 0 0 1 
 
-State Machine - |UART_convert|state_output
+State Machine - |top_kalkulator_integer|UART_convert:UART|state_output
 Name state_output.final state_output.wait_mp state_output.init 
 state_output.init 0 0 0 
 state_output.wait_mp 0 1 1 
 state_output.final 1 0 1 
 
-State Machine - |UART_convert|state_7s
+State Machine - |top_kalkulator_integer|UART_convert:UART|state_7s
 Name state_7s.s4 state_7s.s3 state_7s.s2 state_7s.s1 
 state_7s.s1 0 0 0 0 
 state_7s.s2 0 0 1 1 

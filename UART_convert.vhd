@@ -7,8 +7,8 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 -- entity
 entity UART_convert is
 	generic ( 
-        biner : INTEGER := 14;
-        bcd_char : INTEGER := 4
+        biner : INTEGER := 41;
+        bcd_char : INTEGER := 12
         );
 
 	port(
@@ -36,7 +36,7 @@ entity UART_convert is
 
 		-- -------------------- Untuk Mengirim -------------------------
 		send 		 : in std_logic;
-		REG_IN_Biner : buffer std_logic_vector(biner-1 downto 0); -- ntar ubah jai IN
+		REG_IN_Biner : in std_logic_vector(biner-1 downto 0); -- ntar ubah jai IN
 		
 		-- serial part
 		rs232_rx 		: in std_logic;
@@ -127,6 +127,7 @@ Architecture RTL of UART_convert is
 	-- UNTUK PROSES PENGIRIMAN
 	type states_send is (init, start, shift, adder,  prepare, sendBCD, switch, done );
     SIGNAL state_send 		: states_send := init;
+	SIGNAL isNegatif : std_logic;
 	
 begin
 
@@ -170,19 +171,31 @@ begin
 			when s1 =>
 				Digit_SS <= "1110";
 				--Seven_Segment <= not("10000000");
-				case REG_A(3 downto 0) is    -- display hasil operasi
-				when "0000" => Seven_Segment <= not("00111111");    -- '0'
-				when "0001" => Seven_Segment <= not("00000110");    -- '1'
-				when "0010" => Seven_Segment <= not("01011011");    -- '2'
-				when "0011" => Seven_Segment <= not("01001111");    -- '3'
-				when "0100" => Seven_Segment <= not("01100110");    -- '4'
-				when "0101" => Seven_Segment <= not("01101101");    -- '5'
-				when "0110" => Seven_Segment <= not("01111101");    -- '6'
-				when "0111" => Seven_Segment <= not("00000111");    -- '7'
-				when "1000" => Seven_Segment <= not("01111111");    -- '8'
-				when "1001" => Seven_Segment <= not("01101111");    -- '9'
-				when others => Seven_Segment <= not("11111111");
+				case REG_M is    -- display hasil operasi
+				when "000" => Seven_Segment <= not("01000000");    -- --
+				when "001" => Seven_Segment <= not("00111111");    -- D (adder)
+				when "010" => Seven_Segment <= not("01111111");    -- B (subtractor)
+				when "011" => Seven_Segment <= not("00100111");    -- L (Multiplication)
+				when "100" => Seven_Segment <= not("00000110");    -- V (Division)
+				when "101" => Seven_Segment <= not("00100111");    -- O (Modulo)
+				when "110" => Seven_Segment <= not("00110111");    -- N (Pangkat)
+				when "111" => Seven_Segment <= not("01110011");    -- B (FPB)
+				when others => Seven_Segment <= not("01111001"); -- Error
 				end case;
+
+				-- case REG_A(3 downto 0) is    -- display hasil operasi
+				-- when "0000" => Seven_Segment <= not("00111111");    -- '0'
+				-- when "0001" => Seven_Segment <= not("00000110");    -- '1'
+				-- when "0010" => Seven_Segment <= not("01011011");    -- '2'
+				-- when "0011" => Seven_Segment <= not("01001111");    -- '3'
+				-- when "0100" => Seven_Segment <= not("01100110");    -- '4'
+				-- when "0101" => Seven_Segment <= not("01101101");    -- '5'
+				-- when "0110" => Seven_Segment <= not("01111101");    -- '6'
+				-- when "0111" => Seven_Segment <= not("00000111");    -- '7'
+				-- when "1000" => Seven_Segment <= not("01111111");    -- '8'
+				-- when "1001" => Seven_Segment <= not("01101111");    -- '9'
+				-- when others => Seven_Segment <= not("11111111");
+				-- end case;
 
 				state_7s <= s2;
 		
@@ -245,15 +258,33 @@ begin
 				case state_output is
 					when init => 
 						-- LAKUKAN KONVERSI BCD KE BINER
-						REG_A <= (REGA_BCD(3 downto 0) * "01")  --multiply by 1
-							+ (REGA_BCD(7 downto 4) * "1010") --multiply by 10
-							+ (REGA_BCD(11 downto 8) * "1100100") --multiply by 100
-							+ (REGA_BCD(15 downto 12) * "1111101000"); --multiply by 1000
 
-						REG_B <= (REGB_BCD(3 downto 0) * "01")  --multiply by 1
-							+ (REGB_BCD(7 downto 4) * "1010") --multiply by 10
-							+ (REGB_BCD(11 downto 8) * "1100100") --multiply by 100
-							+ (REGB_BCD(15 downto 12) * "1111101000"); --multiply by 1000
+						REG_A <= (REGA_BCD(3 downto 0) * "000000000000000000000000000000000001")  --multiply by 1
+						+ (REGA_BCD(7 downto 4) * 		"0000000000000000000000000000000001010") --multiply by 10
+						+ (REGA_BCD(11 downto 8) * 		"0000000000000000000000000000001100100") --multiply by 100
+						+ (REGA_BCD(15 downto 12) * 	"0000000000000000000000000001111101000") --multiply by 1000
+						+ (REGA_BCD(19 downto 16) * 	"0000000000000000000000000011111010000") --multiply by 10000
+						+ (REGA_BCD(23 downto 20) * 	"0000000000000000000000000111110100000") --multiply by 100000
+						+ (REGA_BCD(27 downto 24) * 	"0000000000000000000000001111101000000") --multiply by 1000000
+						+ (REGA_BCD(31 downto 28) * 	"0000000000000000000000011111010000000") --multiply by 10000000
+						+ (REGA_BCD(35 downto 32) * 	"0000000000000000000000111110100000000") --multiply by 100000000
+						+ (REGA_BCD(39 downto 36) * 	"0000000000000000000001111101000000000") --multiply by 1000000000
+						+ (REGA_BCD(43 downto 40) * 	"0000000000000000000011111010000000000") --multiply by 10000000000
+						+ (REGA_BCD(47 downto 44) * 	"0000000000000000000111110100000000000"); --multiply by 100000000000
+					
+
+						REG_B <= (REGB_BCD(3 downto 0) * "000000000000000000000000000000000001")  --multiply by 1
+						+ (REGB_BCD(7 downto 4) * 		"0000000000000000000000000000000001010") --multiply by 10
+						+ (REGB_BCD(11 downto 8) * 		"0000000000000000000000000000001100100") --multiply by 100
+						+ (REGB_BCD(15 downto 12) * 	"0000000000000000000000000001111101000") --multiply by 1000
+						+ (REGB_BCD(19 downto 16) * 	"0000000000000000000000000011111010000") --multiply by 10000
+						+ (REGB_BCD(23 downto 20) * 	"0000000000000000000000000111110100000") --multiply by 100000
+						+ (REGB_BCD(27 downto 24) * 	"0000000000000000000000001111101000000") --multiply by 1000000
+						+ (REGB_BCD(31 downto 28) * 	"0000000000000000000000011111010000000") --multiply by 10000000
+						+ (REGB_BCD(35 downto 32) * 	"0000000000000000000000111110100000000") --multiply by 100000000
+						+ (REGB_BCD(39 downto 36) * 	"0000000000000000000001111101000000000") --multiply by 1000000000
+						+ (REGB_BCD(43 downto 40) * 	"0000000000000000000011111010000000000") --multiply by 10000000000
+						+ (REGB_BCD(47 downto 44) * 	"0000000000000000000111110100000000000"); --multiply by 100000000000
 						
 						REG_B_TMP <= (OTHERS => '0');
 
@@ -266,15 +297,32 @@ begin
 							REG_B_TMP <= REG_B;
 
 							-- LAKUKAN KONVERSI BCD KE BINER
-							REG_A <= (REGA_BCD(3 downto 0) * "01")  --multiply by 1
-								+ (REGA_BCD(7 downto 4) * "1010") --multiply by 10
-								+ (REGA_BCD(11 downto 8) * "1100100") --multiply by 100
-								+ (REGA_BCD(15 downto 12) * "1111101000"); --multiply by 1000
+							REG_A <= (REGA_BCD(3 downto 0) * "000000000000000000000000000000000001")  --multiply by 1
+						+ (REGA_BCD(7 downto 4) * 		"0000000000000000000000000000000001010") --multiply by 10
+						+ (REGA_BCD(11 downto 8) * 		"0000000000000000000000000000001100100") --multiply by 100
+						+ (REGA_BCD(15 downto 12) * 	"0000000000000000000000000001111101000") --multiply by 1000
+						+ (REGA_BCD(19 downto 16) * 	"0000000000000000000000000011111010000") --multiply by 10000
+						+ (REGA_BCD(23 downto 20) * 	"0000000000000000000000000111110100000") --multiply by 100000
+						+ (REGA_BCD(27 downto 24) * 	"0000000000000000000000001111101000000") --multiply by 1000000
+						+ (REGA_BCD(31 downto 28) * 	"0000000000000000000000011111010000000") --multiply by 10000000
+						+ (REGA_BCD(35 downto 32) * 	"0000000000000000000000111110100000000") --multiply by 100000000
+						+ (REGA_BCD(39 downto 36) * 	"0000000000000000000001111101000000000") --multiply by 1000000000
+						+ (REGA_BCD(43 downto 40) * 	"0000000000000000000011111010000000000") --multiply by 10000000000
+						+ (REGA_BCD(47 downto 44) * 	"0000000000000000000111110100000000000"); --multiply by 100000000000
+					
 
-							REG_B <= (REGB_BCD(3 downto 0) * "01")  --multiply by 1
-								+ (REGB_BCD(7 downto 4) * "1010") --multiply by 10
-								+ (REGB_BCD(11 downto 8) * "1100100") --multiply by 100
-								+ (REGB_BCD(15 downto 12) * "1111101000"); --multiply by 1000
+						REG_B <= (REGB_BCD(3 downto 0) * "000000000000000000000000000000000001")  --multiply by 1
+						+ (REGB_BCD(7 downto 4) * 		"0000000000000000000000000000000001010") --multiply by 10
+						+ (REGB_BCD(11 downto 8) * 		"0000000000000000000000000000001100100") --multiply by 100
+						+ (REGB_BCD(15 downto 12) * 	"0000000000000000000000000001111101000") --multiply by 1000
+						+ (REGB_BCD(19 downto 16) * 	"0000000000000000000000000011111010000") --multiply by 10000
+						+ (REGB_BCD(23 downto 20) * 	"0000000000000000000000000111110100000") --multiply by 100000
+						+ (REGB_BCD(27 downto 24) * 	"0000000000000000000000001111101000000") --multiply by 1000000
+						+ (REGB_BCD(31 downto 28) * 	"0000000000000000000000011111010000000") --multiply by 10000000
+						+ (REGB_BCD(35 downto 32) * 	"0000000000000000000000111110100000000") --multiply by 100000000
+						+ (REGB_BCD(39 downto 36) * 	"0000000000000000000001111101000000000") --multiply by 1000000000
+						+ (REGB_BCD(43 downto 40) * 	"0000000000000000000011111010000000000") --multiply by 10000000000
+						+ (REGB_BCD(47 downto 44) * 	"0000000000000000000111110100000000000"); --multiply by 100000000000
 
 							state_output <= wait_mp;	
 						else 
@@ -283,15 +331,32 @@ begin
 
 					when final =>
 						-- LAKUKAN KONVERSI BCD KE BINER TAMBAHKAN SIGNED BIT
-						REG_A <= (REGA_BCD(3 downto 0) * "01")  --multiply by 1
-							+ (REGA_BCD(7 downto 4) * "1010") --multiply by 10
-							+ (REGA_BCD(11 downto 8) * "1100100") --multiply by 100
-							+ (REGA_BCD(15 downto 12) * "1111101000"); --multiply by 1000
+						REG_A <= (REGA_BCD(3 downto 0) * "000000000000000000000000000000000001")  --multiply by 1
+						+ (REGA_BCD(7 downto 4) * 		"0000000000000000000000000000000001010") --multiply by 10
+						+ (REGA_BCD(11 downto 8) * 		"0000000000000000000000000000001100100") --multiply by 100
+						+ (REGA_BCD(15 downto 12) * 	"0000000000000000000000000001111101000") --multiply by 1000
+						+ (REGA_BCD(19 downto 16) * 	"0000000000000000000000000011111010000") --multiply by 10000
+						+ (REGA_BCD(23 downto 20) * 	"0000000000000000000000000111110100000") --multiply by 100000
+						+ (REGA_BCD(27 downto 24) * 	"0000000000000000000000001111101000000") --multiply by 1000000
+						+ (REGA_BCD(31 downto 28) * 	"0000000000000000000000011111010000000") --multiply by 10000000
+						+ (REGA_BCD(35 downto 32) * 	"0000000000000000000000111110100000000") --multiply by 100000000
+						+ (REGA_BCD(39 downto 36) * 	"0000000000000000000001111101000000000") --multiply by 1000000000
+						+ (REGA_BCD(43 downto 40) * 	"0000000000000000000011111010000000000") --multiply by 10000000000
+						+ (REGA_BCD(47 downto 44) * 	"0000000000000000000111110100000000000"); --multiply by 100000000000
+					
 
-						REG_B <= (REGB_BCD(3 downto 0) * "01")  --multiply by 1
-							+ (REGB_BCD(7 downto 4) * "1010") --multiply by 10
-							+ (REGB_BCD(11 downto 8) * "1100100") --multiply by 100
-							+ (REGB_BCD(15 downto 12) * "1111101000"); --multiply by 1000
+						REG_B <= (REGB_BCD(3 downto 0) * "000000000000000000000000000000000001")  --multiply by 1
+						+ (REGB_BCD(7 downto 4) * 		"0000000000000000000000000000000001010") --multiply by 10
+						+ (REGB_BCD(11 downto 8) * 		"0000000000000000000000000000001100100") --multiply by 100
+						+ (REGB_BCD(15 downto 12) * 	"0000000000000000000000000001111101000") --multiply by 1000
+						+ (REGB_BCD(19 downto 16) * 	"0000000000000000000000000011111010000") --multiply by 10000
+						+ (REGB_BCD(23 downto 20) * 	"0000000000000000000000000111110100000") --multiply by 100000
+						+ (REGB_BCD(27 downto 24) * 	"0000000000000000000000001111101000000") --multiply by 1000000
+						+ (REGB_BCD(31 downto 28) * 	"0000000000000000000000011111010000000") --multiply by 10000000
+						+ (REGB_BCD(35 downto 32) * 	"0000000000000000000000111110100000000") --multiply by 100000000
+						+ (REGB_BCD(39 downto 36) * 	"0000000000000000000001111101000000000") --multiply by 1000000000
+						+ (REGB_BCD(43 downto 40) * 	"0000000000000000000011111010000000000") --multiply by 10000000000
+						+ (REGB_BCD(47 downto 44) * 	"0000000000000000000111110100000000000"); --multiply by 100000000000
 						
 						if (isA_negative = '1') then
 							REG_A(biner-1) <= '1';
@@ -355,7 +420,7 @@ begin
 
 						state 			<= RA;
 
-					elsif (receive_data = "01010011") then
+					elsif (receive_data = "01010011") then -- NERIMA S
 						isP_s <= '1';
 							
 					elsif(conv_mode /= "000") then								-- KALAU MENEMUKAN TANDA PINDAH STATE
@@ -366,7 +431,7 @@ begin
 					
 					else														-- MENEMUKAN ANGKA, PINDAH ISI REG berikutnya
 						-- PENGISIAN REGISTER A BCD
-						REGA_BCD 		<= REGA_BCD(11 downto 0) & BCD;
+						REGA_BCD 		<= REGA_BCD(((4*bcd_char)-1) - 4 downto 0) & BCD;
 						isSignedBit 	<= '0';
 
 						state 			<= RA;
@@ -391,7 +456,7 @@ begin
 
 					else														-- MENEMUKAN ANGKA, PINDAH ISI REG berikutnya
 						-- PENGISIAN REGISTER B BCD
-						REGB_BCD 		<= REGA_BCD(11 downto 0) & BCD;
+						REGB_BCD 		<= REGA_BCD(((4*bcd_char)-1) - 4 downto 0) & BCD;
 						state 			<= RB;
 					end if;
 
@@ -440,6 +505,7 @@ begin
 	SendData : PROCESS(clk, send)
 		VARIABLE bcdCount : INTEGER:= 0;
 		VARIABLE convert : INTEGER:= 0;
+		
 		BEGIN
 			
 			IF rising_edge(clk_send) THEN
@@ -448,22 +514,34 @@ begin
 					when init =>
 
 						-- REG_OUT_BCD <= ("0101000101110101"); --5175
-						REG_IN_Biner <= "00000000110100";
+						-- REG_IN_Biner <= "00000100001000000100100000000011000110101";
 						bcdCount := 0;
 
-						IF(send = '0') then -- harunya kalau dikasih '1' baru ngirim, tp ini karena button jadi '0'
+						IF(send = '0' or Status = "11" or Status = "10") then -- harunya kalau dikasih '1' baru ngirim, tp ini karena button jadi '0'
 							state_send <= start;
 						else
 							state_send <= init;
 						end if;
 
 					when start =>
-						convert := 1;
+						IF (Status = "11") THEN
+							convert := 1;
 
-						REG_IN_BINER_SHIFT <= REG_IN_Biner;
-						REG_OUT_BCD <= (OTHERS => '0');
-						
-						state_send <= adder;
+							IF (REG_IN_Biner(biner - 1) = '1') then
+								isNegatif <= '1';
+							else
+								isNegatif <= '0';
+							end if;
+
+							REG_IN_BINER_SHIFT <= '0' & REG_IN_Biner(biner - 2 downto 0);
+							REG_OUT_BCD <= (OTHERS => '0');
+
+							state_send <= adder;
+
+						ELSE
+							REG_OUT_BCD <= "111111111111111111111111111111111111111111111111";
+							state_send <= prepare;
+						END IF;
 
 					when shift =>
 						if (convert > biner) then
@@ -484,7 +562,38 @@ begin
 
 					
 					when adder =>
+
+							if REG_OUT_BCD(47 downto 44) > 4 then
+								REG_OUT_BCD(15 downto 12) <= REG_OUT_BCD(15 downto 12) + 3;
+							end if;
 							
+							if REG_OUT_BCD(43 downto 40) > 4 then
+								REG_OUT_BCD(11 downto 8) <= REG_OUT_BCD(11 downto 8) + 3;
+							end if;
+							
+							if REG_OUT_BCD(39 downto 36) > 4 then
+								REG_OUT_BCD(7 downto 4) <= REG_OUT_BCD(7 downto 4) + 3;
+							end if;
+
+							if REG_OUT_BCD(35 downto 32) > 4 then
+								REG_OUT_BCD(15 downto 12) <= REG_OUT_BCD(15 downto 12) + 3;
+							end if;
+
+							if REG_OUT_BCD(31 downto 28) > 4 then
+								REG_OUT_BCD(15 downto 12) <= REG_OUT_BCD(15 downto 12) + 3;
+							end if;
+							
+							if REG_OUT_BCD(27 downto 24) > 4 then
+								REG_OUT_BCD(11 downto 8) <= REG_OUT_BCD(11 downto 8) + 3;
+							end if;
+							
+							if REG_OUT_BCD(23 downto 20) > 4 then
+								REG_OUT_BCD(7 downto 4) <= REG_OUT_BCD(7 downto 4) + 3;
+							end if;		
+							
+							if REG_OUT_BCD(19 downto 16) > 4 then
+								REG_OUT_BCD(15 downto 12) <= REG_OUT_BCD(15 downto 12) + 3;
+							end if;
 
 							if REG_OUT_BCD(15 downto 12) > 4 then
 								REG_OUT_BCD(15 downto 12) <= REG_OUT_BCD(15 downto 12) + 3;
@@ -525,12 +634,17 @@ begin
 					when switch =>
 						send_signal <= '1';
 						led4 <= '0';
+
+						if (isNegatif = '1') then
+							REG_OUT_BCD <= REG_OUT_BCD((((4*bcd_char)-1)- 4) downto 0) & "1010";
+						else
+							REG_OUT_BCD <= REG_OUT_BCD((((4*bcd_char)-1)- 4) downto 0) & "1011";
+						end if;
 						
-						REG_OUT_BCD <= REG_OUT_BCD((((4*bcd_char)-1)- 4) downto 0) & "1100";
 
 						bcdCount := bcdCount + 1;
 
-						if(bcdCount >= bcd_char ) then
+						if(bcdCount >= bcd_char + 1 ) then
 							state_send <= done;
 						else
 							state_send <= sendBCD;
