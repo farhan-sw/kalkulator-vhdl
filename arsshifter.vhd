@@ -3,7 +3,7 @@ use IEEE.std_logic_1164.all;
 use IEEE.std_logic_arith.all;
 
 entity arsShifter is
-	generic (N : INTEGER := 4);
+	generic (N : INTEGER := 41);
     port (
         A                   : in std_logic_vector (N-1 downto 0);
         Q					: in std_logic_vector (N-1 downto 0) ;

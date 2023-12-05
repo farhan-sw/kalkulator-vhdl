@@ -3,7 +3,7 @@ use IEEE.std_logic_1164.all;
 use IEEE.std_logic_arith.all;
 
 entity adderFSM is
-    generic ( N : INTEGER := 4 );
+    generic ( N : INTEGER := 41 );
     port (
         A, B            : in std_logic_vector(N - 1 downto 0);
         sum             : buffer std_logic_vector(N - 1 downto 0);
@@ -20,7 +20,7 @@ end adderFSM;
 architecture adderFSM_arc of adderFSM is
 
     component RegisterSerial
-        generic ( N : INTEGER := 4);
+        generic ( N : INTEGER := 41);
         port (
             IN_REG          : in std_logic_vector (N-1 downto 0);
             L, W, EN        : in std_logic;

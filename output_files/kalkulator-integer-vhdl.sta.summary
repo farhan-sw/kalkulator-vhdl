@@ -3,116 +3,156 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -23.165
-TNS   : -2397.469
+Slack : -22.428
+TNS   : -2225.892
 
 Type  : Slow 1200mV 85C Model Setup 'CLOCK_ALL'
-Slack : -7.066
-TNS   : -5243.714
+Slack : -8.643
+TNS   : -6709.543
 
 Type  : Slow 1200mV 85C Model Setup 'UART_convert:UART|clk_send'
-Slack : -6.986
-TNS   : -976.578
+Slack : -5.643
+TNS   : -750.551
 
-Type  : Slow 1200mV 85C Model Setup 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|Multiplication:perkalian|FSM_Multi:control|cState.B1'
-Slack : -4.355
-TNS   : -186.401
-
-Type  : Slow 1200mV 85C Model Setup 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|FPB:FPBB|fsm_fpb:Control|cstate.s3'
-Slack : -3.673
-TNS   : -215.952
-
-Type  : Slow 1200mV 85C Model Setup 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|divider:pembagian|dividerfsm:FSMDivider|CT_IN'
-Slack : -3.465
-TNS   : -210.949
-
-Type  : Slow 1200mV 85C Model Setup 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|Multiplication:perkalian|FSM_Multi:control|cState.G'
-Slack : -3.185
-TNS   : -190.731
-
-Type  : Slow 1200mV 85C Model Setup 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|FPB:FPBB|fsm_fpb:Control|cstate.s7'
-Slack : -3.048
-TNS   : -198.176
-
-Type  : Slow 1200mV 85C Model Setup 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|divider:pembagian|dividerfsm:FSMDivider|CT_R'
-Slack : -2.888
-TNS   : -199.887
+Type  : Slow 1200mV 85C Model Setup 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Pangkat:blockPangkat|Multiplication:multiply|FSM_Multi:control|cState.B1'
+Slack : -3.823
+TNS   : -209.854
 
 Type  : Slow 1200mV 85C Model Setup 'UART_convert:UART|CLOCKDIV:CLOCK7S|pulse_div'
-Slack : -2.805
-TNS   : -14.332
+Slack : -3.647
+TNS   : -24.220
 
-Type  : Slow 1200mV 85C Model Setup 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|divider:pembagian|dividerfsm:FSMDivider|SubtractON[1]'
-Slack : -2.749
-TNS   : -194.701
+Type  : Slow 1200mV 85C Model Setup 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|divider:blockdivider|dividerfsm:FSMDivider|CT_IN'
+Slack : -3.641
+TNS   : -206.867
 
-Type  : Slow 1200mV 85C Model Setup 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|divider:pembagian|dividerfsm:FSMDivider|add_ON[0]'
-Slack : -2.743
-TNS   : -68.550
+Type  : Slow 1200mV 85C Model Setup 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Pangkat:blockPangkat|Multiplication:multiply|FSM_Multi:control|cState.A1'
+Slack : -3.464
+TNS   : -91.915
+
+Type  : Slow 1200mV 85C Model Setup 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|divider:blockdivider|dividerfsm:FSMDivider|CT_R'
+Slack : -3.345
+TNS   : -192.336
+
+Type  : Slow 1200mV 85C Model Setup 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|FPB:blockFPB|fsm_fpb:Control|cstate.s7'
+Slack : -3.197
+TNS   : -249.854
+
+Type  : Slow 1200mV 85C Model Setup 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Multiplication:blockMulti|FSM_Multi:control|cState.G'
+Slack : -3.055
+TNS   : -193.171
+
+Type  : Slow 1200mV 85C Model Setup 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Multiplication:blockMulti|FSM_Multi:control|cState.B1'
+Slack : -3.036
+TNS   : -169.175
+
+Type  : Slow 1200mV 85C Model Setup 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|FPB:blockFPB|fsm_fpb:Control|cstate.s3'
+Slack : -3.001
+TNS   : -196.663
+
+Type  : Slow 1200mV 85C Model Setup 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Multiplication:blockMulti|FSM_Multi:control|cState.E'
+Slack : -2.823
+TNS   : -120.204
+
+Type  : Slow 1200mV 85C Model Setup 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|divider:blockdivider|dividerfsm:FSMDivider|add_ON[0]'
+Slack : -2.666
+TNS   : -71.345
+
+Type  : Slow 1200mV 85C Model Setup 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|divider:blockdivider|dividerfsm:FSMDivider|SubtractON[1]'
+Slack : -2.411
+TNS   : -222.091
+
+Type  : Slow 1200mV 85C Model Setup 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Pangkat:blockPangkat|pangkatFSM:fsmPangkat|cstate.s0'
+Slack : -2.181
+TNS   : -88.144
+
+Type  : Slow 1200mV 85C Model Setup 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Pangkat:blockPangkat|Multiplication:multiply|FSM_Multi:control|cState.G'
+Slack : -2.049
+TNS   : -150.772
 
 Type  : Slow 1200mV 85C Model Setup 'UART_convert:UART|REG_M[0]'
-Slack : -1.252
-TNS   : -34.475
-
-Type  : Slow 1200mV 85C Model Hold 'CLOCK_ALL'
-Slack : -0.329
-TNS   : -13.625
+Slack : -0.726
+TNS   : -17.904
 
 Type  : Slow 1200mV 85C Model Hold 'UART_convert:UART|REG_M[0]'
-Slack : -0.209
-TNS   : -0.517
+Slack : -0.430
+TNS   : -3.609
 
-Type  : Slow 1200mV 85C Model Hold 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|divider:pembagian|dividerfsm:FSMDivider|SubtractON[1]'
-Slack : 0.219
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_ALL'
+Slack : -0.267
+TNS   : -7.584
+
+Type  : Slow 1200mV 85C Model Hold 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|FPB:blockFPB|fsm_fpb:Control|cstate.s7'
+Slack : -0.108
+TNS   : -0.108
+
+Type  : Slow 1200mV 85C Model Hold 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|divider:blockdivider|dividerfsm:FSMDivider|add_ON[0]'
+Slack : 0.109
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|divider:pembagian|dividerfsm:FSMDivider|add_ON[0]'
-Slack : 0.343
+Type  : Slow 1200mV 85C Model Hold 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Pangkat:blockPangkat|pangkatFSM:fsmPangkat|cstate.s0'
+Slack : 0.120
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|FPB:FPBB|fsm_fpb:Control|cstate.s7'
-Slack : 0.367
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 0.434
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|Multiplication:perkalian|FSM_Multi:control|cState.G'
-Slack : 0.451
+Type  : Slow 1200mV 85C Model Hold 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Pangkat:blockPangkat|Multiplication:multiply|FSM_Multi:control|cState.G'
+Slack : 0.354
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'UART_convert:UART|clk_send'
-Slack : 0.453
+Slack : 0.433
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.452
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|divider:blockdivider|dividerfsm:FSMDivider|SubtractON[1]'
+Slack : 0.501
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'UART_convert:UART|CLOCKDIV:CLOCK7S|pulse_div'
-Slack : 0.479
+Slack : 0.574
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|divider:pembagian|dividerfsm:FSMDivider|CT_IN'
-Slack : 1.058
+Type  : Slow 1200mV 85C Model Hold 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Multiplication:blockMulti|FSM_Multi:control|cState.G'
+Slack : 0.711
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|FPB:FPBB|fsm_fpb:Control|cstate.s3'
-Slack : 1.588
+Type  : Slow 1200mV 85C Model Hold 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Multiplication:blockMulti|FSM_Multi:control|cState.E'
+Slack : 0.736
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|divider:pembagian|dividerfsm:FSMDivider|CT_R'
-Slack : 1.886
+Type  : Slow 1200mV 85C Model Hold 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|divider:blockdivider|dividerfsm:FSMDivider|CT_IN'
+Slack : 1.141
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|Multiplication:perkalian|FSM_Multi:control|cState.B1'
-Slack : 2.124
+Type  : Slow 1200mV 85C Model Hold 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|divider:blockdivider|dividerfsm:FSMDivider|CT_R'
+Slack : 1.659
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|FPB:blockFPB|fsm_fpb:Control|cstate.s3'
+Slack : 1.693
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Multiplication:blockMulti|FSM_Multi:control|cState.B1'
+Slack : 1.720
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Pangkat:blockPangkat|Multiplication:multiply|FSM_Multi:control|cState.A1'
+Slack : 1.744
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Pangkat:blockPangkat|Multiplication:multiply|FSM_Multi:control|cState.B1'
+Slack : 2.097
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Recovery 'CLOCK_ALL'
-Slack : -3.785
-TNS   : -185.223
+Slack : -4.869
+TNS   : -324.442
 
 Type  : Slow 1200mV 85C Model Removal 'CLOCK_ALL'
-Slack : -1.002
-TNS   : -15.904
+Slack : -1.112
+TNS   : -10.330
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
 Slack : -3.000
@@ -120,7 +160,7 @@ TNS   : -480.327
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_ALL'
 Slack : -1.487
-TNS   : -3655.046
+TNS   : -4339.066
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'UART_convert:UART|clk_send'
 Slack : -1.487
@@ -130,153 +170,213 @@ Type  : Slow 1200mV 85C Model Minimum Pulse Width 'UART_convert:UART|CLOCKDIV:CL
 Slack : -1.487
 TNS   : -22.305
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|FPB:FPBB|fsm_fpb:Control|cstate.s7'
-Slack : 0.243
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|Multiplication:perkalian|FSM_Multi:control|cState.B1'
-Slack : 0.304
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|Multiplication:perkalian|FSM_Multi:control|cState.G'
-Slack : 0.308
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|FPB:FPBB|fsm_fpb:Control|cstate.s3'
-Slack : 0.339
-TNS   : 0.000
-
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'UART_convert:UART|REG_M[0]'
-Slack : 0.389
+Slack : 0.139
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|divider:pembagian|dividerfsm:FSMDivider|add_ON[0]'
-Slack : 0.417
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|FPB:blockFPB|fsm_fpb:Control|cstate.s7'
+Slack : 0.235
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|divider:pembagian|dividerfsm:FSMDivider|CT_IN'
-Slack : 0.450
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Multiplication:blockMulti|FSM_Multi:control|cState.G'
+Slack : 0.265
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|divider:pembagian|dividerfsm:FSMDivider|SubtractON[1]'
-Slack : 0.454
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Pangkat:blockPangkat|Multiplication:multiply|FSM_Multi:control|cState.B1'
+Slack : 0.271
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|divider:pembagian|dividerfsm:FSMDivider|CT_R'
-Slack : 0.455
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Multiplication:blockMulti|FSM_Multi:control|cState.E'
+Slack : 0.290
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Multiplication:blockMulti|FSM_Multi:control|cState.B1'
+Slack : 0.324
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Pangkat:blockPangkat|pangkatFSM:fsmPangkat|cstate.s0'
+Slack : 0.329
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Pangkat:blockPangkat|Multiplication:multiply|FSM_Multi:control|cState.G'
+Slack : 0.354
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Pangkat:blockPangkat|Multiplication:multiply|FSM_Multi:control|cState.A1'
+Slack : 0.382
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|FPB:blockFPB|fsm_fpb:Control|cstate.s3'
+Slack : 0.406
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|divider:blockdivider|dividerfsm:FSMDivider|add_ON[0]'
+Slack : 0.423
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|divider:blockdivider|dividerfsm:FSMDivider|SubtractON[1]'
+Slack : 0.426
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|divider:blockdivider|dividerfsm:FSMDivider|CT_R'
+Slack : 0.435
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|divider:blockdivider|dividerfsm:FSMDivider|CT_IN'
+Slack : 0.447
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -20.919
-TNS   : -2228.742
-
-Type  : Slow 1200mV 0C Model Setup 'UART_convert:UART|clk_send'
-Slack : -6.523
-TNS   : -899.410
+Slack : -20.797
+TNS   : -2064.528
 
 Type  : Slow 1200mV 0C Model Setup 'CLOCK_ALL'
-Slack : -6.177
-TNS   : -4792.456
+Slack : -8.103
+TNS   : -6152.512
 
-Type  : Slow 1200mV 0C Model Setup 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|Multiplication:perkalian|FSM_Multi:control|cState.B1'
-Slack : -3.977
-TNS   : -168.352
+Type  : Slow 1200mV 0C Model Setup 'UART_convert:UART|clk_send'
+Slack : -5.247
+TNS   : -694.449
 
-Type  : Slow 1200mV 0C Model Setup 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|FPB:FPBB|fsm_fpb:Control|cstate.s3'
-Slack : -3.525
-TNS   : -202.276
+Type  : Slow 1200mV 0C Model Setup 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Pangkat:blockPangkat|Multiplication:multiply|FSM_Multi:control|cState.B1'
+Slack : -3.656
+TNS   : -189.896
 
-Type  : Slow 1200mV 0C Model Setup 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|divider:pembagian|dividerfsm:FSMDivider|CT_IN'
-Slack : -3.288
-TNS   : -198.270
-
-Type  : Slow 1200mV 0C Model Setup 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|Multiplication:perkalian|FSM_Multi:control|cState.G'
-Slack : -3.074
-TNS   : -181.216
-
-Type  : Slow 1200mV 0C Model Setup 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|FPB:FPBB|fsm_fpb:Control|cstate.s7'
-Slack : -2.841
-TNS   : -183.337
-
-Type  : Slow 1200mV 0C Model Setup 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|divider:pembagian|dividerfsm:FSMDivider|CT_R'
-Slack : -2.731
-TNS   : -186.291
-
-Type  : Slow 1200mV 0C Model Setup 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|divider:pembagian|dividerfsm:FSMDivider|add_ON[0]'
-Slack : -2.654
-TNS   : -64.706
+Type  : Slow 1200mV 0C Model Setup 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|divider:blockdivider|dividerfsm:FSMDivider|CT_IN'
+Slack : -3.491
+TNS   : -194.313
 
 Type  : Slow 1200mV 0C Model Setup 'UART_convert:UART|CLOCKDIV:CLOCK7S|pulse_div'
-Slack : -2.518
-TNS   : -11.978
+Slack : -3.342
+TNS   : -21.389
 
-Type  : Slow 1200mV 0C Model Setup 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|divider:pembagian|dividerfsm:FSMDivider|SubtractON[1]'
-Slack : -2.482
-TNS   : -167.210
+Type  : Slow 1200mV 0C Model Setup 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Pangkat:blockPangkat|Multiplication:multiply|FSM_Multi:control|cState.A1'
+Slack : -3.332
+TNS   : -85.806
+
+Type  : Slow 1200mV 0C Model Setup 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|divider:blockdivider|dividerfsm:FSMDivider|CT_R'
+Slack : -3.170
+TNS   : -178.953
+
+Type  : Slow 1200mV 0C Model Setup 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Multiplication:blockMulti|FSM_Multi:control|cState.G'
+Slack : -2.951
+TNS   : -183.058
+
+Type  : Slow 1200mV 0C Model Setup 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|FPB:blockFPB|fsm_fpb:Control|cstate.s7'
+Slack : -2.950
+TNS   : -238.719
+
+Type  : Slow 1200mV 0C Model Setup 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|FPB:blockFPB|fsm_fpb:Control|cstate.s3'
+Slack : -2.767
+TNS   : -183.013
+
+Type  : Slow 1200mV 0C Model Setup 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Multiplication:blockMulti|FSM_Multi:control|cState.B1'
+Slack : -2.742
+TNS   : -152.575
+
+Type  : Slow 1200mV 0C Model Setup 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Multiplication:blockMulti|FSM_Multi:control|cState.E'
+Slack : -2.683
+TNS   : -113.232
+
+Type  : Slow 1200mV 0C Model Setup 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|divider:blockdivider|dividerfsm:FSMDivider|add_ON[0]'
+Slack : -2.586
+TNS   : -66.340
+
+Type  : Slow 1200mV 0C Model Setup 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|divider:blockdivider|dividerfsm:FSMDivider|SubtractON[1]'
+Slack : -2.172
+TNS   : -194.550
+
+Type  : Slow 1200mV 0C Model Setup 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Pangkat:blockPangkat|pangkatFSM:fsmPangkat|cstate.s0'
+Slack : -2.172
+TNS   : -88.791
+
+Type  : Slow 1200mV 0C Model Setup 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Pangkat:blockPangkat|Multiplication:multiply|FSM_Multi:control|cState.G'
+Slack : -2.003
+TNS   : -147.067
 
 Type  : Slow 1200mV 0C Model Setup 'UART_convert:UART|REG_M[0]'
-Slack : -1.276
-TNS   : -35.878
+Slack : -0.795
+TNS   : -20.671
 
 Type  : Slow 1200mV 0C Model Hold 'CLOCK_ALL'
-Slack : -0.357
-TNS   : -16.630
+Slack : -0.288
+TNS   : -8.589
 
 Type  : Slow 1200mV 0C Model Hold 'UART_convert:UART|REG_M[0]'
-Slack : -0.059
-TNS   : -0.059
+Slack : -0.254
+TNS   : -1.259
 
-Type  : Slow 1200mV 0C Model Hold 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|divider:pembagian|dividerfsm:FSMDivider|SubtractON[1]'
-Slack : 0.158
+Type  : Slow 1200mV 0C Model Hold 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|FPB:blockFPB|fsm_fpb:Control|cstate.s7'
+Slack : -0.010
+TNS   : -0.010
+
+Type  : Slow 1200mV 0C Model Hold 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|divider:blockdivider|dividerfsm:FSMDivider|add_ON[0]'
+Slack : 0.106
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|divider:pembagian|dividerfsm:FSMDivider|add_ON[0]'
-Slack : 0.301
+Type  : Slow 1200mV 0C Model Hold 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Pangkat:blockPangkat|pangkatFSM:fsmPangkat|cstate.s0'
+Slack : 0.128
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : 0.383
+Type  : Slow 1200mV 0C Model Hold 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Pangkat:blockPangkat|Multiplication:multiply|FSM_Multi:control|cState.G'
+Slack : 0.371
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'UART_convert:UART|clk_send'
-Slack : 0.401
+Slack : 0.382
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|Multiplication:perkalian|FSM_Multi:control|cState.G'
-Slack : 0.402
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.400
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|divider:blockdivider|dividerfsm:FSMDivider|SubtractON[1]'
+Slack : 0.436
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'UART_convert:UART|CLOCKDIV:CLOCK7S|pulse_div'
-Slack : 0.409
+Slack : 0.495
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|FPB:FPBB|fsm_fpb:Control|cstate.s7'
-Slack : 0.434
+Type  : Slow 1200mV 0C Model Hold 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Multiplication:blockMulti|FSM_Multi:control|cState.G'
+Slack : 0.632
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|divider:pembagian|dividerfsm:FSMDivider|CT_IN'
-Slack : 1.088
+Type  : Slow 1200mV 0C Model Hold 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Multiplication:blockMulti|FSM_Multi:control|cState.E'
+Slack : 0.658
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|FPB:FPBB|fsm_fpb:Control|cstate.s3'
-Slack : 1.572
+Type  : Slow 1200mV 0C Model Hold 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|divider:blockdivider|dividerfsm:FSMDivider|CT_IN'
+Slack : 1.161
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|divider:pembagian|dividerfsm:FSMDivider|CT_R'
-Slack : 1.869
+Type  : Slow 1200mV 0C Model Hold 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|divider:blockdivider|dividerfsm:FSMDivider|CT_R'
+Slack : 1.627
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|Multiplication:perkalian|FSM_Multi:control|cState.B1'
-Slack : 1.966
+Type  : Slow 1200mV 0C Model Hold 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|FPB:blockFPB|fsm_fpb:Control|cstate.s3'
+Slack : 1.659
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Multiplication:blockMulti|FSM_Multi:control|cState.B1'
+Slack : 1.697
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Pangkat:blockPangkat|Multiplication:multiply|FSM_Multi:control|cState.A1'
+Slack : 1.698
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Pangkat:blockPangkat|Multiplication:multiply|FSM_Multi:control|cState.B1'
+Slack : 1.889
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Recovery 'CLOCK_ALL'
-Slack : -3.452
-TNS   : -164.635
+Slack : -4.560
+TNS   : -291.023
 
 Type  : Slow 1200mV 0C Model Removal 'CLOCK_ALL'
-Slack : -0.953
-TNS   : -15.898
+Slack : -1.062
+TNS   : -10.092
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
@@ -284,7 +384,7 @@ TNS   : -480.327
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_ALL'
 Slack : -1.487
-TNS   : -3655.046
+TNS   : -4339.616
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'UART_convert:UART|clk_send'
 Slack : -1.487
@@ -294,161 +394,221 @@ Type  : Slow 1200mV 0C Model Minimum Pulse Width 'UART_convert:UART|CLOCKDIV:CLO
 Slack : -1.487
 TNS   : -22.305
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|FPB:FPBB|fsm_fpb:Control|cstate.s7'
-Slack : 0.030
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'UART_convert:UART|REG_M[0]'
+Slack : -0.137
+TNS   : -2.061
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Multiplication:blockMulti|FSM_Multi:control|cState.G'
+Slack : 0.071
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|Multiplication:perkalian|FSM_Multi:control|cState.G'
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Multiplication:blockMulti|FSM_Multi:control|cState.E'
+Slack : 0.092
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Pangkat:blockPangkat|Multiplication:multiply|FSM_Multi:control|cState.G'
 Slack : 0.098
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|FPB:FPBB|fsm_fpb:Control|cstate.s3'
-Slack : 0.178
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|FPB:blockFPB|fsm_fpb:Control|cstate.s7'
+Slack : 0.134
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'UART_convert:UART|REG_M[0]'
-Slack : 0.214
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Pangkat:blockPangkat|Multiplication:multiply|FSM_Multi:control|cState.B1'
+Slack : 0.153
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|Multiplication:perkalian|FSM_Multi:control|cState.B1'
-Slack : 0.239
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Multiplication:blockMulti|FSM_Multi:control|cState.B1'
+Slack : 0.196
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|divider:pembagian|dividerfsm:FSMDivider|SubtractON[1]'
-Slack : 0.368
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Pangkat:blockPangkat|pangkatFSM:fsmPangkat|cstate.s0'
+Slack : 0.229
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|divider:pembagian|dividerfsm:FSMDivider|CT_R'
-Slack : 0.414
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Pangkat:blockPangkat|Multiplication:multiply|FSM_Multi:control|cState.A1'
+Slack : 0.242
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|divider:pembagian|dividerfsm:FSMDivider|add_ON[0]'
-Slack : 0.429
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|FPB:blockFPB|fsm_fpb:Control|cstate.s3'
+Slack : 0.250
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|divider:pembagian|dividerfsm:FSMDivider|CT_IN'
-Slack : 0.436
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|divider:blockdivider|dividerfsm:FSMDivider|CT_R'
+Slack : 0.413
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|divider:blockdivider|dividerfsm:FSMDivider|add_ON[0]'
+Slack : 0.437
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|divider:blockdivider|dividerfsm:FSMDivider|CT_IN'
+Slack : 0.440
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|divider:blockdivider|dividerfsm:FSMDivider|SubtractON[1]'
+Slack : 0.446
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -9.827
-TNS   : -867.784
+Slack : -9.311
+TNS   : -789.548
 
 Type  : Fast 1200mV 0C Model Setup 'CLOCK_ALL'
-Slack : -3.041
-TNS   : -1288.040
+Slack : -3.278
+TNS   : -1717.172
 
 Type  : Fast 1200mV 0C Model Setup 'UART_convert:UART|clk_send'
-Slack : -2.573
-TNS   : -347.320
+Slack : -1.845
+TNS   : -229.779
 
-Type  : Fast 1200mV 0C Model Setup 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|Multiplication:perkalian|FSM_Multi:control|cState.B1'
-Slack : -1.703
-TNS   : -64.799
-
-Type  : Fast 1200mV 0C Model Setup 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|FPB:FPBB|fsm_fpb:Control|cstate.s3'
-Slack : -1.250
-TNS   : -66.254
-
-Type  : Fast 1200mV 0C Model Setup 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|divider:pembagian|dividerfsm:FSMDivider|CT_IN'
-Slack : -1.194
-TNS   : -64.220
-
-Type  : Fast 1200mV 0C Model Setup 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|Multiplication:perkalian|FSM_Multi:control|cState.G'
-Slack : -1.063
-TNS   : -43.703
-
-Type  : Fast 1200mV 0C Model Setup 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|divider:pembagian|dividerfsm:FSMDivider|SubtractON[1]'
-Slack : -1.027
-TNS   : -33.982
-
-Type  : Fast 1200mV 0C Model Setup 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|FPB:FPBB|fsm_fpb:Control|cstate.s7'
-Slack : -1.007
-TNS   : -30.338
-
-Type  : Fast 1200mV 0C Model Setup 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|divider:pembagian|dividerfsm:FSMDivider|add_ON[0]'
-Slack : -0.945
-TNS   : -4.942
-
-Type  : Fast 1200mV 0C Model Setup 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|divider:pembagian|dividerfsm:FSMDivider|CT_R'
-Slack : -0.897
-TNS   : -59.730
+Type  : Fast 1200mV 0C Model Setup 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Pangkat:blockPangkat|Multiplication:multiply|FSM_Multi:control|cState.B1'
+Slack : -1.340
+TNS   : -67.683
 
 Type  : Fast 1200mV 0C Model Setup 'UART_convert:UART|CLOCKDIV:CLOCK7S|pulse_div'
-Slack : -0.798
-TNS   : -4.133
+Slack : -1.291
+TNS   : -6.220
+
+Type  : Fast 1200mV 0C Model Setup 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|divider:blockdivider|dividerfsm:FSMDivider|CT_IN'
+Slack : -1.259
+TNS   : -62.933
+
+Type  : Fast 1200mV 0C Model Setup 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Pangkat:blockPangkat|Multiplication:multiply|FSM_Multi:control|cState.A1'
+Slack : -1.188
+TNS   : -25.590
+
+Type  : Fast 1200mV 0C Model Setup 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|divider:blockdivider|dividerfsm:FSMDivider|CT_R'
+Slack : -1.148
+TNS   : -56.296
+
+Type  : Fast 1200mV 0C Model Setup 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Multiplication:blockMulti|FSM_Multi:control|cState.B1'
+Slack : -1.081
+TNS   : -56.791
+
+Type  : Fast 1200mV 0C Model Setup 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|FPB:blockFPB|fsm_fpb:Control|cstate.s7'
+Slack : -1.073
+TNS   : -44.340
+
+Type  : Fast 1200mV 0C Model Setup 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Multiplication:blockMulti|FSM_Multi:control|cState.G'
+Slack : -1.064
+TNS   : -43.553
+
+Type  : Fast 1200mV 0C Model Setup 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|FPB:blockFPB|fsm_fpb:Control|cstate.s3'
+Slack : -0.984
+TNS   : -57.310
+
+Type  : Fast 1200mV 0C Model Setup 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Multiplication:blockMulti|FSM_Multi:control|cState.E'
+Slack : -0.891
+TNS   : -25.549
+
+Type  : Fast 1200mV 0C Model Setup 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|divider:blockdivider|dividerfsm:FSMDivider|add_ON[0]'
+Slack : -0.884
+TNS   : -6.488
+
+Type  : Fast 1200mV 0C Model Setup 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|divider:blockdivider|dividerfsm:FSMDivider|SubtractON[1]'
+Slack : -0.832
+TNS   : -44.128
+
+Type  : Fast 1200mV 0C Model Setup 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Pangkat:blockPangkat|Multiplication:multiply|FSM_Multi:control|cState.G'
+Slack : -0.563
+TNS   : -15.364
+
+Type  : Fast 1200mV 0C Model Setup 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Pangkat:blockPangkat|pangkatFSM:fsmPangkat|cstate.s0'
+Slack : -0.459
+TNS   : -7.008
 
 Type  : Fast 1200mV 0C Model Setup 'UART_convert:UART|REG_M[0]'
-Slack : -0.290
-TNS   : -1.622
+Slack : 0.104
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|FPB:blockFPB|fsm_fpb:Control|cstate.s7'
+Slack : -0.220
+TNS   : -0.519
 
 Type  : Fast 1200mV 0C Model Hold 'UART_convert:UART|REG_M[0]'
-Slack : 0.047
-TNS   : 0.000
+Slack : -0.121
+TNS   : -0.739
 
-Type  : Fast 1200mV 0C Model Hold 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|FPB:FPBB|fsm_fpb:Control|cstate.s7'
-Slack : 0.067
-TNS   : 0.000
+Type  : Fast 1200mV 0C Model Hold 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Pangkat:blockPangkat|pangkatFSM:fsmPangkat|cstate.s0'
+Slack : -0.070
+TNS   : -0.160
 
-Type  : Fast 1200mV 0C Model Hold 'UART_convert:UART|clk_send'
-Slack : 0.094
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|divider:pembagian|dividerfsm:FSMDivider|add_ON[0]'
-Slack : 0.116
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|Multiplication:perkalian|FSM_Multi:control|cState.G'
-Slack : 0.124
+Type  : Fast 1200mV 0C Model Hold 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|divider:blockdivider|dividerfsm:FSMDivider|add_ON[0]'
+Slack : 0.011
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'CLOCK_ALL'
-Slack : 0.157
+Slack : 0.046
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Pangkat:blockPangkat|Multiplication:multiply|FSM_Multi:control|cState.G'
+Slack : 0.126
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'UART_convert:UART|clk_send'
+Slack : 0.179
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : 0.180
+Slack : 0.186
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Multiplication:blockMulti|FSM_Multi:control|cState.G'
+Slack : 0.226
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'UART_convert:UART|CLOCKDIV:CLOCK7S|pulse_div'
-Slack : 0.195
+Slack : 0.244
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|divider:pembagian|dividerfsm:FSMDivider|SubtractON[1]'
-Slack : 0.454
+Type  : Fast 1200mV 0C Model Hold 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Multiplication:blockMulti|FSM_Multi:control|cState.E'
+Slack : 0.244
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|divider:pembagian|dividerfsm:FSMDivider|CT_IN'
-Slack : 0.665
+Type  : Fast 1200mV 0C Model Hold 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|divider:blockdivider|dividerfsm:FSMDivider|SubtractON[1]'
+Slack : 0.512
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|FPB:FPBB|fsm_fpb:Control|cstate.s3'
-Slack : 0.864
+Type  : Fast 1200mV 0C Model Hold 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|divider:blockdivider|dividerfsm:FSMDivider|CT_IN'
+Slack : 0.710
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|divider:pembagian|dividerfsm:FSMDivider|CT_R'
-Slack : 1.004
+Type  : Fast 1200mV 0C Model Hold 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|divider:blockdivider|dividerfsm:FSMDivider|CT_R'
+Slack : 0.923
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|Multiplication:perkalian|FSM_Multi:control|cState.B1'
-Slack : 1.235
+Type  : Fast 1200mV 0C Model Hold 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|FPB:blockFPB|fsm_fpb:Control|cstate.s3'
+Slack : 0.927
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Multiplication:blockMulti|FSM_Multi:control|cState.B1'
+Slack : 0.930
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Pangkat:blockPangkat|Multiplication:multiply|FSM_Multi:control|cState.A1'
+Slack : 0.935
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Pangkat:blockPangkat|Multiplication:multiply|FSM_Multi:control|cState.B1'
+Slack : 1.094
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Recovery 'CLOCK_ALL'
-Slack : -1.277
-TNS   : -42.273
+Slack : -1.812
+TNS   : -88.110
 
 Type  : Fast 1200mV 0C Model Removal 'CLOCK_ALL'
-Slack : -0.449
-TNS   : -6.842
+Slack : -0.482
+TNS   : -4.506
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -345.321
+TNS   : -345.105
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_ALL'
 Slack : -1.000
-TNS   : -2458.000
+TNS   : -2918.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'UART_convert:UART|clk_send'
 Slack : -1.000
@@ -458,40 +618,60 @@ Type  : Fast 1200mV 0C Model Minimum Pulse Width 'UART_convert:UART|CLOCKDIV:CLO
 Slack : -1.000
 TNS   : -15.000
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|FPB:FPBB|fsm_fpb:Control|cstate.s3'
-Slack : 0.303
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|FPB:FPBB|fsm_fpb:Control|cstate.s7'
-Slack : 0.314
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|Multiplication:perkalian|FSM_Multi:control|cState.G'
-Slack : 0.317
-TNS   : 0.000
-
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'UART_convert:UART|REG_M[0]'
-Slack : 0.330
+Slack : 0.236
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|divider:pembagian|dividerfsm:FSMDivider|add_ON[0]'
-Slack : 0.373
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Pangkat:blockPangkat|Multiplication:multiply|FSM_Multi:control|cState.G'
+Slack : 0.255
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|Multiplication:perkalian|FSM_Multi:control|cState.B1'
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Multiplication:blockMulti|FSM_Multi:control|cState.G'
+Slack : 0.310
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Multiplication:blockMulti|FSM_Multi:control|cState.E'
+Slack : 0.324
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|FPB:blockFPB|fsm_fpb:Control|cstate.s3'
+Slack : 0.328
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Pangkat:blockPangkat|Multiplication:multiply|FSM_Multi:control|cState.A1'
+Slack : 0.342
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Pangkat:blockPangkat|Multiplication:multiply|FSM_Multi:control|cState.B1'
+Slack : 0.352
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Multiplication:blockMulti|FSM_Multi:control|cState.B1'
+Slack : 0.355
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|FPB:blockFPB|fsm_fpb:Control|cstate.s7'
+Slack : 0.371
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|divider:blockdivider|dividerfsm:FSMDivider|add_ON[0]'
 Slack : 0.378
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|divider:pembagian|dividerfsm:FSMDivider|SubtractON[1]'
-Slack : 0.391
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|divider:blockdivider|dividerfsm:FSMDivider|SubtractON[1]'
+Slack : 0.394
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|divider:pembagian|dividerfsm:FSMDivider|CT_IN'
-Slack : 0.403
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|Pangkat:blockPangkat|pangkatFSM:fsmPangkat|cstate.s0'
+Slack : 0.400
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|kalkulator:blokKalkulator|divider:pembagian|dividerfsm:FSMDivider|CT_R'
-Slack : 0.403
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|divider:blockdivider|dividerfsm:FSMDivider|CT_R'
+Slack : 0.401
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'toplevel_sistem:kalkulator|KalkulatorTopLevel:blokKalkulator|divider:blockdivider|dividerfsm:FSMDivider|CT_IN'
+Slack : 0.405
 TNS   : 0.000
 
 ------------------------------------------------------------

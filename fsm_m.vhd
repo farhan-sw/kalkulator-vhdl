@@ -3,7 +3,7 @@ use IEEE.std_logic_1164.all;
 use IEEE.std_logic_arith.all;
 
 entity FSM_M is
-    generic ( N : INTEGER := 4);
+    generic ( N : INTEGER := 41);
     port (
         Pin, Qin        : in std_logic_vector (N - 1 downto 0);
         P_Out, Q_Out    : out std_logic_vector(N - 1 downto 0);

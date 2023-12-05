@@ -3,7 +3,7 @@ use IEEE.std_logic_1164.all;
 use IEEE.std_logic_arith.all;
 use IEEE.std_logic_unsigned.all;
 entity func_R is
-    generic ( N : INTEGER := 5);
+    generic ( N : INTEGER := 41);
     port (
         input_vector            : in std_logic_vector (N - 1 downto 0);
         output_result : out std_logic_vector(N+N-3 downto 0)

@@ -25,100 +25,31 @@ end toplevel_sistem;
 
 architecture sistem_arc of toplevel_sistem is
 
-component kalkulator is 
+component KalkulatorTopLevel is 
     generic(N: INTEGER := 41);
     port(
-        input_P, input_Q 	: in std_logic_vector (N - 1 downto 0);
-        Mode 				: in  std_logic_vector(2 downto 0);
-        status 				: out std_logic_vector(1 downto 0);
-        hasil 				: out std_logic_vector(N-1 downto 0);
-        clk   	            : in std_logic;
-        rst        	        : in std_logic
+        P, Q		: IN STD_LOGIC_VECTOR (N-1 DOWNTO 0);
+		M 			: IN STD_LOGIC_VECTOR (2 DOWNTO 0);
+		CLK 		: IN STD_LOGIC;
+		RST			: IN STD_LOGIC;
+		OUT_OPERASI	: OUT STD_LOGIC_VECTOR (N-1 DOWNTO 0);
+		STATUS 		: OUT STD_LOGIC_VECTOR (1 DOWNTO 0)
     );
 end component;
 
-component AdderSubtractor
-generic ( N : INTEGER := 41);
-port (
-	P_in            : in std_logic_vector (N - 1 downto 0);
-	Q_in            : in std_logic_vector (N - 1 downto 0);
-
-	OUT_Operasi     : out std_logic_vector (N - 1 downto 0);
-
-	M               : in std_logic_vector(2 downto 0);
-	status          : out std_logic_vector(1 downto 0);
-
-	clk             : in std_logic;
-	rst             : in std_logic
-	);
-end component;
-
-component Multiplication
-    generic ( N: INTEGER := 41);
-	port (
-		P			: in std_logic_vector (N-1 downto 0) ;
-		Q			: in std_logic_vector (N-1 downto 0) ;
-		Mode		: in std_logic_vector (2 downto 0) ;
-		Clk, Rst	: in std_logic ;
-		Multi_Out	: out std_logic_vector (N-1 downto 0) ;
-		Status_Out	: out std_logic_vector (1 downto 0)
-		--debugout 	: out integer 
-	);
-	end component;
-
--- BENER?
-signal P, Q : std_logic_vector (N-1 downto 0);
-signal status : std_logic_vector (1 downto 0); 
-signal reg_hasil : std_logic_vector (N-1 downto 0);
-
-signal hasil_kalkulator : std_logic_vector (N-1 downto 0);
-signal status_kalkulator : std_logic_vector (1 downto 0); 
-
-signal hasil_adder : std_logic_vector (N-1 downto 0);
-signal status_adder : std_logic_vector (1 downto 0); 
-
-
-signal final_status : std_logic_vector (1 downto 0); 
-signal final_send	: std_logic_vector (N-1 downto 0); 
+-- BENER? 
 
 signal low : std_logic := '0';
 
 begin
-	blokKalkulator : kalkulator port map (
-		input_P		=> A, 
-		input_Q 	=> B,
-        Mode 		=> Mode,
-        status 		=> status_kalkulator,
-        hasil 		=> hasil_kalkulator,
-        clk   	    => clk,
-        rst        	=> rst
+	blokKalkulator : KalkulatorTopLevel port map (
+		P			=> A,
+		Q			=> B,
+		M 			=> Mode,
+		CLK 		=> clk,
+		RST			=> rst,
+		OUT_OPERASI	=> Sen,
+		STATUS 		=> S
 	); 
-
-	addersubs : AdderSubtractor
-    generic map (N=>N)
-    port map (
-		P_in            => A,
-        Q_in            => B,
-
-        OUT_Operasi     => hasil_adder,
-
-        M               => Mode,
-        status          => status_adder,
-
-        clk             => clk,
-        rst            => rst );
-
-	
-	process (clk, mode)
-	begin
-		if(mode = "001" or mode = "010") then
-			Sen <= hasil_adder;
-			S <= status_adder;
-		else
-			Sen <= hasil_kalkulator;
-			S <= status_kalkulator;
-		end if;
-	
-	end process;
 	
 end sistem_arc;

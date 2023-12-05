@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 entity divider is
-    generic ( N : INTEGER := 11);
+    generic ( N : INTEGER := 41);
     port (
         P_in            : in std_logic_vector (N - 1 downto 0);
         Q_in            : in std_logic_vector (N - 1 downto 0);

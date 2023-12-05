@@ -109,12 +109,32 @@ architecture behavorial of kalkulator is
 	--); 
 	--end component; 
 
+    component Pangkat is  
+	generic ( N: INTEGER := 41); 
+	port ( 
+		P_in   	      : in std_logic_vector (N-1 downto 0); 
+		Q_in          : in std_logic_vector (N-1 downto 0); 
+		Mode          : in std_logic_vector (2 downto 0); 
+
+        clk           : in std_logic; 
+        rst           : in std_logic; 
+
+		out_pangkat   : out std_logic_vector (N-1 downto 0);  
+		status        : out std_logic_vector (1 downto 0);  
+
+        debug_pangkat : out integer; 
+        tess : out std_logic_vector (N-1 downto 0)
+	); 
+    end component;
+
+
 	
 
     signal output_S, output_D, output_F, output_P, output_pangkat  : std_logic_vector(N-1 downto 0);
     signal st_S,st_D,st_F, st_P, st_pangkat : std_logic_vector(1 downto 0);
     signal debug_fsm :  std_logic_vector(3 downto 0);
 	signal debug_logic :  std_logic;
+    
 begin
     addersubs : AdderSubtractor
     generic map (N=>N)

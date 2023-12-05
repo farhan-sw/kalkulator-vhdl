@@ -2,7 +2,7 @@ LIBRARY ieee ;
 USE ieee.std_logic_1164.all ;
 
 ENTITY multiplexer IS
-	generic ( N : INTEGER := 4);
+	generic ( N : INTEGER := 41);
 	PORT (  P, Q   : IN STD_LOGIC_VECTOR (N-1 downto 0) ;
 			S, clk      : IN std_logic;
 			f     : OUT STD_LOGIC_VECTOR (N-1 downto 0)

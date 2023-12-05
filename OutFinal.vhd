@@ -4,7 +4,7 @@ use IEEE.std_logic_arith.all ;
 use IEEE.std_logic_unsigned.all;
 
 entity outFinal is 
-	generic (N : Integer := 4) ;
+	generic (N : Integer := 41) ;
 	port (
 		Aout			: in std_logic_vector (N-1 downto 0) ;
 		Qout			: in std_logic_vector (N-1 downto 0) ;

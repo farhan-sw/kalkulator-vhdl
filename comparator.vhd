@@ -4,7 +4,7 @@ use ieee.std_logic_arith.all;
 use ieee.std_logic_unsigned.all;
 
 entity comparator is
-	generic ( N: INTEGER := 6);
+	generic ( N: INTEGER := 41);
 	port ( P, Q : in std_logic_vector (N - 1 downto 0);
 			rst, clk : in std_logic ;
 			comp : out std_logic_vector (1 downto 0)

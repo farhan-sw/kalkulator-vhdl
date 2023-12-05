@@ -79,9 +79,11 @@ set_location_assignment PIN_86 -to led2
 set_location_assignment PIN_90 -to button_reset
 set_location_assignment PIN_84 -to led4
 set_location_assignment PIN_88 -to send
+set_global_assignment -name VHDL_FILE top_kalkulator_integer.vhd
+set_location_assignment PIN_85 -to led3
+set_global_assignment -name VHDL_FILE kalkulatortoplevel.vhd
+set_global_assignment -name VHDL_FILE mu8to1stat.vhd
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name VHDL_FILE top_kalkulator_integer.vhd
-set_location_assignment PIN_85 -to led3
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
