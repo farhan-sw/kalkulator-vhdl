@@ -1,0 +1,217 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "REG_A[0]",
+					"strict" : false
+				},
+				{
+					"name" : "REG_A[1]",
+					"strict" : false
+				},
+				{
+					"name" : "REG_A[2]",
+					"strict" : false
+				},
+				{
+					"name" : "REG_A[3]",
+					"strict" : false
+				},
+				{
+					"name" : "REG_A[4]",
+					"strict" : false
+				},
+				{
+					"name" : "REG_A[5]",
+					"strict" : false
+				},
+				{
+					"name" : "REG_A[6]",
+					"strict" : false
+				},
+				{
+					"name" : "REG_A[7]",
+					"strict" : false
+				},
+				{
+					"name" : "REG_A[8]",
+					"strict" : false
+				},
+				{
+					"name" : "REG_A[9]",
+					"strict" : false
+				},
+				{
+					"name" : "REG_A[10]",
+					"strict" : false
+				},
+				{
+					"name" : "REG_A[11]",
+					"strict" : false
+				},
+				{
+					"name" : "REG_A[12]",
+					"strict" : false
+				},
+				{
+					"name" : "REG_A[13]",
+					"strict" : false
+				},
+				{
+					"name" : "REG_B[0]",
+					"strict" : false
+				},
+				{
+					"name" : "REG_B[1]",
+					"strict" : false
+				},
+				{
+					"name" : "REG_B[2]",
+					"strict" : false
+				},
+				{
+					"name" : "REG_B[3]",
+					"strict" : false
+				},
+				{
+					"name" : "REG_B[4]",
+					"strict" : false
+				},
+				{
+					"name" : "REG_B[5]",
+					"strict" : false
+				},
+				{
+					"name" : "REG_B[6]",
+					"strict" : false
+				},
+				{
+					"name" : "REG_B[7]",
+					"strict" : false
+				},
+				{
+					"name" : "REG_B[8]",
+					"strict" : false
+				},
+				{
+					"name" : "REG_B[9]",
+					"strict" : false
+				},
+				{
+					"name" : "REG_B[10]",
+					"strict" : false
+				},
+				{
+					"name" : "REG_B[11]",
+					"strict" : false
+				},
+				{
+					"name" : "REG_B[12]",
+					"strict" : false
+				},
+				{
+					"name" : "REG_B[13]",
+					"strict" : false
+				},
+				{
+					"name" : "REG_M[0]",
+					"strict" : false
+				},
+				{
+					"name" : "REG_M[1]",
+					"strict" : false
+				},
+				{
+					"name" : "REG_M[2]",
+					"strict" : false
+				},
+				{
+					"name" : "isP_s",
+					"strict" : false
+				},
+				{
+					"name" : "isQ_s",
+					"strict" : false
+				},
+				{
+					"name" : "R_out",
+					"strict" : false
+				},
+				{
+					"name" : "Seven_Segment[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Seven_Segment[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Seven_Segment[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Seven_Segment[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Seven_Segment[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Seven_Segment[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Seven_Segment[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Seven_Segment[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Digit_SS[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Digit_SS[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Digit_SS[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Digit_SS[3]",
+					"strict" : false
+				},
+				{
+					"name" : "led4",
+					"strict" : false
+				},
+				{
+					"name" : "rs232_tx",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "rst_n",
+					"strict" : false
+				},
+				{
+					"name" : "rs232_rx",
+					"strict" : false
+				},
+				{
+					"name" : "send",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
