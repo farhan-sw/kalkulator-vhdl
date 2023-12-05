@@ -172,7 +172,7 @@ begin
 		VARIABLE count : INTEGER:= 0;
 		BEGIN
 			IF rising_edge(clk) THEN
-				IF count > (100000) THEN
+				IF count > (50000) THEN
                     CLOCK_ALL <= NOT CLOCK_ALL;
 					count := 0;
 				ELSE
@@ -183,7 +183,7 @@ begin
 
     Process (clk)
     begin
-        if (REG_M = "111") then
+        if (REG_M = "001") then
             led2 <= '0';
         else
             led2 <= '1'; 

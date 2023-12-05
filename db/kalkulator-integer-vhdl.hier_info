@@ -34,25 +34,25 @@ clk => \CLOCKSISTEM:count[29].CLK
 clk => \CLOCKSISTEM:count[30].CLK
 clk => \CLOCKSISTEM:count[31].CLK
 rst_n => UART_convert:UART.rst_n
-Seven_Segment[0] <= UART_convert:UART.Seven_Segment[0]
-Seven_Segment[1] <= UART_convert:UART.Seven_Segment[1]
-Seven_Segment[2] <= UART_convert:UART.Seven_Segment[2]
-Seven_Segment[3] <= UART_convert:UART.Seven_Segment[3]
-Seven_Segment[4] <= UART_convert:UART.Seven_Segment[4]
-Seven_Segment[5] <= UART_convert:UART.Seven_Segment[5]
-Seven_Segment[6] <= UART_convert:UART.Seven_Segment[6]
-Seven_Segment[7] <= UART_convert:UART.Seven_Segment[7]
-Digit_SS[0] <= UART_convert:UART.Digit_SS[0]
-Digit_SS[1] <= UART_convert:UART.Digit_SS[1]
-Digit_SS[2] <= UART_convert:UART.Digit_SS[2]
-Digit_SS[3] <= UART_convert:UART.Digit_SS[3]
-led1 <= UART_convert:UART.led1
-led2 <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
-led3 <= Equal1.DB_MAX_OUTPUT_PORT_TYPE
+Seven_Segment[0] << UART_convert:UART.Seven_Segment[0]
+Seven_Segment[1] << UART_convert:UART.Seven_Segment[1]
+Seven_Segment[2] << UART_convert:UART.Seven_Segment[2]
+Seven_Segment[3] << UART_convert:UART.Seven_Segment[3]
+Seven_Segment[4] << UART_convert:UART.Seven_Segment[4]
+Seven_Segment[5] << UART_convert:UART.Seven_Segment[5]
+Seven_Segment[6] << UART_convert:UART.Seven_Segment[6]
+Seven_Segment[7] << UART_convert:UART.Seven_Segment[7]
+Digit_SS[0] << UART_convert:UART.Digit_SS[0]
+Digit_SS[1] << UART_convert:UART.Digit_SS[1]
+Digit_SS[2] << UART_convert:UART.Digit_SS[2]
+Digit_SS[3] << UART_convert:UART.Digit_SS[3]
+led1 << UART_convert:UART.led1
+led2 << Equal0.DB_MAX_OUTPUT_PORT_TYPE
+led3 << Equal1.DB_MAX_OUTPUT_PORT_TYPE
 led4 << UART_convert:UART.led4
 send => UART_convert:UART.send
 rs232_rx => UART_convert:UART.rs232_rx
-rs232_tx <= UART_convert:UART.rs232_tx
+rs232_tx << UART_convert:UART.rs232_tx
 
 
 |top_kalkulator_integer|UART_convert:UART
@@ -2614,7 +2614,7 @@ EN => count.OUTPUTSELECT
 EN => Selector0.IN1
 EN => state~3.DATAIN
 ENS <= ENS.DB_MAX_OUTPUT_PORT_TYPE
-status[0] <= status[0].DB_MAX_OUTPUT_PORT_TYPE
+status[0] <= status.DB_MAX_OUTPUT_PORT_TYPE
 status[1] <= status.DB_MAX_OUTPUT_PORT_TYPE
 clk => RegisterSerial:RegA.clk
 clk => count[0].CLK
@@ -8559,7 +8559,7 @@ EN => count.OUTPUTSELECT
 EN => Selector0.IN1
 EN => state~3.DATAIN
 ENS <= ENS.DB_MAX_OUTPUT_PORT_TYPE
-status[0] <= status[0].DB_MAX_OUTPUT_PORT_TYPE
+status[0] <= status.DB_MAX_OUTPUT_PORT_TYPE
 status[1] <= status.DB_MAX_OUTPUT_PORT_TYPE
 clk => RegisterSerial:RegA.clk
 clk => count[0].CLK
@@ -11083,7 +11083,7 @@ EN => count.OUTPUTSELECT
 EN => Selector0.IN1
 EN => state~3.DATAIN
 ENS <= ENS.DB_MAX_OUTPUT_PORT_TYPE
-status[0] <= status[0].DB_MAX_OUTPUT_PORT_TYPE
+status[0] <= status.DB_MAX_OUTPUT_PORT_TYPE
 status[1] <= status.DB_MAX_OUTPUT_PORT_TYPE
 clk => RegisterSerial:RegA.clk
 clk => count[0].CLK
@@ -14379,7 +14379,7 @@ EN => count.OUTPUTSELECT
 EN => Selector0.IN1
 EN => state~3.DATAIN
 ENS <= ENS.DB_MAX_OUTPUT_PORT_TYPE
-status[0] <= status[0].DB_MAX_OUTPUT_PORT_TYPE
+status[0] <= status.DB_MAX_OUTPUT_PORT_TYPE
 status[1] <= status.DB_MAX_OUTPUT_PORT_TYPE
 clk => RegisterSerial:RegA.clk
 clk => count[0].CLK
@@ -17042,7 +17042,7 @@ EN => count.OUTPUTSELECT
 EN => Selector0.IN1
 EN => state~3.DATAIN
 ENS <= ENS.DB_MAX_OUTPUT_PORT_TYPE
-status[0] <= status[0].DB_MAX_OUTPUT_PORT_TYPE
+status[0] <= status.DB_MAX_OUTPUT_PORT_TYPE
 status[1] <= status.DB_MAX_OUTPUT_PORT_TYPE
 clk => RegisterSerial:RegA.clk
 clk => count[0].CLK
@@ -21444,7 +21444,7 @@ EN => count.OUTPUTSELECT
 EN => Selector0.IN1
 EN => state~3.DATAIN
 ENS <= ENS.DB_MAX_OUTPUT_PORT_TYPE
-status[0] <= status[0].DB_MAX_OUTPUT_PORT_TYPE
+status[0] <= status.DB_MAX_OUTPUT_PORT_TYPE
 status[1] <= status.DB_MAX_OUTPUT_PORT_TYPE
 clk => RegisterSerial:RegA.clk
 clk => count[0].CLK

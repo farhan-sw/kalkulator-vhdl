@@ -151,12 +151,12 @@ begin
             when G =>
                 s <= (QA(0) XOR QB(0));
                 ENS <= '1';
-                status <= "01";          -- Dalam Proses
+                status <= "00";          -- Dalam Proses
                 
             when H =>
                 s <= NOT(QA(0) XOR QB(0));
                 ENS <= '1';
-                status <= "01";          -- Dalam Proses
+                status <= "00";          -- Dalam Proses
 
             when doneWithCary =>
                 s <= NOT(QA(0) XOR QB(0));
