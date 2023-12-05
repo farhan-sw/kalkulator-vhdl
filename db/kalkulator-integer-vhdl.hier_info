@@ -14,8 +14,8 @@ Digit_SS[1] <= UART_convert:UART.Digit_SS[1]
 Digit_SS[2] <= UART_convert:UART.Digit_SS[2]
 Digit_SS[3] <= UART_convert:UART.Digit_SS[3]
 led1 <= UART_convert:UART.led1
-led2 <= UART_convert:UART.led2
-led3 <= UART_convert:UART.led3
+led2 <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+led3 <= Equal1.DB_MAX_OUTPUT_PORT_TYPE
 led4 << UART_convert:UART.led4
 send => UART_convert:UART.send
 rs232_rx => UART_convert:UART.rs232_rx

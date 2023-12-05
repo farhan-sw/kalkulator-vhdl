@@ -2,17 +2,17 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1200mV 85C Model Setup 'UART_convert:UART|clk_send'
-Slack : -6.084
-TNS   : -645.468
-
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -4.577
-TNS   : -406.949
+Slack : -22.640
+TNS   : -1983.514
+
+Type  : Slow 1200mV 85C Model Setup 'UART_convert:UART|clk_send'
+Slack : -5.583
+TNS   : -524.190
 
 Type  : Slow 1200mV 85C Model Setup 'UART_convert:UART|CLOCKDIV:CLOCK7S|pulse_div'
-Slack : -1.312
-TNS   : -8.387
+Slack : -1.286
+TNS   : -8.537
 
 Type  : Slow 1200mV 85C Model Hold 'UART_convert:UART|clk_send'
 Slack : 0.433
@@ -23,35 +23,35 @@ Slack : 0.433
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'UART_convert:UART|CLOCKDIV:CLOCK7S|pulse_div'
-Slack : 0.641
+Slack : 0.515
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -220.102
+TNS   : -478.840
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'UART_convert:UART|clk_send'
 Slack : -1.487
-TNS   : -242.381
+TNS   : -181.414
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'UART_convert:UART|CLOCKDIV:CLOCK7S|pulse_div'
 Slack : -1.487
 TNS   : -22.305
 
-Type  : Slow 1200mV 0C Model Setup 'UART_convert:UART|clk_send'
-Slack : -5.550
-TNS   : -582.071
-
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -4.326
-TNS   : -375.799
+Slack : -20.708
+TNS   : -1837.749
+
+Type  : Slow 1200mV 0C Model Setup 'UART_convert:UART|clk_send'
+Slack : -4.968
+TNS   : -479.535
 
 Type  : Slow 1200mV 0C Model Setup 'UART_convert:UART|CLOCKDIV:CLOCK7S|pulse_div'
-Slack : -1.124
-TNS   : -6.722
+Slack : -1.151
+TNS   : -7.058
 
 Type  : Slow 1200mV 0C Model Hold 'UART_convert:UART|clk_send'
-Slack : 0.383
+Slack : 0.382
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
@@ -59,52 +59,52 @@ Slack : 0.383
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'UART_convert:UART|CLOCKDIV:CLOCK7S|pulse_div'
-Slack : 0.595
+Slack : 0.476
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -220.102
+TNS   : -478.840
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'UART_convert:UART|clk_send'
 Slack : -1.487
-TNS   : -242.381
+TNS   : -181.414
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'UART_convert:UART|CLOCKDIV:CLOCK7S|pulse_div'
 Slack : -1.487
 TNS   : -22.305
 
-Type  : Fast 1200mV 0C Model Setup 'UART_convert:UART|clk_send'
-Slack : -2.065
-TNS   : -187.494
-
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -1.501
-TNS   : -92.404
+Slack : -9.495
+TNS   : -680.146
+
+Type  : Fast 1200mV 0C Model Setup 'UART_convert:UART|clk_send'
+Slack : -1.823
+TNS   : -161.226
 
 Type  : Fast 1200mV 0C Model Setup 'UART_convert:UART|CLOCKDIV:CLOCK7S|pulse_div'
-Slack : -0.022
-TNS   : -0.022
+Slack : -0.010
+TNS   : -0.010
 
 Type  : Fast 1200mV 0C Model Hold 'UART_convert:UART|clk_send'
-Slack : 0.179
+Slack : 0.178
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : 0.179
+Slack : 0.178
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'UART_convert:UART|CLOCKDIV:CLOCK7S|pulse_div'
-Slack : 0.261
+Slack : 0.212
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -158.553
+TNS   : -344.537
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'UART_convert:UART|clk_send'
 Slack : -1.000
-TNS   : -163.000
+TNS   : -122.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'UART_convert:UART|CLOCKDIV:CLOCK7S|pulse_div'
 Slack : -1.000

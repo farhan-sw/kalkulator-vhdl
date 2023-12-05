@@ -1,7 +1,8 @@
 -- library
 library IEEE;
-use IEEE.std_logic_1164.all;
-use IEEE.numeric_std.all;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL; 
 
 -- entity
 entity top_kalkulator_integer is
@@ -74,7 +75,7 @@ architecture kalkulator of top_kalkulator_integer is
     SIGNAL REG_M                : std_logic_vector(2 downto 0) ;
     SIGNAL isP_s, isQ_s, R_out  : std_logic;
 
-    SIGNAL dump                 : std_logic;
+    SIGNAL dump1, dump2                  : std_logic;
 
 
     -- INI HARUSNYA DARI FSM
@@ -109,8 +110,8 @@ begin
         Digit_SS		=> Digit_SS,
 
         led1		=> led1,
-        led2 		=> led2,
-        led3 		=> dump,
+        led2 		=> dump2,
+        led3 		=> dump1,
         led4 		=> led4,
 
         -- -------------------- Untuk Mengirim -------------------------
@@ -124,11 +125,21 @@ begin
 
     );
 
-    -- Process (clk)
-    -- begin
+    Process (clk)
+    begin
+        if (REG_A = 123) then
+            led2 <= '0';
+        else
+            led2 <= '1'; 
+        end if;
 
+        if (REG_B = 7) then
+            led3 <= '0';
+        else
+            led3 <= '1';
+        end if;
 
-    -- end Process;
+    end Process;
 
 	
 end architecture;

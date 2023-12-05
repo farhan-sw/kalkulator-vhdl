@@ -1,5 +1,5 @@
 Analysis & Synthesis report for kalkulator-integer-vhdl
-Tue Dec  5 13:35:05 2023
+Tue Dec  5 14:08:28 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -24,10 +24,31 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
  16. Multiplexer Restructuring Statistics (Restructuring Performed)
  17. Parameter Settings for User Entity Instance: Top-level Entity: |top_kalkulator_integer
  18. Parameter Settings for User Entity Instance: UART_convert:UART
- 19. Port Connectivity Checks: "UART_convert:UART"
- 20. Post-Synthesis Netlist Statistics for Top Partition
- 21. Elapsed Time Per Partition
- 22. Analysis & Synthesis Messages
+ 19. Parameter Settings for Inferred Entity Instance: UART_convert:UART|lpm_mult:Mult9
+ 20. Parameter Settings for Inferred Entity Instance: UART_convert:UART|lpm_mult:Mult19
+ 21. Parameter Settings for Inferred Entity Instance: UART_convert:UART|lpm_mult:Mult8
+ 22. Parameter Settings for Inferred Entity Instance: UART_convert:UART|lpm_mult:Mult18
+ 23. Parameter Settings for Inferred Entity Instance: UART_convert:UART|lpm_mult:Mult1
+ 24. Parameter Settings for Inferred Entity Instance: UART_convert:UART|lpm_mult:Mult2
+ 25. Parameter Settings for Inferred Entity Instance: UART_convert:UART|lpm_mult:Mult3
+ 26. Parameter Settings for Inferred Entity Instance: UART_convert:UART|lpm_mult:Mult4
+ 27. Parameter Settings for Inferred Entity Instance: UART_convert:UART|lpm_mult:Mult5
+ 28. Parameter Settings for Inferred Entity Instance: UART_convert:UART|lpm_mult:Mult6
+ 29. Parameter Settings for Inferred Entity Instance: UART_convert:UART|lpm_mult:Mult7
+ 30. Parameter Settings for Inferred Entity Instance: UART_convert:UART|lpm_mult:Mult11
+ 31. Parameter Settings for Inferred Entity Instance: UART_convert:UART|lpm_mult:Mult12
+ 32. Parameter Settings for Inferred Entity Instance: UART_convert:UART|lpm_mult:Mult13
+ 33. Parameter Settings for Inferred Entity Instance: UART_convert:UART|lpm_mult:Mult14
+ 34. Parameter Settings for Inferred Entity Instance: UART_convert:UART|lpm_mult:Mult15
+ 35. Parameter Settings for Inferred Entity Instance: UART_convert:UART|lpm_mult:Mult16
+ 36. Parameter Settings for Inferred Entity Instance: UART_convert:UART|lpm_mult:Mult17
+ 37. Parameter Settings for Inferred Entity Instance: UART_convert:UART|lpm_mult:Mult0
+ 38. Parameter Settings for Inferred Entity Instance: UART_convert:UART|lpm_mult:Mult10
+ 39. lpm_mult Parameter Settings by Entity Instance
+ 40. Port Connectivity Checks: "UART_convert:UART"
+ 41. Post-Synthesis Netlist Statistics for Top Partition
+ 42. Elapsed Time Per Partition
+ 43. Analysis & Synthesis Messages
 
 
 
@@ -54,15 +75,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Dec  5 13:35:05 2023          ;
+; Analysis & Synthesis Status        ; Successful - Tue Dec  5 14:08:28 2023          ;
 ; Quartus Prime Version              ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                      ; kalkulator-integer-vhdl                        ;
 ; Top-level Entity Name              ; top_kalkulator_integer                         ;
 ; Family                             ; Cyclone IV E                                   ;
-; Total logic elements               ; 579                                            ;
-;     Total combinational functions  ; 559                                            ;
-;     Dedicated logic registers      ; 324                                            ;
-; Total registers                    ; 324                                            ;
+; Total logic elements               ; 1,192                                          ;
+;     Total combinational functions  ; 1,171                                          ;
+;     Dedicated logic registers      ; 457                                            ;
+; Total registers                    ; 457                                            ;
 ; Total pins                         ; 21                                             ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0                                              ;
@@ -171,7 +192,12 @@ https://fpgasoftware.intel.com/eula.
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.0%      ;
-;     Processors 3-8         ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
+;     Processor 5            ;   0.0%      ;
+;     Processor 6            ;   0.0%      ;
+;     Processor 7            ;   0.0%      ;
+;     Processor 8            ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -189,39 +215,56 @@ https://fpgasoftware.intel.com/eula.
 ; ascii_to_bcd.vhd                 ; yes             ; Auto-Found VHDL File  ; D:/1. Cloud/OneDrive - Institut Teknologi Bandung/A. ITB-STEI/Akademik/3. Semester 3/EL2002 Sistem Digital/Tugas Besar/VHDL/kalkulator-vhdl/ascii_to_bcd.vhd           ;         ;
 ; bcd_to_ascii.vhd                 ; yes             ; Auto-Found VHDL File  ; D:/1. Cloud/OneDrive - Institut Teknologi Bandung/A. ITB-STEI/Akademik/3. Semester 3/EL2002 Sistem Digital/Tugas Besar/VHDL/kalkulator-vhdl/bcd_to_ascii.vhd           ;         ;
 ; clockdiv.vhd                     ; yes             ; Auto-Found VHDL File  ; D:/1. Cloud/OneDrive - Institut Teknologi Bandung/A. ITB-STEI/Akademik/3. Semester 3/EL2002 Sistem Digital/Tugas Besar/VHDL/kalkulator-vhdl/clockdiv.vhd               ;         ;
+; lpm_mult.tdf                     ; yes             ; Megafunction          ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_mult.tdf                                                                                                 ;         ;
+; aglobal221.inc                   ; yes             ; Megafunction          ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/aglobal221.inc                                                                                               ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction          ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_add_sub.inc                                                                                              ;         ;
+; multcore.inc                     ; yes             ; Megafunction          ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/multcore.inc                                                                                                 ;         ;
+; bypassff.inc                     ; yes             ; Megafunction          ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/bypassff.inc                                                                                                 ;         ;
+; altshift.inc                     ; yes             ; Megafunction          ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altshift.inc                                                                                                 ;         ;
+; multcore.tdf                     ; yes             ; Megafunction          ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/multcore.tdf                                                                                                 ;         ;
+; csa_add.inc                      ; yes             ; Megafunction          ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/csa_add.inc                                                                                                  ;         ;
+; mpar_add.inc                     ; yes             ; Megafunction          ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/mpar_add.inc                                                                                                 ;         ;
+; muleabz.inc                      ; yes             ; Megafunction          ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/muleabz.inc                                                                                                  ;         ;
+; mul_lfrg.inc                     ; yes             ; Megafunction          ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/mul_lfrg.inc                                                                                                 ;         ;
+; mul_boothc.inc                   ; yes             ; Megafunction          ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/mul_boothc.inc                                                                                               ;         ;
+; alt_ded_mult.inc                 ; yes             ; Megafunction          ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/alt_ded_mult.inc                                                                                             ;         ;
+; alt_ded_mult_y.inc               ; yes             ; Megafunction          ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/alt_ded_mult_y.inc                                                                                           ;         ;
+; dffpipe.inc                      ; yes             ; Megafunction          ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/dffpipe.inc                                                                                                  ;         ;
+; mpar_add.tdf                     ; yes             ; Megafunction          ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/mpar_add.tdf                                                                                                 ;         ;
+; altshift.tdf                     ; yes             ; Megafunction          ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altshift.tdf                                                                                                 ;         ;
 +----------------------------------+-----------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+--------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                              ;
-+---------------------------------------------+----------------------------+
-; Resource                                    ; Usage                      ;
-+---------------------------------------------+----------------------------+
-; Estimated Total logic elements              ; 579                        ;
-;                                             ;                            ;
-; Total combinational functions               ; 559                        ;
-; Logic element usage by number of LUT inputs ;                            ;
-;     -- 4 input functions                    ; 237                        ;
-;     -- 3 input functions                    ; 99                         ;
-;     -- <=2 input functions                  ; 223                        ;
-;                                             ;                            ;
-; Logic elements by mode                      ;                            ;
-;     -- normal mode                          ; 411                        ;
-;     -- arithmetic mode                      ; 148                        ;
-;                                             ;                            ;
-; Total registers                             ; 324                        ;
-;     -- Dedicated logic registers            ; 324                        ;
-;     -- I/O registers                        ; 0                          ;
-;                                             ;                            ;
-; I/O pins                                    ; 21                         ;
-;                                             ;                            ;
-; Embedded Multiplier 9-bit elements          ; 0                          ;
-;                                             ;                            ;
-; Maximum fan-out node                        ; UART_convert:UART|clk_send ;
-; Maximum fan-out                             ; 164                        ;
-; Total fan-out                               ; 2657                       ;
-; Average fan-out                             ; 2.87                       ;
-+---------------------------------------------+----------------------------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 1,192     ;
+;                                             ;           ;
+; Total combinational functions               ; 1171      ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 470       ;
+;     -- 3 input functions                    ; 298       ;
+;     -- <=2 input functions                  ; 403       ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 795       ;
+;     -- arithmetic mode                      ; 376       ;
+;                                             ;           ;
+; Total registers                             ; 457       ;
+;     -- Dedicated logic registers            ; 457       ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 21        ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 320       ;
+; Total fan-out                               ; 5088      ;
+; Average fan-out                             ; 3.05      ;
++---------------------------------------------+-----------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -229,11 +272,51 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------+------------------------+--------------+
 ; Compilation Hierarchy Node            ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                               ; Entity Name            ; Library Name ;
 +---------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------+------------------------+--------------+
-; |top_kalkulator_integer               ; 559 (0)             ; 324 (0)                   ; 0           ; 0            ; 0       ; 0         ; 21   ; 0            ; |top_kalkulator_integer                                                           ; top_kalkulator_integer ; work         ;
-;    |UART_convert:UART|                ; 559 (410)           ; 324 (220)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_kalkulator_integer|UART_convert:UART                                         ; UART_convert           ; work         ;
+; |top_kalkulator_integer               ; 1171 (16)           ; 457 (0)                   ; 0           ; 0            ; 0       ; 0         ; 21   ; 0            ; |top_kalkulator_integer                                                           ; top_kalkulator_integer ; work         ;
+;    |UART_convert:UART|                ; 1155 (819)          ; 457 (353)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_kalkulator_integer|UART_convert:UART                                         ; UART_convert           ; work         ;
 ;       |CLOCKDIV:CLOCK7S|              ; 44 (44)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_kalkulator_integer|UART_convert:UART|CLOCKDIV:CLOCK7S                        ; CLOCKDIV               ; work         ;
-;       |ascii_to_bcd:CONVERT|          ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_kalkulator_integer|UART_convert:UART|ascii_to_bcd:CONVERT                    ; ascii_to_bcd           ; work         ;
+;       |ascii_to_bcd:CONVERT|          ; 21 (21)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_kalkulator_integer|UART_convert:UART|ascii_to_bcd:CONVERT                    ; ascii_to_bcd           ; work         ;
 ;       |bcd_to_ascii:CONVERT_TO_ASCII| ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_kalkulator_integer|UART_convert:UART|bcd_to_ascii:CONVERT_TO_ASCII           ; bcd_to_ascii           ; work         ;
+;       |lpm_mult:Mult0|                ; 6 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_kalkulator_integer|UART_convert:UART|lpm_mult:Mult0                          ; lpm_mult               ; work         ;
+;          |multcore:mult_core|         ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_kalkulator_integer|UART_convert:UART|lpm_mult:Mult0|multcore:mult_core       ; multcore               ; work         ;
+;       |lpm_mult:Mult10|               ; 6 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_kalkulator_integer|UART_convert:UART|lpm_mult:Mult10                         ; lpm_mult               ; work         ;
+;          |multcore:mult_core|         ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_kalkulator_integer|UART_convert:UART|lpm_mult:Mult10|multcore:mult_core      ; multcore               ; work         ;
+;       |lpm_mult:Mult11|               ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_kalkulator_integer|UART_convert:UART|lpm_mult:Mult11                         ; lpm_mult               ; work         ;
+;          |multcore:mult_core|         ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_kalkulator_integer|UART_convert:UART|lpm_mult:Mult11|multcore:mult_core      ; multcore               ; work         ;
+;       |lpm_mult:Mult12|               ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_kalkulator_integer|UART_convert:UART|lpm_mult:Mult12                         ; lpm_mult               ; work         ;
+;          |multcore:mult_core|         ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_kalkulator_integer|UART_convert:UART|lpm_mult:Mult12|multcore:mult_core      ; multcore               ; work         ;
+;       |lpm_mult:Mult13|               ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_kalkulator_integer|UART_convert:UART|lpm_mult:Mult13                         ; lpm_mult               ; work         ;
+;          |multcore:mult_core|         ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_kalkulator_integer|UART_convert:UART|lpm_mult:Mult13|multcore:mult_core      ; multcore               ; work         ;
+;       |lpm_mult:Mult14|               ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_kalkulator_integer|UART_convert:UART|lpm_mult:Mult14                         ; lpm_mult               ; work         ;
+;          |multcore:mult_core|         ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_kalkulator_integer|UART_convert:UART|lpm_mult:Mult14|multcore:mult_core      ; multcore               ; work         ;
+;       |lpm_mult:Mult15|               ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_kalkulator_integer|UART_convert:UART|lpm_mult:Mult15                         ; lpm_mult               ; work         ;
+;          |multcore:mult_core|         ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_kalkulator_integer|UART_convert:UART|lpm_mult:Mult15|multcore:mult_core      ; multcore               ; work         ;
+;       |lpm_mult:Mult16|               ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_kalkulator_integer|UART_convert:UART|lpm_mult:Mult16                         ; lpm_mult               ; work         ;
+;          |multcore:mult_core|         ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_kalkulator_integer|UART_convert:UART|lpm_mult:Mult16|multcore:mult_core      ; multcore               ; work         ;
+;       |lpm_mult:Mult17|               ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_kalkulator_integer|UART_convert:UART|lpm_mult:Mult17                         ; lpm_mult               ; work         ;
+;          |multcore:mult_core|         ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_kalkulator_integer|UART_convert:UART|lpm_mult:Mult17|multcore:mult_core      ; multcore               ; work         ;
+;       |lpm_mult:Mult18|               ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_kalkulator_integer|UART_convert:UART|lpm_mult:Mult18                         ; lpm_mult               ; work         ;
+;          |multcore:mult_core|         ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_kalkulator_integer|UART_convert:UART|lpm_mult:Mult18|multcore:mult_core      ; multcore               ; work         ;
+;       |lpm_mult:Mult19|               ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_kalkulator_integer|UART_convert:UART|lpm_mult:Mult19                         ; lpm_mult               ; work         ;
+;          |multcore:mult_core|         ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_kalkulator_integer|UART_convert:UART|lpm_mult:Mult19|multcore:mult_core      ; multcore               ; work         ;
+;       |lpm_mult:Mult1|                ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_kalkulator_integer|UART_convert:UART|lpm_mult:Mult1                          ; lpm_mult               ; work         ;
+;          |multcore:mult_core|         ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_kalkulator_integer|UART_convert:UART|lpm_mult:Mult1|multcore:mult_core       ; multcore               ; work         ;
+;       |lpm_mult:Mult2|                ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_kalkulator_integer|UART_convert:UART|lpm_mult:Mult2                          ; lpm_mult               ; work         ;
+;          |multcore:mult_core|         ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_kalkulator_integer|UART_convert:UART|lpm_mult:Mult2|multcore:mult_core       ; multcore               ; work         ;
+;       |lpm_mult:Mult3|                ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_kalkulator_integer|UART_convert:UART|lpm_mult:Mult3                          ; lpm_mult               ; work         ;
+;          |multcore:mult_core|         ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_kalkulator_integer|UART_convert:UART|lpm_mult:Mult3|multcore:mult_core       ; multcore               ; work         ;
+;       |lpm_mult:Mult4|                ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_kalkulator_integer|UART_convert:UART|lpm_mult:Mult4                          ; lpm_mult               ; work         ;
+;          |multcore:mult_core|         ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_kalkulator_integer|UART_convert:UART|lpm_mult:Mult4|multcore:mult_core       ; multcore               ; work         ;
+;       |lpm_mult:Mult5|                ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_kalkulator_integer|UART_convert:UART|lpm_mult:Mult5                          ; lpm_mult               ; work         ;
+;          |multcore:mult_core|         ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_kalkulator_integer|UART_convert:UART|lpm_mult:Mult5|multcore:mult_core       ; multcore               ; work         ;
+;       |lpm_mult:Mult6|                ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_kalkulator_integer|UART_convert:UART|lpm_mult:Mult6                          ; lpm_mult               ; work         ;
+;          |multcore:mult_core|         ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_kalkulator_integer|UART_convert:UART|lpm_mult:Mult6|multcore:mult_core       ; multcore               ; work         ;
+;       |lpm_mult:Mult7|                ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_kalkulator_integer|UART_convert:UART|lpm_mult:Mult7                          ; lpm_mult               ; work         ;
+;          |multcore:mult_core|         ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_kalkulator_integer|UART_convert:UART|lpm_mult:Mult7|multcore:mult_core       ; multcore               ; work         ;
+;       |lpm_mult:Mult8|                ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_kalkulator_integer|UART_convert:UART|lpm_mult:Mult8                          ; lpm_mult               ; work         ;
+;          |multcore:mult_core|         ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_kalkulator_integer|UART_convert:UART|lpm_mult:Mult8|multcore:mult_core       ; multcore               ; work         ;
+;       |lpm_mult:Mult9|                ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_kalkulator_integer|UART_convert:UART|lpm_mult:Mult9                          ; lpm_mult               ; work         ;
+;          |multcore:mult_core|         ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_kalkulator_integer|UART_convert:UART|lpm_mult:Mult9|multcore:mult_core       ; multcore               ; work         ;
 ;       |my_uart_top:UART|              ; 90 (0)              ; 71 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_kalkulator_integer|UART_convert:UART|my_uart_top:UART                        ; my_uart_top            ; work         ;
 ;          |my_uart_rx:receiver|        ; 28 (28)             ; 26 (26)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_kalkulator_integer|UART_convert:UART|my_uart_top:UART|my_uart_rx:receiver    ; my_uart_rx             ; work         ;
 ;          |my_uart_tx:transmitter|     ; 18 (18)             ; 17 (17)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_kalkulator_integer|UART_convert:UART|my_uart_top:UART|my_uart_tx:transmitter ; my_uart_tx             ; work         ;
@@ -307,76 +390,45 @@ Encoding Type:  One-Hot
 ; UART_convert:UART|my_uart_top:UART|my_uart_tx:transmitter|tx_data_i[7]   ; Stuck at GND due to stuck port data_in      ;
 ; UART_convert:UART|my_uart_top:UART|my_uart_tx:transmitter|bps_start_r~en ; Lost fanout                                 ;
 ; UART_convert:UART|my_uart_top:UART|my_uart_rx:receiver|bps_start_r~en    ; Lost fanout                                 ;
-; UART_convert:UART|isNegatif                                              ; Stuck at VCC due to stuck port data_in      ;
-; UART_convert:UART|REG_B[24..39]                                          ; Merged with UART_convert:UART|REG_B[23]     ;
+; UART_convert:UART|REG_A[24..39]                                          ; Merged with UART_convert:UART|REG_A[23]     ;
+; UART_convert:UART|REG_B[23..39]                                          ; Merged with UART_convert:UART|REG_A[23]     ;
 ; UART_convert:UART|REG_B_TMP[24..39]                                      ; Merged with UART_convert:UART|REG_B_TMP[23] ;
-; UART_convert:UART|is_receive_done                                        ; Lost fanout                                 ;
-; UART_convert:UART|REG_B[0..23,40]                                        ; Lost fanout                                 ;
-; UART_convert:UART|REG_B_TMP[0..23,40]                                    ; Lost fanout                                 ;
-; UART_convert:UART|isB_negative                                           ; Lost fanout                                 ;
-; UART_convert:UART|REGB_BCD[0..47]                                        ; Lost fanout                                 ;
-; UART_convert:UART|REGA_BCD[0..43]                                        ; Lost fanout                                 ;
-; UART_convert:UART|state_output.init                                      ; Lost fanout                                 ;
-; UART_convert:UART|state_output.wait_mp                                   ; Lost fanout                                 ;
-; UART_convert:UART|state_output.final                                     ; Lost fanout                                 ;
-; Total Number of Removed Registers = 184                                  ;                                             ;
+; UART_convert:UART|isNegatif                                              ; Stuck at GND due to stuck port data_in      ;
+; UART_convert:UART|REG_IN_BINER_SHIFT[0..40]                              ; Stuck at GND due to stuck port data_in      ;
+; UART_convert:UART|REG_A[23]                                              ; Stuck at GND due to stuck port data_in      ;
+; UART_convert:UART|REG_B_TMP[23]                                          ; Stuck at GND due to stuck port data_in      ;
+; Total Number of Removed Registers = 97                                   ;                                             ;
 +--------------------------------------------------------------------------+---------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                         ;
-+---------------------------------+--------------------+------------------------------------------------------------------------------+
-; Register name                   ; Reason for Removal ; Registers Removed due to This Register                                       ;
-+---------------------------------+--------------------+------------------------------------------------------------------------------+
-; UART_convert:UART|REG_B[1]      ; Lost Fanouts       ; UART_convert:UART|REGB_BCD[4], UART_convert:UART|REGB_BCD[1],                ;
-;                                 ;                    ; UART_convert:UART|REGB_BCD[5], UART_convert:UART|REGA_BCD[0],                ;
-;                                 ;                    ; UART_convert:UART|REGA_BCD[1]                                                ;
-; UART_convert:UART|REG_B_TMP[40] ; Lost Fanouts       ; UART_convert:UART|state_output.wait_mp, UART_convert:UART|state_output.final ;
-; UART_convert:UART|REG_B[40]     ; Lost Fanouts       ; UART_convert:UART|isB_negative                                               ;
-; UART_convert:UART|REG_B[10]     ; Lost Fanouts       ; UART_convert:UART|REGB_BCD[0]                                                ;
-; UART_convert:UART|REGB_BCD[7]   ; Lost Fanouts       ; UART_convert:UART|REGA_BCD[3]                                                ;
-; UART_convert:UART|REGB_BCD[6]   ; Lost Fanouts       ; UART_convert:UART|REGA_BCD[2]                                                ;
-; UART_convert:UART|REGB_BCD[11]  ; Lost Fanouts       ; UART_convert:UART|REGA_BCD[7]                                                ;
-; UART_convert:UART|REGB_BCD[10]  ; Lost Fanouts       ; UART_convert:UART|REGA_BCD[6]                                                ;
-; UART_convert:UART|REGB_BCD[9]   ; Lost Fanouts       ; UART_convert:UART|REGA_BCD[5]                                                ;
-; UART_convert:UART|REGB_BCD[8]   ; Lost Fanouts       ; UART_convert:UART|REGA_BCD[4]                                                ;
-; UART_convert:UART|REGB_BCD[12]  ; Lost Fanouts       ; UART_convert:UART|REGA_BCD[8]                                                ;
-; UART_convert:UART|REGB_BCD[13]  ; Lost Fanouts       ; UART_convert:UART|REGA_BCD[9]                                                ;
-; UART_convert:UART|REGB_BCD[15]  ; Lost Fanouts       ; UART_convert:UART|REGA_BCD[11]                                               ;
-; UART_convert:UART|REGB_BCD[14]  ; Lost Fanouts       ; UART_convert:UART|REGA_BCD[10]                                               ;
-; UART_convert:UART|REGB_BCD[19]  ; Lost Fanouts       ; UART_convert:UART|REGA_BCD[15]                                               ;
-; UART_convert:UART|REGB_BCD[18]  ; Lost Fanouts       ; UART_convert:UART|REGA_BCD[14]                                               ;
-; UART_convert:UART|REGB_BCD[17]  ; Lost Fanouts       ; UART_convert:UART|REGA_BCD[13]                                               ;
-; UART_convert:UART|REGB_BCD[16]  ; Lost Fanouts       ; UART_convert:UART|REGA_BCD[12]                                               ;
-; UART_convert:UART|REGB_BCD[20]  ; Lost Fanouts       ; UART_convert:UART|REGA_BCD[16]                                               ;
-; UART_convert:UART|REGB_BCD[21]  ; Lost Fanouts       ; UART_convert:UART|REGA_BCD[17]                                               ;
-; UART_convert:UART|REGB_BCD[23]  ; Lost Fanouts       ; UART_convert:UART|REGA_BCD[19]                                               ;
-; UART_convert:UART|REGB_BCD[22]  ; Lost Fanouts       ; UART_convert:UART|REGA_BCD[18]                                               ;
-; UART_convert:UART|REGB_BCD[27]  ; Lost Fanouts       ; UART_convert:UART|REGA_BCD[23]                                               ;
-; UART_convert:UART|REGB_BCD[26]  ; Lost Fanouts       ; UART_convert:UART|REGA_BCD[22]                                               ;
-; UART_convert:UART|REGB_BCD[25]  ; Lost Fanouts       ; UART_convert:UART|REGA_BCD[21]                                               ;
-; UART_convert:UART|REGB_BCD[24]  ; Lost Fanouts       ; UART_convert:UART|REGA_BCD[20]                                               ;
-; UART_convert:UART|REGB_BCD[28]  ; Lost Fanouts       ; UART_convert:UART|REGA_BCD[24]                                               ;
-; UART_convert:UART|REGB_BCD[29]  ; Lost Fanouts       ; UART_convert:UART|REGA_BCD[25]                                               ;
-; UART_convert:UART|REGB_BCD[31]  ; Lost Fanouts       ; UART_convert:UART|REGA_BCD[27]                                               ;
-; UART_convert:UART|REGB_BCD[30]  ; Lost Fanouts       ; UART_convert:UART|REGA_BCD[26]                                               ;
-; UART_convert:UART|REGB_BCD[35]  ; Lost Fanouts       ; UART_convert:UART|REGA_BCD[31]                                               ;
-; UART_convert:UART|REGB_BCD[34]  ; Lost Fanouts       ; UART_convert:UART|REGA_BCD[30]                                               ;
-; UART_convert:UART|REGB_BCD[33]  ; Lost Fanouts       ; UART_convert:UART|REGA_BCD[29]                                               ;
-; UART_convert:UART|REGB_BCD[32]  ; Lost Fanouts       ; UART_convert:UART|REGA_BCD[28]                                               ;
-; UART_convert:UART|REGB_BCD[36]  ; Lost Fanouts       ; UART_convert:UART|REGA_BCD[32]                                               ;
-; UART_convert:UART|REGB_BCD[37]  ; Lost Fanouts       ; UART_convert:UART|REGA_BCD[33]                                               ;
-; UART_convert:UART|REGB_BCD[39]  ; Lost Fanouts       ; UART_convert:UART|REGA_BCD[35]                                               ;
-; UART_convert:UART|REGB_BCD[38]  ; Lost Fanouts       ; UART_convert:UART|REGA_BCD[34]                                               ;
-; UART_convert:UART|REGB_BCD[43]  ; Lost Fanouts       ; UART_convert:UART|REGA_BCD[39]                                               ;
-; UART_convert:UART|REGB_BCD[42]  ; Lost Fanouts       ; UART_convert:UART|REGA_BCD[38]                                               ;
-; UART_convert:UART|REGB_BCD[41]  ; Lost Fanouts       ; UART_convert:UART|REGA_BCD[37]                                               ;
-; UART_convert:UART|REGB_BCD[40]  ; Lost Fanouts       ; UART_convert:UART|REGA_BCD[36]                                               ;
-; UART_convert:UART|REGB_BCD[47]  ; Lost Fanouts       ; UART_convert:UART|REGA_BCD[43]                                               ;
-; UART_convert:UART|REGB_BCD[46]  ; Lost Fanouts       ; UART_convert:UART|REGA_BCD[42]                                               ;
-; UART_convert:UART|REGB_BCD[45]  ; Lost Fanouts       ; UART_convert:UART|REGA_BCD[41]                                               ;
-; UART_convert:UART|REGB_BCD[44]  ; Lost Fanouts       ; UART_convert:UART|REGA_BCD[40]                                               ;
-+---------------------------------+--------------------+------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                               ;
++-----------------------------------------+---------------------------+-------------------------------------------------------------------------------------+
+; Register name                           ; Reason for Removal        ; Registers Removed due to This Register                                              ;
++-----------------------------------------+---------------------------+-------------------------------------------------------------------------------------+
+; UART_convert:UART|REG_IN_BINER_SHIFT[0] ; Stuck at GND              ; UART_convert:UART|REG_IN_BINER_SHIFT[1], UART_convert:UART|REG_IN_BINER_SHIFT[2],   ;
+;                                         ; due to stuck port data_in ; UART_convert:UART|REG_IN_BINER_SHIFT[3], UART_convert:UART|REG_IN_BINER_SHIFT[4],   ;
+;                                         ;                           ; UART_convert:UART|REG_IN_BINER_SHIFT[5], UART_convert:UART|REG_IN_BINER_SHIFT[6],   ;
+;                                         ;                           ; UART_convert:UART|REG_IN_BINER_SHIFT[7], UART_convert:UART|REG_IN_BINER_SHIFT[8],   ;
+;                                         ;                           ; UART_convert:UART|REG_IN_BINER_SHIFT[9], UART_convert:UART|REG_IN_BINER_SHIFT[10],  ;
+;                                         ;                           ; UART_convert:UART|REG_IN_BINER_SHIFT[11], UART_convert:UART|REG_IN_BINER_SHIFT[12], ;
+;                                         ;                           ; UART_convert:UART|REG_IN_BINER_SHIFT[13], UART_convert:UART|REG_IN_BINER_SHIFT[14], ;
+;                                         ;                           ; UART_convert:UART|REG_IN_BINER_SHIFT[15], UART_convert:UART|REG_IN_BINER_SHIFT[16], ;
+;                                         ;                           ; UART_convert:UART|REG_IN_BINER_SHIFT[17], UART_convert:UART|REG_IN_BINER_SHIFT[18], ;
+;                                         ;                           ; UART_convert:UART|REG_IN_BINER_SHIFT[19], UART_convert:UART|REG_IN_BINER_SHIFT[20], ;
+;                                         ;                           ; UART_convert:UART|REG_IN_BINER_SHIFT[21], UART_convert:UART|REG_IN_BINER_SHIFT[22], ;
+;                                         ;                           ; UART_convert:UART|REG_IN_BINER_SHIFT[23], UART_convert:UART|REG_IN_BINER_SHIFT[24], ;
+;                                         ;                           ; UART_convert:UART|REG_IN_BINER_SHIFT[25], UART_convert:UART|REG_IN_BINER_SHIFT[26], ;
+;                                         ;                           ; UART_convert:UART|REG_IN_BINER_SHIFT[27], UART_convert:UART|REG_IN_BINER_SHIFT[28], ;
+;                                         ;                           ; UART_convert:UART|REG_IN_BINER_SHIFT[29], UART_convert:UART|REG_IN_BINER_SHIFT[30], ;
+;                                         ;                           ; UART_convert:UART|REG_IN_BINER_SHIFT[31], UART_convert:UART|REG_IN_BINER_SHIFT[32], ;
+;                                         ;                           ; UART_convert:UART|REG_IN_BINER_SHIFT[33], UART_convert:UART|REG_IN_BINER_SHIFT[34], ;
+;                                         ;                           ; UART_convert:UART|REG_IN_BINER_SHIFT[35], UART_convert:UART|REG_IN_BINER_SHIFT[36], ;
+;                                         ;                           ; UART_convert:UART|REG_IN_BINER_SHIFT[37], UART_convert:UART|REG_IN_BINER_SHIFT[38], ;
+;                                         ;                           ; UART_convert:UART|REG_IN_BINER_SHIFT[39], UART_convert:UART|REG_IN_BINER_SHIFT[40]  ;
+; UART_convert:UART|REG_A[23]             ; Stuck at GND              ; UART_convert:UART|REG_B_TMP[23]                                                     ;
+;                                         ; due to stuck port data_in ;                                                                                     ;
++-----------------------------------------+---------------------------+-------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -384,12 +436,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 324   ;
-; Number of registers using Synchronous Clear  ; 90    ;
-; Number of registers using Synchronous Load   ; 2     ;
+; Total registers                              ; 457   ;
+; Number of registers using Synchronous Clear  ; 93    ;
+; Number of registers using Synchronous Load   ; 96    ;
 ; Number of registers using Asynchronous Clear ; 69    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 134   ;
+; Number of registers using Clock Enable       ; 257   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -409,21 +461,22 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top_kalkulator_integer|UART_convert:UART|my_uart_top:UART|my_uart_rx:receiver|num[3]    ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top_kalkulator_integer|UART_convert:UART|my_uart_top:UART|my_uart_tx:transmitter|num[2] ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |top_kalkulator_integer|UART_convert:UART|\SendData:convert[0]                           ;
-; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |top_kalkulator_integer|UART_convert:UART|REG_OUT_BCD[39]                                ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |top_kalkulator_integer|UART_convert:UART|REG_M[2]                                       ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 8 LEs                ; 24 LEs                 ; Yes        ; |top_kalkulator_integer|UART_convert:UART|REGB_BCD[6]                                    ;
-; 6:1                ; 44 bits   ; 176 LEs       ; 44 LEs               ; 132 LEs                ; Yes        ; |top_kalkulator_integer|UART_convert:UART|REGA_BCD[26]                                   ;
-; 7:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top_kalkulator_integer|UART_convert:UART|REG_OUT_BCD[14]                                ;
-; 7:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top_kalkulator_integer|UART_convert:UART|REG_OUT_BCD[10]                                ;
-; 7:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top_kalkulator_integer|UART_convert:UART|REG_OUT_BCD[7]                                 ;
-; 7:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top_kalkulator_integer|UART_convert:UART|REG_OUT_BCD[2]                                 ;
-; 6:1                ; 40 bits   ; 160 LEs       ; 40 LEs               ; 120 LEs                ; Yes        ; |top_kalkulator_integer|UART_convert:UART|REGB_BCD[13]                                   ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top_kalkulator_integer|UART_convert:UART|my_uart_top:UART|my_uart_rx:receiver|num[0]    ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top_kalkulator_integer|UART_convert:UART|my_uart_top:UART|my_uart_tx:transmitter|num[3] ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |top_kalkulator_integer|UART_convert:UART|\SendData:convert[24]                          ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |top_kalkulator_integer|UART_convert:UART|REG_OUT_BCD[42]                                ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |top_kalkulator_integer|UART_convert:UART|REG_M[1]                                       ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 8 LEs                ; 24 LEs                 ; Yes        ; |top_kalkulator_integer|UART_convert:UART|REGA_BCD[6]                                    ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 8 LEs                ; 24 LEs                 ; Yes        ; |top_kalkulator_integer|UART_convert:UART|REGB_BCD[4]                                    ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top_kalkulator_integer|UART_convert:UART|REG_OUT_BCD[15]                                ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top_kalkulator_integer|UART_convert:UART|REG_OUT_BCD[11]                                ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top_kalkulator_integer|UART_convert:UART|REG_OUT_BCD[6]                                 ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top_kalkulator_integer|UART_convert:UART|REG_OUT_BCD[3]                                 ;
+; 6:1                ; 40 bits   ; 160 LEs       ; 40 LEs               ; 120 LEs                ; Yes        ; |top_kalkulator_integer|UART_convert:UART|REGA_BCD[26]                                   ;
+; 6:1                ; 40 bits   ; 160 LEs       ; 40 LEs               ; 120 LEs                ; Yes        ; |top_kalkulator_integer|UART_convert:UART|REGB_BCD[30]                                   ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top_kalkulator_integer|UART_convert:UART|state                                          ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |top_kalkulator_integer|UART_convert:UART|state_send                                     ;
-; 4:1                ; 23 bits   ; 46 LEs        ; 23 LEs               ; 23 LEs                 ; No         ; |top_kalkulator_integer|UART_convert:UART|REG_B                                          ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |top_kalkulator_integer|UART_convert:UART|state_send                                     ;
+; 4:1                ; 46 bits   ; 92 LEs        ; 46 LEs               ; 46 LEs                 ; No         ; |top_kalkulator_integer|UART_convert:UART|REG_B                                          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------+
 
 
@@ -449,22 +502,950 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: UART_convert:UART|lpm_mult:Mult9   ;
++------------------------------------------------+--------------+---------------------+
+; Parameter Name                                 ; Value        ; Type                ;
++------------------------------------------------+--------------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 4            ; Untyped             ;
+; LPM_WIDTHB                                     ; 18           ; Untyped             ;
+; LPM_WIDTHP                                     ; 22           ; Untyped             ;
+; LPM_WIDTHR                                     ; 22           ; Untyped             ;
+; LPM_WIDTHS                                     ; 1            ; Untyped             ;
+; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped             ;
+; LPM_PIPELINE                                   ; 0            ; Untyped             ;
+; LATENCY                                        ; 0            ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; YES          ; Untyped             ;
+; USE_EAB                                        ; OFF          ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 5            ; Untyped             ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped             ;
+; CBXI_PARAMETER                                 ; NOTHING      ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped             ;
++------------------------------------------------+--------------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: UART_convert:UART|lpm_mult:Mult19  ;
++------------------------------------------------+--------------+---------------------+
+; Parameter Name                                 ; Value        ; Type                ;
++------------------------------------------------+--------------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 4            ; Untyped             ;
+; LPM_WIDTHB                                     ; 18           ; Untyped             ;
+; LPM_WIDTHP                                     ; 22           ; Untyped             ;
+; LPM_WIDTHR                                     ; 22           ; Untyped             ;
+; LPM_WIDTHS                                     ; 1            ; Untyped             ;
+; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped             ;
+; LPM_PIPELINE                                   ; 0            ; Untyped             ;
+; LATENCY                                        ; 0            ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; YES          ; Untyped             ;
+; USE_EAB                                        ; OFF          ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 5            ; Untyped             ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped             ;
+; CBXI_PARAMETER                                 ; NOTHING      ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped             ;
++------------------------------------------------+--------------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: UART_convert:UART|lpm_mult:Mult8   ;
++------------------------------------------------+--------------+---------------------+
+; Parameter Name                                 ; Value        ; Type                ;
++------------------------------------------------+--------------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 4            ; Untyped             ;
+; LPM_WIDTHB                                     ; 17           ; Untyped             ;
+; LPM_WIDTHP                                     ; 21           ; Untyped             ;
+; LPM_WIDTHR                                     ; 21           ; Untyped             ;
+; LPM_WIDTHS                                     ; 1            ; Untyped             ;
+; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped             ;
+; LPM_PIPELINE                                   ; 0            ; Untyped             ;
+; LATENCY                                        ; 0            ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; YES          ; Untyped             ;
+; USE_EAB                                        ; OFF          ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 5            ; Untyped             ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped             ;
+; CBXI_PARAMETER                                 ; NOTHING      ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped             ;
++------------------------------------------------+--------------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: UART_convert:UART|lpm_mult:Mult18  ;
++------------------------------------------------+--------------+---------------------+
+; Parameter Name                                 ; Value        ; Type                ;
++------------------------------------------------+--------------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 4            ; Untyped             ;
+; LPM_WIDTHB                                     ; 17           ; Untyped             ;
+; LPM_WIDTHP                                     ; 21           ; Untyped             ;
+; LPM_WIDTHR                                     ; 21           ; Untyped             ;
+; LPM_WIDTHS                                     ; 1            ; Untyped             ;
+; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped             ;
+; LPM_PIPELINE                                   ; 0            ; Untyped             ;
+; LATENCY                                        ; 0            ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; YES          ; Untyped             ;
+; USE_EAB                                        ; OFF          ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 5            ; Untyped             ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped             ;
+; CBXI_PARAMETER                                 ; NOTHING      ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped             ;
++------------------------------------------------+--------------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: UART_convert:UART|lpm_mult:Mult1   ;
++------------------------------------------------+--------------+---------------------+
+; Parameter Name                                 ; Value        ; Type                ;
++------------------------------------------------+--------------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 4            ; Untyped             ;
+; LPM_WIDTHB                                     ; 10           ; Untyped             ;
+; LPM_WIDTHP                                     ; 14           ; Untyped             ;
+; LPM_WIDTHR                                     ; 14           ; Untyped             ;
+; LPM_WIDTHS                                     ; 1            ; Untyped             ;
+; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped             ;
+; LPM_PIPELINE                                   ; 0            ; Untyped             ;
+; LATENCY                                        ; 0            ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; YES          ; Untyped             ;
+; USE_EAB                                        ; OFF          ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 6            ; Untyped             ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped             ;
+; CBXI_PARAMETER                                 ; NOTHING      ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped             ;
++------------------------------------------------+--------------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: UART_convert:UART|lpm_mult:Mult2   ;
++------------------------------------------------+--------------+---------------------+
+; Parameter Name                                 ; Value        ; Type                ;
++------------------------------------------------+--------------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 4            ; Untyped             ;
+; LPM_WIDTHB                                     ; 11           ; Untyped             ;
+; LPM_WIDTHP                                     ; 15           ; Untyped             ;
+; LPM_WIDTHR                                     ; 15           ; Untyped             ;
+; LPM_WIDTHS                                     ; 1            ; Untyped             ;
+; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped             ;
+; LPM_PIPELINE                                   ; 0            ; Untyped             ;
+; LATENCY                                        ; 0            ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; YES          ; Untyped             ;
+; USE_EAB                                        ; OFF          ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 6            ; Untyped             ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped             ;
+; CBXI_PARAMETER                                 ; NOTHING      ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped             ;
++------------------------------------------------+--------------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: UART_convert:UART|lpm_mult:Mult3   ;
++------------------------------------------------+--------------+---------------------+
+; Parameter Name                                 ; Value        ; Type                ;
++------------------------------------------------+--------------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 4            ; Untyped             ;
+; LPM_WIDTHB                                     ; 12           ; Untyped             ;
+; LPM_WIDTHP                                     ; 16           ; Untyped             ;
+; LPM_WIDTHR                                     ; 16           ; Untyped             ;
+; LPM_WIDTHS                                     ; 1            ; Untyped             ;
+; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped             ;
+; LPM_PIPELINE                                   ; 0            ; Untyped             ;
+; LATENCY                                        ; 0            ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; YES          ; Untyped             ;
+; USE_EAB                                        ; OFF          ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 5            ; Untyped             ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped             ;
+; CBXI_PARAMETER                                 ; NOTHING      ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped             ;
++------------------------------------------------+--------------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: UART_convert:UART|lpm_mult:Mult4   ;
++------------------------------------------------+--------------+---------------------+
+; Parameter Name                                 ; Value        ; Type                ;
++------------------------------------------------+--------------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 4            ; Untyped             ;
+; LPM_WIDTHB                                     ; 13           ; Untyped             ;
+; LPM_WIDTHP                                     ; 17           ; Untyped             ;
+; LPM_WIDTHR                                     ; 17           ; Untyped             ;
+; LPM_WIDTHS                                     ; 1            ; Untyped             ;
+; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped             ;
+; LPM_PIPELINE                                   ; 0            ; Untyped             ;
+; LATENCY                                        ; 0            ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; YES          ; Untyped             ;
+; USE_EAB                                        ; OFF          ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 6            ; Untyped             ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped             ;
+; CBXI_PARAMETER                                 ; NOTHING      ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped             ;
++------------------------------------------------+--------------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: UART_convert:UART|lpm_mult:Mult5   ;
++------------------------------------------------+--------------+---------------------+
+; Parameter Name                                 ; Value        ; Type                ;
++------------------------------------------------+--------------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 4            ; Untyped             ;
+; LPM_WIDTHB                                     ; 14           ; Untyped             ;
+; LPM_WIDTHP                                     ; 18           ; Untyped             ;
+; LPM_WIDTHR                                     ; 18           ; Untyped             ;
+; LPM_WIDTHS                                     ; 1            ; Untyped             ;
+; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped             ;
+; LPM_PIPELINE                                   ; 0            ; Untyped             ;
+; LATENCY                                        ; 0            ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; YES          ; Untyped             ;
+; USE_EAB                                        ; OFF          ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 5            ; Untyped             ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped             ;
+; CBXI_PARAMETER                                 ; NOTHING      ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped             ;
++------------------------------------------------+--------------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: UART_convert:UART|lpm_mult:Mult6   ;
++------------------------------------------------+--------------+---------------------+
+; Parameter Name                                 ; Value        ; Type                ;
++------------------------------------------------+--------------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 4            ; Untyped             ;
+; LPM_WIDTHB                                     ; 15           ; Untyped             ;
+; LPM_WIDTHP                                     ; 19           ; Untyped             ;
+; LPM_WIDTHR                                     ; 19           ; Untyped             ;
+; LPM_WIDTHS                                     ; 1            ; Untyped             ;
+; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped             ;
+; LPM_PIPELINE                                   ; 0            ; Untyped             ;
+; LATENCY                                        ; 0            ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; YES          ; Untyped             ;
+; USE_EAB                                        ; OFF          ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 5            ; Untyped             ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped             ;
+; CBXI_PARAMETER                                 ; NOTHING      ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped             ;
++------------------------------------------------+--------------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: UART_convert:UART|lpm_mult:Mult7   ;
++------------------------------------------------+--------------+---------------------+
+; Parameter Name                                 ; Value        ; Type                ;
++------------------------------------------------+--------------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 4            ; Untyped             ;
+; LPM_WIDTHB                                     ; 16           ; Untyped             ;
+; LPM_WIDTHP                                     ; 20           ; Untyped             ;
+; LPM_WIDTHR                                     ; 20           ; Untyped             ;
+; LPM_WIDTHS                                     ; 1            ; Untyped             ;
+; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped             ;
+; LPM_PIPELINE                                   ; 0            ; Untyped             ;
+; LATENCY                                        ; 0            ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; YES          ; Untyped             ;
+; USE_EAB                                        ; OFF          ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 6            ; Untyped             ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped             ;
+; CBXI_PARAMETER                                 ; NOTHING      ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped             ;
++------------------------------------------------+--------------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: UART_convert:UART|lpm_mult:Mult11  ;
++------------------------------------------------+--------------+---------------------+
+; Parameter Name                                 ; Value        ; Type                ;
++------------------------------------------------+--------------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 4            ; Untyped             ;
+; LPM_WIDTHB                                     ; 10           ; Untyped             ;
+; LPM_WIDTHP                                     ; 14           ; Untyped             ;
+; LPM_WIDTHR                                     ; 14           ; Untyped             ;
+; LPM_WIDTHS                                     ; 1            ; Untyped             ;
+; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped             ;
+; LPM_PIPELINE                                   ; 0            ; Untyped             ;
+; LATENCY                                        ; 0            ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; YES          ; Untyped             ;
+; USE_EAB                                        ; OFF          ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 6            ; Untyped             ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped             ;
+; CBXI_PARAMETER                                 ; NOTHING      ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped             ;
++------------------------------------------------+--------------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: UART_convert:UART|lpm_mult:Mult12  ;
++------------------------------------------------+--------------+---------------------+
+; Parameter Name                                 ; Value        ; Type                ;
++------------------------------------------------+--------------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 4            ; Untyped             ;
+; LPM_WIDTHB                                     ; 11           ; Untyped             ;
+; LPM_WIDTHP                                     ; 15           ; Untyped             ;
+; LPM_WIDTHR                                     ; 15           ; Untyped             ;
+; LPM_WIDTHS                                     ; 1            ; Untyped             ;
+; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped             ;
+; LPM_PIPELINE                                   ; 0            ; Untyped             ;
+; LATENCY                                        ; 0            ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; YES          ; Untyped             ;
+; USE_EAB                                        ; OFF          ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 6            ; Untyped             ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped             ;
+; CBXI_PARAMETER                                 ; NOTHING      ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped             ;
++------------------------------------------------+--------------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: UART_convert:UART|lpm_mult:Mult13  ;
++------------------------------------------------+--------------+---------------------+
+; Parameter Name                                 ; Value        ; Type                ;
++------------------------------------------------+--------------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 4            ; Untyped             ;
+; LPM_WIDTHB                                     ; 12           ; Untyped             ;
+; LPM_WIDTHP                                     ; 16           ; Untyped             ;
+; LPM_WIDTHR                                     ; 16           ; Untyped             ;
+; LPM_WIDTHS                                     ; 1            ; Untyped             ;
+; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped             ;
+; LPM_PIPELINE                                   ; 0            ; Untyped             ;
+; LATENCY                                        ; 0            ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; YES          ; Untyped             ;
+; USE_EAB                                        ; OFF          ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 5            ; Untyped             ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped             ;
+; CBXI_PARAMETER                                 ; NOTHING      ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped             ;
++------------------------------------------------+--------------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: UART_convert:UART|lpm_mult:Mult14  ;
++------------------------------------------------+--------------+---------------------+
+; Parameter Name                                 ; Value        ; Type                ;
++------------------------------------------------+--------------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 4            ; Untyped             ;
+; LPM_WIDTHB                                     ; 13           ; Untyped             ;
+; LPM_WIDTHP                                     ; 17           ; Untyped             ;
+; LPM_WIDTHR                                     ; 17           ; Untyped             ;
+; LPM_WIDTHS                                     ; 1            ; Untyped             ;
+; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped             ;
+; LPM_PIPELINE                                   ; 0            ; Untyped             ;
+; LATENCY                                        ; 0            ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; YES          ; Untyped             ;
+; USE_EAB                                        ; OFF          ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 6            ; Untyped             ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped             ;
+; CBXI_PARAMETER                                 ; NOTHING      ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped             ;
++------------------------------------------------+--------------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: UART_convert:UART|lpm_mult:Mult15  ;
++------------------------------------------------+--------------+---------------------+
+; Parameter Name                                 ; Value        ; Type                ;
++------------------------------------------------+--------------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 4            ; Untyped             ;
+; LPM_WIDTHB                                     ; 14           ; Untyped             ;
+; LPM_WIDTHP                                     ; 18           ; Untyped             ;
+; LPM_WIDTHR                                     ; 18           ; Untyped             ;
+; LPM_WIDTHS                                     ; 1            ; Untyped             ;
+; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped             ;
+; LPM_PIPELINE                                   ; 0            ; Untyped             ;
+; LATENCY                                        ; 0            ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; YES          ; Untyped             ;
+; USE_EAB                                        ; OFF          ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 5            ; Untyped             ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped             ;
+; CBXI_PARAMETER                                 ; NOTHING      ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped             ;
++------------------------------------------------+--------------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: UART_convert:UART|lpm_mult:Mult16  ;
++------------------------------------------------+--------------+---------------------+
+; Parameter Name                                 ; Value        ; Type                ;
++------------------------------------------------+--------------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 4            ; Untyped             ;
+; LPM_WIDTHB                                     ; 15           ; Untyped             ;
+; LPM_WIDTHP                                     ; 19           ; Untyped             ;
+; LPM_WIDTHR                                     ; 19           ; Untyped             ;
+; LPM_WIDTHS                                     ; 1            ; Untyped             ;
+; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped             ;
+; LPM_PIPELINE                                   ; 0            ; Untyped             ;
+; LATENCY                                        ; 0            ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; YES          ; Untyped             ;
+; USE_EAB                                        ; OFF          ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 5            ; Untyped             ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped             ;
+; CBXI_PARAMETER                                 ; NOTHING      ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped             ;
++------------------------------------------------+--------------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: UART_convert:UART|lpm_mult:Mult17  ;
++------------------------------------------------+--------------+---------------------+
+; Parameter Name                                 ; Value        ; Type                ;
++------------------------------------------------+--------------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 4            ; Untyped             ;
+; LPM_WIDTHB                                     ; 16           ; Untyped             ;
+; LPM_WIDTHP                                     ; 20           ; Untyped             ;
+; LPM_WIDTHR                                     ; 20           ; Untyped             ;
+; LPM_WIDTHS                                     ; 1            ; Untyped             ;
+; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped             ;
+; LPM_PIPELINE                                   ; 0            ; Untyped             ;
+; LATENCY                                        ; 0            ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; YES          ; Untyped             ;
+; USE_EAB                                        ; OFF          ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 6            ; Untyped             ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped             ;
+; CBXI_PARAMETER                                 ; NOTHING      ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped             ;
++------------------------------------------------+--------------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: UART_convert:UART|lpm_mult:Mult0   ;
++------------------------------------------------+--------------+---------------------+
+; Parameter Name                                 ; Value        ; Type                ;
++------------------------------------------------+--------------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 4            ; Untyped             ;
+; LPM_WIDTHB                                     ; 7            ; Untyped             ;
+; LPM_WIDTHP                                     ; 11           ; Untyped             ;
+; LPM_WIDTHR                                     ; 11           ; Untyped             ;
+; LPM_WIDTHS                                     ; 1            ; Untyped             ;
+; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped             ;
+; LPM_PIPELINE                                   ; 0            ; Untyped             ;
+; LATENCY                                        ; 0            ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; YES          ; Untyped             ;
+; USE_EAB                                        ; OFF          ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 5            ; Untyped             ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped             ;
+; CBXI_PARAMETER                                 ; NOTHING      ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped             ;
++------------------------------------------------+--------------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: UART_convert:UART|lpm_mult:Mult10  ;
++------------------------------------------------+--------------+---------------------+
+; Parameter Name                                 ; Value        ; Type                ;
++------------------------------------------------+--------------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 4            ; Untyped             ;
+; LPM_WIDTHB                                     ; 7            ; Untyped             ;
+; LPM_WIDTHP                                     ; 11           ; Untyped             ;
+; LPM_WIDTHR                                     ; 11           ; Untyped             ;
+; LPM_WIDTHS                                     ; 1            ; Untyped             ;
+; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped             ;
+; LPM_PIPELINE                                   ; 0            ; Untyped             ;
+; LATENCY                                        ; 0            ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; YES          ; Untyped             ;
+; USE_EAB                                        ; OFF          ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 5            ; Untyped             ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped             ;
+; CBXI_PARAMETER                                 ; NOTHING      ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped             ;
++------------------------------------------------+--------------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; lpm_mult Parameter Settings by Entity Instance                            ;
++---------------------------------------+-----------------------------------+
+; Name                                  ; Value                             ;
++---------------------------------------+-----------------------------------+
+; Number of entity instances            ; 20                                ;
+; Entity Instance                       ; UART_convert:UART|lpm_mult:Mult9  ;
+;     -- LPM_WIDTHA                     ; 4                                 ;
+;     -- LPM_WIDTHB                     ; 18                                ;
+;     -- LPM_WIDTHP                     ; 22                                ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                          ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                               ;
+;     -- USE_EAB                        ; OFF                               ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                              ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                ;
+; Entity Instance                       ; UART_convert:UART|lpm_mult:Mult19 ;
+;     -- LPM_WIDTHA                     ; 4                                 ;
+;     -- LPM_WIDTHB                     ; 18                                ;
+;     -- LPM_WIDTHP                     ; 22                                ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                          ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                               ;
+;     -- USE_EAB                        ; OFF                               ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                              ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                ;
+; Entity Instance                       ; UART_convert:UART|lpm_mult:Mult8  ;
+;     -- LPM_WIDTHA                     ; 4                                 ;
+;     -- LPM_WIDTHB                     ; 17                                ;
+;     -- LPM_WIDTHP                     ; 21                                ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                          ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                               ;
+;     -- USE_EAB                        ; OFF                               ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                              ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                ;
+; Entity Instance                       ; UART_convert:UART|lpm_mult:Mult18 ;
+;     -- LPM_WIDTHA                     ; 4                                 ;
+;     -- LPM_WIDTHB                     ; 17                                ;
+;     -- LPM_WIDTHP                     ; 21                                ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                          ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                               ;
+;     -- USE_EAB                        ; OFF                               ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                              ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                ;
+; Entity Instance                       ; UART_convert:UART|lpm_mult:Mult1  ;
+;     -- LPM_WIDTHA                     ; 4                                 ;
+;     -- LPM_WIDTHB                     ; 10                                ;
+;     -- LPM_WIDTHP                     ; 14                                ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                          ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                               ;
+;     -- USE_EAB                        ; OFF                               ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                              ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                ;
+; Entity Instance                       ; UART_convert:UART|lpm_mult:Mult2  ;
+;     -- LPM_WIDTHA                     ; 4                                 ;
+;     -- LPM_WIDTHB                     ; 11                                ;
+;     -- LPM_WIDTHP                     ; 15                                ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                          ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                               ;
+;     -- USE_EAB                        ; OFF                               ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                              ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                ;
+; Entity Instance                       ; UART_convert:UART|lpm_mult:Mult3  ;
+;     -- LPM_WIDTHA                     ; 4                                 ;
+;     -- LPM_WIDTHB                     ; 12                                ;
+;     -- LPM_WIDTHP                     ; 16                                ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                          ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                               ;
+;     -- USE_EAB                        ; OFF                               ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                              ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                ;
+; Entity Instance                       ; UART_convert:UART|lpm_mult:Mult4  ;
+;     -- LPM_WIDTHA                     ; 4                                 ;
+;     -- LPM_WIDTHB                     ; 13                                ;
+;     -- LPM_WIDTHP                     ; 17                                ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                          ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                               ;
+;     -- USE_EAB                        ; OFF                               ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                              ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                ;
+; Entity Instance                       ; UART_convert:UART|lpm_mult:Mult5  ;
+;     -- LPM_WIDTHA                     ; 4                                 ;
+;     -- LPM_WIDTHB                     ; 14                                ;
+;     -- LPM_WIDTHP                     ; 18                                ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                          ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                               ;
+;     -- USE_EAB                        ; OFF                               ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                              ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                ;
+; Entity Instance                       ; UART_convert:UART|lpm_mult:Mult6  ;
+;     -- LPM_WIDTHA                     ; 4                                 ;
+;     -- LPM_WIDTHB                     ; 15                                ;
+;     -- LPM_WIDTHP                     ; 19                                ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                          ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                               ;
+;     -- USE_EAB                        ; OFF                               ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                              ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                ;
+; Entity Instance                       ; UART_convert:UART|lpm_mult:Mult7  ;
+;     -- LPM_WIDTHA                     ; 4                                 ;
+;     -- LPM_WIDTHB                     ; 16                                ;
+;     -- LPM_WIDTHP                     ; 20                                ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                          ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                               ;
+;     -- USE_EAB                        ; OFF                               ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                              ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                ;
+; Entity Instance                       ; UART_convert:UART|lpm_mult:Mult11 ;
+;     -- LPM_WIDTHA                     ; 4                                 ;
+;     -- LPM_WIDTHB                     ; 10                                ;
+;     -- LPM_WIDTHP                     ; 14                                ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                          ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                               ;
+;     -- USE_EAB                        ; OFF                               ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                              ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                ;
+; Entity Instance                       ; UART_convert:UART|lpm_mult:Mult12 ;
+;     -- LPM_WIDTHA                     ; 4                                 ;
+;     -- LPM_WIDTHB                     ; 11                                ;
+;     -- LPM_WIDTHP                     ; 15                                ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                          ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                               ;
+;     -- USE_EAB                        ; OFF                               ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                              ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                ;
+; Entity Instance                       ; UART_convert:UART|lpm_mult:Mult13 ;
+;     -- LPM_WIDTHA                     ; 4                                 ;
+;     -- LPM_WIDTHB                     ; 12                                ;
+;     -- LPM_WIDTHP                     ; 16                                ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                          ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                               ;
+;     -- USE_EAB                        ; OFF                               ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                              ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                ;
+; Entity Instance                       ; UART_convert:UART|lpm_mult:Mult14 ;
+;     -- LPM_WIDTHA                     ; 4                                 ;
+;     -- LPM_WIDTHB                     ; 13                                ;
+;     -- LPM_WIDTHP                     ; 17                                ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                          ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                               ;
+;     -- USE_EAB                        ; OFF                               ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                              ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                ;
+; Entity Instance                       ; UART_convert:UART|lpm_mult:Mult15 ;
+;     -- LPM_WIDTHA                     ; 4                                 ;
+;     -- LPM_WIDTHB                     ; 14                                ;
+;     -- LPM_WIDTHP                     ; 18                                ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                          ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                               ;
+;     -- USE_EAB                        ; OFF                               ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                              ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                ;
+; Entity Instance                       ; UART_convert:UART|lpm_mult:Mult16 ;
+;     -- LPM_WIDTHA                     ; 4                                 ;
+;     -- LPM_WIDTHB                     ; 15                                ;
+;     -- LPM_WIDTHP                     ; 19                                ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                          ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                               ;
+;     -- USE_EAB                        ; OFF                               ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                              ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                ;
+; Entity Instance                       ; UART_convert:UART|lpm_mult:Mult17 ;
+;     -- LPM_WIDTHA                     ; 4                                 ;
+;     -- LPM_WIDTHB                     ; 16                                ;
+;     -- LPM_WIDTHP                     ; 20                                ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                          ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                               ;
+;     -- USE_EAB                        ; OFF                               ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                              ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                ;
+; Entity Instance                       ; UART_convert:UART|lpm_mult:Mult0  ;
+;     -- LPM_WIDTHA                     ; 4                                 ;
+;     -- LPM_WIDTHB                     ; 7                                 ;
+;     -- LPM_WIDTHP                     ; 11                                ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                          ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                               ;
+;     -- USE_EAB                        ; OFF                               ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                              ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                ;
+; Entity Instance                       ; UART_convert:UART|lpm_mult:Mult10 ;
+;     -- LPM_WIDTHA                     ; 4                                 ;
+;     -- LPM_WIDTHB                     ; 7                                 ;
+;     -- LPM_WIDTHP                     ; 11                                ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                          ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                               ;
+;     -- USE_EAB                        ; OFF                               ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                              ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                ;
++---------------------------------------+-----------------------------------+
+
+
 +--------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "UART_convert:UART"                                                                                  ;
 +----------------------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port                 ; Type   ; Severity ; Details                                                                             ;
 +----------------------+--------+----------+-------------------------------------------------------------------------------------+
-; reg_a                ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; reg_b                ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; reg_m                ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; isp_s                ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; isq_s                ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; r_out                ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; status               ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; status               ; Input  ; Info     ; Stuck at GND                                                                        ;
+; led2                 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; led3                 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; reg_in_biner[5..4]   ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; reg_in_biner[39..11] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; reg_in_biner[40..11] ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; reg_in_biner[9..6]   ; Input  ; Info     ; Stuck at GND                                                                        ;
-; reg_in_biner[40]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; reg_in_biner[10]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; reg_in_biner[3]      ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; reg_in_biner[2]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
@@ -479,26 +1460,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 21                          ;
-; cycloneiii_ff         ; 324                         ;
+; cycloneiii_ff         ; 457                         ;
 ;     CLR               ; 28                          ;
 ;     CLR SCLR          ; 26                          ;
-;     ENA               ; 119                         ;
+;     ENA               ; 195                         ;
 ;     ENA CLR           ; 15                          ;
-;     SCLR              ; 64                          ;
-;     SLD               ; 2                           ;
-;     plain             ; 70                          ;
-; cycloneiii_lcell_comb ; 562                         ;
-;     arith             ; 148                         ;
-;         2 data inputs ; 148                         ;
-;     normal            ; 414                         ;
-;         0 data inputs ; 2                           ;
+;     ENA SCLR          ; 1                           ;
+;     ENA SLD           ; 46                          ;
+;     SCLR              ; 66                          ;
+;     SLD               ; 50                          ;
+;     plain             ; 30                          ;
+; cycloneiii_lcell_comb ; 1176                        ;
+;     arith             ; 376                         ;
+;         2 data inputs ; 160                         ;
+;         3 data inputs ; 216                         ;
+;     normal            ; 800                         ;
+;         0 data inputs ; 22                          ;
 ;         1 data inputs ; 14                          ;
-;         2 data inputs ; 62                          ;
-;         3 data inputs ; 99                          ;
-;         4 data inputs ; 237                         ;
+;         2 data inputs ; 212                         ;
+;         3 data inputs ; 82                          ;
+;         4 data inputs ; 470                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 9.90                        ;
-; Average LUT depth     ; 4.11                        ;
+; Max LUT depth         ; 14.90                       ;
+; Average LUT depth     ; 7.46                        ;
 +-----------------------+-----------------------------+
 
 
@@ -507,7 +1491,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -517,7 +1501,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Tue Dec  5 13:34:50 2023
+    Info: Processing started: Tue Dec  5 14:08:12 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off kalkulator-integer-vhdl -c kalkulator-integer-vhdl
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -525,16 +1509,18 @@ Info (12021): Found 2 design units, including 1 entities, in source file uart_co
     Info (12022): Found design unit 1: UART_convert-RTL File: D:/1. Cloud/OneDrive - Institut Teknologi Bandung/A. ITB-STEI/Akademik/3. Semester 3/EL2002 Sistem Digital/Tugas Besar/VHDL/kalkulator-vhdl/UART_convert.vhd Line: 49
     Info (12023): Found entity 1: UART_convert File: D:/1. Cloud/OneDrive - Institut Teknologi Bandung/A. ITB-STEI/Akademik/3. Semester 3/EL2002 Sistem Digital/Tugas Besar/VHDL/kalkulator-vhdl/UART_convert.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file top_kalkulator_integer.vhd
-    Info (12022): Found design unit 1: top_kalkulator_integer-kalkulator File: D:/1. Cloud/OneDrive - Institut Teknologi Bandung/A. ITB-STEI/Akademik/3. Semester 3/EL2002 Sistem Digital/Tugas Besar/VHDL/kalkulator-vhdl/top_kalkulator_integer.vhd Line: 33
-    Info (12023): Found entity 1: top_kalkulator_integer File: D:/1. Cloud/OneDrive - Institut Teknologi Bandung/A. ITB-STEI/Akademik/3. Semester 3/EL2002 Sistem Digital/Tugas Besar/VHDL/kalkulator-vhdl/top_kalkulator_integer.vhd Line: 7
+    Info (12022): Found design unit 1: top_kalkulator_integer-kalkulator File: D:/1. Cloud/OneDrive - Institut Teknologi Bandung/A. ITB-STEI/Akademik/3. Semester 3/EL2002 Sistem Digital/Tugas Besar/VHDL/kalkulator-vhdl/top_kalkulator_integer.vhd Line: 34
+    Info (12023): Found entity 1: top_kalkulator_integer File: D:/1. Cloud/OneDrive - Institut Teknologi Bandung/A. ITB-STEI/Akademik/3. Semester 3/EL2002 Sistem Digital/Tugas Besar/VHDL/kalkulator-vhdl/top_kalkulator_integer.vhd Line: 8
 Info (12127): Elaborating entity "top_kalkulator_integer" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at top_kalkulator_integer.vhd(73): object "REG_A" assigned a value but never read File: D:/1. Cloud/OneDrive - Institut Teknologi Bandung/A. ITB-STEI/Akademik/3. Semester 3/EL2002 Sistem Digital/Tugas Besar/VHDL/kalkulator-vhdl/top_kalkulator_integer.vhd Line: 73
-Warning (10036): Verilog HDL or VHDL warning at top_kalkulator_integer.vhd(73): object "REG_B" assigned a value but never read File: D:/1. Cloud/OneDrive - Institut Teknologi Bandung/A. ITB-STEI/Akademik/3. Semester 3/EL2002 Sistem Digital/Tugas Besar/VHDL/kalkulator-vhdl/top_kalkulator_integer.vhd Line: 73
-Warning (10036): Verilog HDL or VHDL warning at top_kalkulator_integer.vhd(74): object "REG_M" assigned a value but never read File: D:/1. Cloud/OneDrive - Institut Teknologi Bandung/A. ITB-STEI/Akademik/3. Semester 3/EL2002 Sistem Digital/Tugas Besar/VHDL/kalkulator-vhdl/top_kalkulator_integer.vhd Line: 74
-Warning (10036): Verilog HDL or VHDL warning at top_kalkulator_integer.vhd(75): object "isP_s" assigned a value but never read File: D:/1. Cloud/OneDrive - Institut Teknologi Bandung/A. ITB-STEI/Akademik/3. Semester 3/EL2002 Sistem Digital/Tugas Besar/VHDL/kalkulator-vhdl/top_kalkulator_integer.vhd Line: 75
-Warning (10036): Verilog HDL or VHDL warning at top_kalkulator_integer.vhd(75): object "isQ_s" assigned a value but never read File: D:/1. Cloud/OneDrive - Institut Teknologi Bandung/A. ITB-STEI/Akademik/3. Semester 3/EL2002 Sistem Digital/Tugas Besar/VHDL/kalkulator-vhdl/top_kalkulator_integer.vhd Line: 75
-Warning (10036): Verilog HDL or VHDL warning at top_kalkulator_integer.vhd(75): object "R_out" assigned a value but never read File: D:/1. Cloud/OneDrive - Institut Teknologi Bandung/A. ITB-STEI/Akademik/3. Semester 3/EL2002 Sistem Digital/Tugas Besar/VHDL/kalkulator-vhdl/top_kalkulator_integer.vhd Line: 75
-Info (12128): Elaborating entity "UART_convert" for hierarchy "UART_convert:UART" File: D:/1. Cloud/OneDrive - Institut Teknologi Bandung/A. ITB-STEI/Akademik/3. Semester 3/EL2002 Sistem Digital/Tugas Besar/VHDL/kalkulator-vhdl/top_kalkulator_integer.vhd Line: 89
+Warning (10036): Verilog HDL or VHDL warning at top_kalkulator_integer.vhd(75): object "REG_M" assigned a value but never read File: D:/1. Cloud/OneDrive - Institut Teknologi Bandung/A. ITB-STEI/Akademik/3. Semester 3/EL2002 Sistem Digital/Tugas Besar/VHDL/kalkulator-vhdl/top_kalkulator_integer.vhd Line: 75
+Warning (10036): Verilog HDL or VHDL warning at top_kalkulator_integer.vhd(76): object "isP_s" assigned a value but never read File: D:/1. Cloud/OneDrive - Institut Teknologi Bandung/A. ITB-STEI/Akademik/3. Semester 3/EL2002 Sistem Digital/Tugas Besar/VHDL/kalkulator-vhdl/top_kalkulator_integer.vhd Line: 76
+Warning (10036): Verilog HDL or VHDL warning at top_kalkulator_integer.vhd(76): object "isQ_s" assigned a value but never read File: D:/1. Cloud/OneDrive - Institut Teknologi Bandung/A. ITB-STEI/Akademik/3. Semester 3/EL2002 Sistem Digital/Tugas Besar/VHDL/kalkulator-vhdl/top_kalkulator_integer.vhd Line: 76
+Warning (10036): Verilog HDL or VHDL warning at top_kalkulator_integer.vhd(76): object "R_out" assigned a value but never read File: D:/1. Cloud/OneDrive - Institut Teknologi Bandung/A. ITB-STEI/Akademik/3. Semester 3/EL2002 Sistem Digital/Tugas Besar/VHDL/kalkulator-vhdl/top_kalkulator_integer.vhd Line: 76
+Warning (10036): Verilog HDL or VHDL warning at top_kalkulator_integer.vhd(78): object "dump1" assigned a value but never read File: D:/1. Cloud/OneDrive - Institut Teknologi Bandung/A. ITB-STEI/Akademik/3. Semester 3/EL2002 Sistem Digital/Tugas Besar/VHDL/kalkulator-vhdl/top_kalkulator_integer.vhd Line: 78
+Warning (10036): Verilog HDL or VHDL warning at top_kalkulator_integer.vhd(78): object "dump2" assigned a value but never read File: D:/1. Cloud/OneDrive - Institut Teknologi Bandung/A. ITB-STEI/Akademik/3. Semester 3/EL2002 Sistem Digital/Tugas Besar/VHDL/kalkulator-vhdl/top_kalkulator_integer.vhd Line: 78
+Warning (10492): VHDL Process Statement warning at top_kalkulator_integer.vhd(130): signal "REG_A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/1. Cloud/OneDrive - Institut Teknologi Bandung/A. ITB-STEI/Akademik/3. Semester 3/EL2002 Sistem Digital/Tugas Besar/VHDL/kalkulator-vhdl/top_kalkulator_integer.vhd Line: 130
+Warning (10492): VHDL Process Statement warning at top_kalkulator_integer.vhd(136): signal "REG_B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/1. Cloud/OneDrive - Institut Teknologi Bandung/A. ITB-STEI/Akademik/3. Semester 3/EL2002 Sistem Digital/Tugas Besar/VHDL/kalkulator-vhdl/top_kalkulator_integer.vhd Line: 136
+Info (12128): Elaborating entity "UART_convert" for hierarchy "UART_convert:UART" File: D:/1. Cloud/OneDrive - Institut Teknologi Bandung/A. ITB-STEI/Akademik/3. Semester 3/EL2002 Sistem Digital/Tugas Besar/VHDL/kalkulator-vhdl/top_kalkulator_integer.vhd Line: 92
 Warning (10541): VHDL Signal Declaration warning at UART_convert.vhd(32): used implicit default value for signal "led1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/1. Cloud/OneDrive - Institut Teknologi Bandung/A. ITB-STEI/Akademik/3. Semester 3/EL2002 Sistem Digital/Tugas Besar/VHDL/kalkulator-vhdl/UART_convert.vhd Line: 32
 Warning (10541): VHDL Signal Declaration warning at UART_convert.vhd(33): used implicit default value for signal "led2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/1. Cloud/OneDrive - Institut Teknologi Bandung/A. ITB-STEI/Akademik/3. Semester 3/EL2002 Sistem Digital/Tugas Besar/VHDL/kalkulator-vhdl/UART_convert.vhd Line: 33
 Warning (10541): VHDL Signal Declaration warning at UART_convert.vhd(34): used implicit default value for signal "led3" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/1. Cloud/OneDrive - Institut Teknologi Bandung/A. ITB-STEI/Akademik/3. Semester 3/EL2002 Sistem Digital/Tugas Besar/VHDL/kalkulator-vhdl/UART_convert.vhd Line: 34
@@ -571,25 +1557,184 @@ Info (12128): Elaborating entity "CLOCKDIV" for hierarchy "UART_convert:UART|CLO
 Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
     Warning (13049): Converted tri-state buffer "UART_convert:UART|my_uart_top:UART|my_uart_tx:transmitter|bps_start" feeding internal logic into a wire File: D:/1. Cloud/OneDrive - Institut Teknologi Bandung/A. ITB-STEI/Akademik/3. Semester 3/EL2002 Sistem Digital/Tugas Besar/VHDL/kalkulator-vhdl/my_uart_tx.vhd Line: 16
     Warning (13049): Converted tri-state buffer "UART_convert:UART|my_uart_top:UART|my_uart_rx:receiver|bps_start" feeding internal logic into a wire File: D:/1. Cloud/OneDrive - Institut Teknologi Bandung/A. ITB-STEI/Akademik/3. Semester 3/EL2002 Sistem Digital/Tugas Besar/VHDL/kalkulator-vhdl/my_uart_rx.vhd Line: 16
+Info (278001): Inferred 20 megafunctions from design logic
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "UART_convert:UART|Mult9" File: c:/intelfpga_lite/22.1std/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 687
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "UART_convert:UART|Mult19" File: c:/intelfpga_lite/22.1std/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 687
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "UART_convert:UART|Mult8" File: c:/intelfpga_lite/22.1std/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 687
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "UART_convert:UART|Mult18" File: c:/intelfpga_lite/22.1std/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 687
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "UART_convert:UART|Mult1" File: c:/intelfpga_lite/22.1std/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 687
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "UART_convert:UART|Mult2" File: c:/intelfpga_lite/22.1std/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 687
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "UART_convert:UART|Mult3" File: c:/intelfpga_lite/22.1std/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 687
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "UART_convert:UART|Mult4" File: c:/intelfpga_lite/22.1std/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 687
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "UART_convert:UART|Mult5" File: c:/intelfpga_lite/22.1std/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 687
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "UART_convert:UART|Mult6" File: c:/intelfpga_lite/22.1std/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 687
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "UART_convert:UART|Mult7" File: c:/intelfpga_lite/22.1std/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 687
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "UART_convert:UART|Mult11" File: c:/intelfpga_lite/22.1std/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 687
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "UART_convert:UART|Mult12" File: c:/intelfpga_lite/22.1std/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 687
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "UART_convert:UART|Mult13" File: c:/intelfpga_lite/22.1std/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 687
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "UART_convert:UART|Mult14" File: c:/intelfpga_lite/22.1std/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 687
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "UART_convert:UART|Mult15" File: c:/intelfpga_lite/22.1std/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 687
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "UART_convert:UART|Mult16" File: c:/intelfpga_lite/22.1std/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 687
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "UART_convert:UART|Mult17" File: c:/intelfpga_lite/22.1std/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 687
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "UART_convert:UART|Mult0" File: c:/intelfpga_lite/22.1std/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 687
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "UART_convert:UART|Mult10" File: c:/intelfpga_lite/22.1std/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 687
+Info (12130): Elaborated megafunction instantiation "UART_convert:UART|lpm_mult:Mult9" File: c:/intelfpga_lite/22.1std/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 687
+Info (12133): Instantiated megafunction "UART_convert:UART|lpm_mult:Mult9" with the following parameter: File: c:/intelfpga_lite/22.1std/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 687
+    Info (12134): Parameter "LPM_WIDTHA" = "4"
+    Info (12134): Parameter "LPM_WIDTHB" = "18"
+    Info (12134): Parameter "LPM_WIDTHP" = "22"
+    Info (12134): Parameter "LPM_WIDTHR" = "22"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12131): Elaborated megafunction instantiation "UART_convert:UART|lpm_mult:Mult9|multcore:mult_core", which is child of megafunction instantiation "UART_convert:UART|lpm_mult:Mult9" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_mult.tdf Line: 309
+Info (12131): Elaborated megafunction instantiation "UART_convert:UART|lpm_mult:Mult9|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "UART_convert:UART|lpm_mult:Mult9" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/multcore.tdf Line: 229
+Info (12131): Elaborated megafunction instantiation "UART_convert:UART|lpm_mult:Mult9|altshift:external_latency_ffs", which is child of megafunction instantiation "UART_convert:UART|lpm_mult:Mult9" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_mult.tdf Line: 352
+Info (12130): Elaborated megafunction instantiation "UART_convert:UART|lpm_mult:Mult8" File: c:/intelfpga_lite/22.1std/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 687
+Info (12133): Instantiated megafunction "UART_convert:UART|lpm_mult:Mult8" with the following parameter: File: c:/intelfpga_lite/22.1std/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 687
+    Info (12134): Parameter "LPM_WIDTHA" = "4"
+    Info (12134): Parameter "LPM_WIDTHB" = "17"
+    Info (12134): Parameter "LPM_WIDTHP" = "21"
+    Info (12134): Parameter "LPM_WIDTHR" = "21"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12131): Elaborated megafunction instantiation "UART_convert:UART|lpm_mult:Mult8|multcore:mult_core", which is child of megafunction instantiation "UART_convert:UART|lpm_mult:Mult8" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_mult.tdf Line: 309
+Info (12131): Elaborated megafunction instantiation "UART_convert:UART|lpm_mult:Mult8|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "UART_convert:UART|lpm_mult:Mult8" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/multcore.tdf Line: 229
+Info (12131): Elaborated megafunction instantiation "UART_convert:UART|lpm_mult:Mult8|altshift:external_latency_ffs", which is child of megafunction instantiation "UART_convert:UART|lpm_mult:Mult8" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_mult.tdf Line: 352
+Info (12130): Elaborated megafunction instantiation "UART_convert:UART|lpm_mult:Mult1" File: c:/intelfpga_lite/22.1std/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 687
+Info (12133): Instantiated megafunction "UART_convert:UART|lpm_mult:Mult1" with the following parameter: File: c:/intelfpga_lite/22.1std/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 687
+    Info (12134): Parameter "LPM_WIDTHA" = "4"
+    Info (12134): Parameter "LPM_WIDTHB" = "10"
+    Info (12134): Parameter "LPM_WIDTHP" = "14"
+    Info (12134): Parameter "LPM_WIDTHR" = "14"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
+Info (12131): Elaborated megafunction instantiation "UART_convert:UART|lpm_mult:Mult1|multcore:mult_core", which is child of megafunction instantiation "UART_convert:UART|lpm_mult:Mult1" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_mult.tdf Line: 309
+Info (12131): Elaborated megafunction instantiation "UART_convert:UART|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "UART_convert:UART|lpm_mult:Mult1" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/multcore.tdf Line: 229
+Info (12131): Elaborated megafunction instantiation "UART_convert:UART|lpm_mult:Mult1|altshift:external_latency_ffs", which is child of megafunction instantiation "UART_convert:UART|lpm_mult:Mult1" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_mult.tdf Line: 352
+Info (12130): Elaborated megafunction instantiation "UART_convert:UART|lpm_mult:Mult2" File: c:/intelfpga_lite/22.1std/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 687
+Info (12133): Instantiated megafunction "UART_convert:UART|lpm_mult:Mult2" with the following parameter: File: c:/intelfpga_lite/22.1std/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 687
+    Info (12134): Parameter "LPM_WIDTHA" = "4"
+    Info (12134): Parameter "LPM_WIDTHB" = "11"
+    Info (12134): Parameter "LPM_WIDTHP" = "15"
+    Info (12134): Parameter "LPM_WIDTHR" = "15"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
+Info (12131): Elaborated megafunction instantiation "UART_convert:UART|lpm_mult:Mult2|multcore:mult_core", which is child of megafunction instantiation "UART_convert:UART|lpm_mult:Mult2" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_mult.tdf Line: 309
+Info (12131): Elaborated megafunction instantiation "UART_convert:UART|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "UART_convert:UART|lpm_mult:Mult2" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/multcore.tdf Line: 229
+Info (12131): Elaborated megafunction instantiation "UART_convert:UART|lpm_mult:Mult2|altshift:external_latency_ffs", which is child of megafunction instantiation "UART_convert:UART|lpm_mult:Mult2" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_mult.tdf Line: 352
+Info (12130): Elaborated megafunction instantiation "UART_convert:UART|lpm_mult:Mult3" File: c:/intelfpga_lite/22.1std/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 687
+Info (12133): Instantiated megafunction "UART_convert:UART|lpm_mult:Mult3" with the following parameter: File: c:/intelfpga_lite/22.1std/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 687
+    Info (12134): Parameter "LPM_WIDTHA" = "4"
+    Info (12134): Parameter "LPM_WIDTHB" = "12"
+    Info (12134): Parameter "LPM_WIDTHP" = "16"
+    Info (12134): Parameter "LPM_WIDTHR" = "16"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12131): Elaborated megafunction instantiation "UART_convert:UART|lpm_mult:Mult3|multcore:mult_core", which is child of megafunction instantiation "UART_convert:UART|lpm_mult:Mult3" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_mult.tdf Line: 309
+Info (12131): Elaborated megafunction instantiation "UART_convert:UART|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "UART_convert:UART|lpm_mult:Mult3" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/multcore.tdf Line: 229
+Info (12131): Elaborated megafunction instantiation "UART_convert:UART|lpm_mult:Mult3|altshift:external_latency_ffs", which is child of megafunction instantiation "UART_convert:UART|lpm_mult:Mult3" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_mult.tdf Line: 352
+Info (12130): Elaborated megafunction instantiation "UART_convert:UART|lpm_mult:Mult4" File: c:/intelfpga_lite/22.1std/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 687
+Info (12133): Instantiated megafunction "UART_convert:UART|lpm_mult:Mult4" with the following parameter: File: c:/intelfpga_lite/22.1std/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 687
+    Info (12134): Parameter "LPM_WIDTHA" = "4"
+    Info (12134): Parameter "LPM_WIDTHB" = "13"
+    Info (12134): Parameter "LPM_WIDTHP" = "17"
+    Info (12134): Parameter "LPM_WIDTHR" = "17"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
+Info (12131): Elaborated megafunction instantiation "UART_convert:UART|lpm_mult:Mult4|multcore:mult_core", which is child of megafunction instantiation "UART_convert:UART|lpm_mult:Mult4" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_mult.tdf Line: 309
+Info (12131): Elaborated megafunction instantiation "UART_convert:UART|lpm_mult:Mult4|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "UART_convert:UART|lpm_mult:Mult4" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/multcore.tdf Line: 229
+Info (12131): Elaborated megafunction instantiation "UART_convert:UART|lpm_mult:Mult4|altshift:external_latency_ffs", which is child of megafunction instantiation "UART_convert:UART|lpm_mult:Mult4" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_mult.tdf Line: 352
+Info (12130): Elaborated megafunction instantiation "UART_convert:UART|lpm_mult:Mult5" File: c:/intelfpga_lite/22.1std/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 687
+Info (12133): Instantiated megafunction "UART_convert:UART|lpm_mult:Mult5" with the following parameter: File: c:/intelfpga_lite/22.1std/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 687
+    Info (12134): Parameter "LPM_WIDTHA" = "4"
+    Info (12134): Parameter "LPM_WIDTHB" = "14"
+    Info (12134): Parameter "LPM_WIDTHP" = "18"
+    Info (12134): Parameter "LPM_WIDTHR" = "18"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12131): Elaborated megafunction instantiation "UART_convert:UART|lpm_mult:Mult5|multcore:mult_core", which is child of megafunction instantiation "UART_convert:UART|lpm_mult:Mult5" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_mult.tdf Line: 309
+Info (12131): Elaborated megafunction instantiation "UART_convert:UART|lpm_mult:Mult5|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "UART_convert:UART|lpm_mult:Mult5" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/multcore.tdf Line: 229
+Info (12131): Elaborated megafunction instantiation "UART_convert:UART|lpm_mult:Mult5|altshift:external_latency_ffs", which is child of megafunction instantiation "UART_convert:UART|lpm_mult:Mult5" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_mult.tdf Line: 352
+Info (12130): Elaborated megafunction instantiation "UART_convert:UART|lpm_mult:Mult6" File: c:/intelfpga_lite/22.1std/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 687
+Info (12133): Instantiated megafunction "UART_convert:UART|lpm_mult:Mult6" with the following parameter: File: c:/intelfpga_lite/22.1std/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 687
+    Info (12134): Parameter "LPM_WIDTHA" = "4"
+    Info (12134): Parameter "LPM_WIDTHB" = "15"
+    Info (12134): Parameter "LPM_WIDTHP" = "19"
+    Info (12134): Parameter "LPM_WIDTHR" = "19"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12131): Elaborated megafunction instantiation "UART_convert:UART|lpm_mult:Mult6|multcore:mult_core", which is child of megafunction instantiation "UART_convert:UART|lpm_mult:Mult6" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_mult.tdf Line: 309
+Info (12131): Elaborated megafunction instantiation "UART_convert:UART|lpm_mult:Mult6|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "UART_convert:UART|lpm_mult:Mult6" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/multcore.tdf Line: 229
+Info (12131): Elaborated megafunction instantiation "UART_convert:UART|lpm_mult:Mult6|altshift:external_latency_ffs", which is child of megafunction instantiation "UART_convert:UART|lpm_mult:Mult6" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_mult.tdf Line: 352
+Info (12130): Elaborated megafunction instantiation "UART_convert:UART|lpm_mult:Mult7" File: c:/intelfpga_lite/22.1std/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 687
+Info (12133): Instantiated megafunction "UART_convert:UART|lpm_mult:Mult7" with the following parameter: File: c:/intelfpga_lite/22.1std/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 687
+    Info (12134): Parameter "LPM_WIDTHA" = "4"
+    Info (12134): Parameter "LPM_WIDTHB" = "16"
+    Info (12134): Parameter "LPM_WIDTHP" = "20"
+    Info (12134): Parameter "LPM_WIDTHR" = "20"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
+Info (12131): Elaborated megafunction instantiation "UART_convert:UART|lpm_mult:Mult7|multcore:mult_core", which is child of megafunction instantiation "UART_convert:UART|lpm_mult:Mult7" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_mult.tdf Line: 309
+Info (12131): Elaborated megafunction instantiation "UART_convert:UART|lpm_mult:Mult7|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "UART_convert:UART|lpm_mult:Mult7" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/multcore.tdf Line: 229
+Info (12131): Elaborated megafunction instantiation "UART_convert:UART|lpm_mult:Mult7|altshift:external_latency_ffs", which is child of megafunction instantiation "UART_convert:UART|lpm_mult:Mult7" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_mult.tdf Line: 352
+Info (12130): Elaborated megafunction instantiation "UART_convert:UART|lpm_mult:Mult0" File: c:/intelfpga_lite/22.1std/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 687
+Info (12133): Instantiated megafunction "UART_convert:UART|lpm_mult:Mult0" with the following parameter: File: c:/intelfpga_lite/22.1std/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 687
+    Info (12134): Parameter "LPM_WIDTHA" = "4"
+    Info (12134): Parameter "LPM_WIDTHB" = "7"
+    Info (12134): Parameter "LPM_WIDTHP" = "11"
+    Info (12134): Parameter "LPM_WIDTHR" = "11"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12131): Elaborated megafunction instantiation "UART_convert:UART|lpm_mult:Mult0|multcore:mult_core", which is child of megafunction instantiation "UART_convert:UART|lpm_mult:Mult0" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_mult.tdf Line: 309
+Info (12131): Elaborated megafunction instantiation "UART_convert:UART|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "UART_convert:UART|lpm_mult:Mult0" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/multcore.tdf Line: 229
+Info (12131): Elaborated megafunction instantiation "UART_convert:UART|lpm_mult:Mult0|altshift:external_latency_ffs", which is child of megafunction instantiation "UART_convert:UART|lpm_mult:Mult0" File: c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_mult.tdf Line: 352
 Info (13000): Registers with preset signals will power-up high File: D:/1. Cloud/OneDrive - Institut Teknologi Bandung/A. ITB-STEI/Akademik/3. Semester 3/EL2002 Sistem Digital/Tugas Besar/VHDL/kalkulator-vhdl/my_uart_tx.vhd Line: 84
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "Seven_Segment[7]" is stuck at VCC File: D:/1. Cloud/OneDrive - Institut Teknologi Bandung/A. ITB-STEI/Akademik/3. Semester 3/EL2002 Sistem Digital/Tugas Besar/VHDL/kalkulator-vhdl/top_kalkulator_integer.vhd Line: 17
-    Warning (13410): Pin "led1" is stuck at GND File: D:/1. Cloud/OneDrive - Institut Teknologi Bandung/A. ITB-STEI/Akademik/3. Semester 3/EL2002 Sistem Digital/Tugas Besar/VHDL/kalkulator-vhdl/top_kalkulator_integer.vhd Line: 20
-    Warning (13410): Pin "led2" is stuck at GND File: D:/1. Cloud/OneDrive - Institut Teknologi Bandung/A. ITB-STEI/Akademik/3. Semester 3/EL2002 Sistem Digital/Tugas Besar/VHDL/kalkulator-vhdl/top_kalkulator_integer.vhd Line: 21
-    Warning (13410): Pin "led3" is stuck at GND File: D:/1. Cloud/OneDrive - Institut Teknologi Bandung/A. ITB-STEI/Akademik/3. Semester 3/EL2002 Sistem Digital/Tugas Besar/VHDL/kalkulator-vhdl/top_kalkulator_integer.vhd Line: 22
+    Warning (13410): Pin "Seven_Segment[7]" is stuck at VCC File: D:/1. Cloud/OneDrive - Institut Teknologi Bandung/A. ITB-STEI/Akademik/3. Semester 3/EL2002 Sistem Digital/Tugas Besar/VHDL/kalkulator-vhdl/top_kalkulator_integer.vhd Line: 18
+    Warning (13410): Pin "led1" is stuck at GND File: D:/1. Cloud/OneDrive - Institut Teknologi Bandung/A. ITB-STEI/Akademik/3. Semester 3/EL2002 Sistem Digital/Tugas Besar/VHDL/kalkulator-vhdl/top_kalkulator_integer.vhd Line: 21
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 149 registers lost all their fanouts during netlist optimizations.
+Info (17049): 2 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 602 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1274 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 17 output pins
-    Info (21061): Implemented 581 logic cells
+    Info (21061): Implemented 1253 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 27 warnings
-    Info: Peak virtual memory: 4894 megabytes
-    Info: Processing ended: Tue Dec  5 13:35:05 2023
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:18
+    Info: Peak virtual memory: 4908 megabytes
+    Info: Processing ended: Tue Dec  5 14:08:28 2023
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:20
 
 

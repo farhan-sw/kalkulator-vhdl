@@ -173,13 +173,13 @@ begin
 				--Seven_Segment <= not("10000000");
 				case REG_M is    -- display hasil operasi
 				when "000" => Seven_Segment <= not("01000000");    -- --
-				when "001" => Seven_Segment <= not("00111111");    -- D (adder)
-				when "010" => Seven_Segment <= not("01111111");    -- B (subtractor)
+				when "001" => Seven_Segment <= not("00111111");    -- E (adder)
+				when "010" => Seven_Segment <= not("01111111");    -- t (subtractor)
 				when "011" => Seven_Segment <= not("00100111");    -- L (Multiplication)
-				when "100" => Seven_Segment <= not("00000110");    -- V (Division)
-				when "101" => Seven_Segment <= not("00100111");    -- O (Modulo)
-				when "110" => Seven_Segment <= not("00110111");    -- N (Pangkat)
-				when "111" => Seven_Segment <= not("01110011");    -- B (FPB)
+				when "100" => Seven_Segment <= not("00000110");    -- i (Division)
+				when "101" => Seven_Segment <= not("00100111");    -- d (Modulo)
+				when "110" => Seven_Segment <= not("00110111");    -- G (Pangkat)
+				when "111" => Seven_Segment <= not("01110011");    -- - (FPB)
 				when others => Seven_Segment <= not("01111001"); -- Error
 				end case;
 
@@ -206,7 +206,7 @@ begin
 				when "000" => Seven_Segment <= not("01000000");    -- --
 				when "001" => Seven_Segment <= not("00111111");    -- D (adder)
 				when "010" => Seven_Segment <= not("01111111");    -- B (subtractor)
-				when "011" => Seven_Segment <= not("00100111");    -- L (Multiplication)
+				when "011" => Seven_Segment <= not("00000010");    -- U (Multiplication)
 				when "100" => Seven_Segment <= not("00000110");    -- V (Division)
 				when "101" => Seven_Segment <= not("00100111");    -- O (Modulo)
 				when "110" => Seven_Segment <= not("00110111");    -- N (Pangkat)
@@ -456,7 +456,7 @@ begin
 
 					else														-- MENEMUKAN ANGKA, PINDAH ISI REG berikutnya
 						-- PENGISIAN REGISTER B BCD
-						REGB_BCD 		<= REGA_BCD(((4*bcd_char)-1) - 4 downto 0) & BCD;
+						REGB_BCD 		<= REGB_BCD(((4*bcd_char)-1) - 4 downto 0) & BCD;
 						state 			<= RB;
 					end if;
 
